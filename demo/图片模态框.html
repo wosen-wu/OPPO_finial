@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>close</title>
+    <style>
+        .real{
+            /*点击弹出模态框的图片*/
+            margin: 30px;
+            width: 250px;
+            border-radius:6px;
+        }
+        .real:hover{
+            opacity: 0.6;
+        }
+        .motai{
+            display: none;/*隐藏*/
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.7);
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+        }
+        .motaiimg{
+            display: block;
+            margin:25px auto;
+            min-height: 500px;
+            max-width: 750px;
+            border: 1px solid #000;
+        }
+        .caption{
+            text-align: center;
+            margin: 15px auto;
+            width: 60%;
+            max-height: 750px;
+            font-size: 20px;
+            color:#ccc;
+        }
+        .motaiimg,.caption{
+            -webkit-animation: first 1s;
+            -o-animation: first 1s;
+            animation: first 1s;
+        }
+        @keyframes first{
+            from{transform: scale(0.1);}
+            to{transform: scale(1);}
+        }
+        .closeimg {
+            font-size: 40px;
+            font-weight: bold;
+            position: absolute;
+            top: 20px;
+            right: 14%;
+            color:#f1f1f1;
+        }
+        .closeimg:hover,
+        .closeimg:focus{
+            color:#bbb;
+            cursor:pointer;
+        }
+        @media only screen and(max-width:750px ) {
+            .motaiimg{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h2>图片点击弹出模态框效果</h2>
+<p>图片模态框很不错，是个值得学习的效果</p>
+<img src="../imgs/wosen-boyfriends/part1-1.jpg" class="real" alt="model test picture">
+<img src="../imgs/wosen-boyfriends/part1-2.jpg" class="real" alt="model test picture">
+<a href="#1"><img src="../imgs/wosen-boyfriends/part1-1.jpg" class="real" alt="model test picture" /></a>
+<!--图片模态框 -->
+<div class="motai">
+    <span class="closeimg">×</span>
+    <img class="motaiimg">
+    <div class="caption"></div>
+</div>
+
+</body>
+</html>
+<script src="../js/jquery-1.11.3.js"></script>
+<script>
+    $(".real").click(sco);
+function sco(){
+   $(".motai").css("display","block");
+    console.log($(this).attr('src'));
+    var a=$(this).attr('src');
+    $(".motaiimg").attr("src",a);
+   $(".caption").html=$(this).attr("alt");
+}
+function close(){
+    $(".motai").css("display","none");
+}
+    $(".closeimg").click(close);
+</script>

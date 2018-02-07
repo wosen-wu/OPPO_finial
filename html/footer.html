@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--meta：vp-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--meta:compat-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <!--<link rel="stylesheet" href="../css/001-&#45;&#45;weibu.css">-->
+    <link rel="stylesheet" href="../font_550483_idrlwihoxv18aor/iconfont.css">
+    <link rel="stylesheet" href="../css/globle.css"/>
+    <!--<link rel="stylesheet" href="../css/f.css"/>-->
+
+    <script src="../bootstrap/js/html5shiv.min.js"></script>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .lr_con{
+            padding: 20px 0;
+            border-top: 1px #ebebeb solid;
+        }
+
+        #oc-footer{
+            position: relative;
+            z-index: 10;
+            padding: 20px 0;
+        }
+        .co-footer{
+            font-size: 14px;
+        }
+        .of-nav{
+            position: relative;
+            width: 16rem;
+            margin: 0 auto;
+        }
+        .of-nav .of-directory{
+            float: left;
+            display: flex;
+            overflow: hidden;
+            width: 62%;
+        }
+        .of-nav .of-directory dl{
+            position: relative;
+            display: block;
+            box-sizing: border-box;
+            flex: 1;
+        }
+        dl{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-weight: 400;
+            float: left;
+
+
+        }
+        a {
+            background-color: transparent;
+        }
+        .of-nav .of-directory:after{
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        .of-nav .of-service{
+            float: right;
+            text-align: right;
+        }
+        .of-nav .of-service .of-serv-oppo{
+            margin-top: -5px;
+            margin-bottom: 20px;
+        }
+        .of-nav .of-service .of-serv-oppo .of-ico{
+            color: #ffffff;
+            background: #666666;
+            text-align: center;
+            transition: background .35s ease;
+            /* z-index: 20;*/
+        }
+        .btn-size-bottom{
+            width: 173px;
+            height: 51px;
+            line-height: 51px;
+            border-radius: 25.5px;
+
+        }
+        .oc-btn{
+            display: inline-block;
+            margin-bottom: 0;
+            vertical-align: middle;
+        }
+        b{
+            font-weight: 700;
+        }
+        .oc-iconfont-ooo:before{
+            content: "";
+        }
+        .oc-icon:before{
+            display: inline-block;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+        }
+        .of-nav .of-service .of-serv-oppo .of-ico span{
+            display: inline-block;
+            font-size: 15px;
+        }
+        .of-nav .of-service .of-serv-tel h3{
+            font-size: 24px;
+            line-height: 1;
+            font-weight: 400;
+            color:#333333;
+            margin: 0 0 7px 0;
+            padding: 0;
+            display: block;
+        }
+        .of-nav .of-service .of-serv-tel p{
+            font-size: 14px;
+            color: #828282;
+            margin: 0;
+            padding: 0;
+            font-weight: 400;
+            display: block;
+        }
+        .of-nav .of-service .of-serv-tel .of-tel {
+            /* display: none;*/
+        }
+
+        .of-nav .of-service .of-serv-tel .of-tel{
+            font-size: 24px;
+            line-height: 1;
+            font-weight: 400;
+            color: #333;
+            margin: 0 0 7px 0;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .of-copyright {
+            display: flex;
+            position: relative;
+            /*width: 14rem;*/
+            margin: 72px auto 0 auto;
+            padding-top: 24px;
+            color: #98979a;
+            box-sizing: border-box;
+            border-top: 1px #ebebeb solid;
+        }
+        .of-copyright .of-cp-content {
+            -webkit-box-flex: 1;
+            flex: 1;
+            font-size: 13px;
+            line-height: 25px;
+        }
+        .of-copyright .of-cp-content a {
+            color: inherit;
+        }
+
+        .of-copyright .of-gs-link {
+            display: inline-block;
+        }
+        .of-copyright .of-sns-content{
+            font-size: 13px;
+            text-align: right;
+            /* padding: 2em;*/
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .of-copyright .of-sns-content strong {
+            font-weight: 400;
+            display: inline-block;
+            vertical-align: middle;
+            font-style: normal;
+        }
+        .of-copyright .of-sns-content a{
+            color:#999;
+            font-size: 20px;
+            vertical-align: middle;
+            margin-left: 10px;
+            transition: color .35s ease;
+        }
+        .of-copyright .of-sns-content a b {
+            font-size: 16px;
+            vertical-align: middle;
+        }
+        .of-copyright .of-sns-content a.of-global-link {
+            margin-left: 15px;
+            padding-left: 10px;
+            position: relative;
+        }
+        .of-copyright .of-qrcode-model {
+            position: absolute;
+            display: none;
+            width: 296px;
+            height: 148px;
+            background-color: #fff;
+            border: 1px #ebebeb solid;
+            box-sizing: border-box;
+            right: 0;
+            bottom: 100%;
+            padding: 12px;
+        }
+        .of-copyright .of-qrcode-model .of-qrcode-view {
+            display: none;
+            height: 100%;
+        }
+        .of-copyright .of-qrcode-model .of-qrcode-view .qrcode-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 30px 0;
+        }
+        .oc-row .col-6 {
+            -webkit-box-flex: 0;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .of-copyright .of-sns-content a span {
+            font-size: 13px;
+            padding-left: .5em;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .oc-text-inside {
+            margin: -1px;
+            padding: 0;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            position: absolute;
+        }
+        .of-copyright .oc-icon-gs {
+            width: 15px;
+            height: 19px;
+            margin-left: 3px;
+            display: inherit;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            /*  background-image: url(../images/icon-gs@1x.png);*/
+            background-image: url("../imgs/footer/pa.png");
+        }
+        .of-copyright .of-sns-content{
+            box-sizing: border-box;
+            height: 100%;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-pack: center
+        }
+        .of-copyright .of-qrcode-model {
+            position: absolute;
+            width: 296px;
+            height: 148px;
+            background-color: #fff;
+            border: 1px #ebebeb solid;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            right: 0;
+            bottom: 100%;
+            padding: 12px;
+        }
+
+        /*@media (min-width: 768px){
+            .container {
+                 width: 97%;
+            }
+        }
+
+
+
+        @media (max-width: 768px) {
+
+            .of-nav .of-directory dl.active dt b {
+                will-change: transform;
+                -webkit-transform: rotate(-135deg);
+                -ms-transform: rotate(-135deg);
+                transform: rotate(-135deg);
+            }
+        }
+            @media (max-width: 768px){
+                .of-nav .of-directory dl dt b {
+                    display: block;
+                }
+        }
+
+        @media (max-width: 768px) {
+
+            .of-copyright .of-qrcode-model .of-qrcode-view .qrcode-text {
+                padding: 0;
+                line-height: 16px;
+                margin-top: 21px;
+            }
+        }
+        @media (max-width: 768px){
+
+            .of-copyright .of-qrcode-model .of-qrcode-view .download-link {
+                display: flex;
+                align-self: flex-start;
+            }
+        }
+        @media (max-width: 768px) {
+
+            .of-copyright  {
+                margin-bottom: 5px;
+            }
+        }*/
+
+        .of-nav .of-directory dl dd {
+            display: block;
+            line-height: 1;
+            padding: 6px 0;
+            color: #666;
+
+            overflow: hidden;
+            margin-right: 1em;
+        }
+
+        dd>a:hover{
+            text-decoration: none;
+            color: #ccc;
+            font-size: 13px;
+        }
+        dd>a{
+            font-size: 13px;
+            color: #919191;
+            /*    #333;*/
+
+            /* #98979A*/
+        }
+        dt{
+            color: #919191;
+        }
+
+        #lx_foot1 {
+
+            display: none;
+        }
+        #lx_footWrap {
+            border-top: 1px #ebebeb solid;
+            display: block;
+            margin: 0 20px;
+        }
+        #lx_footWrap .foot-floor {
+            border-bottom: 1px #ebebeb solid;
+        }
+        #lx_footWrap .foot-floor p {
+            padding: 20px 0;
+            font-weight: 500;
+        }
+        #lx_footWrap .foot-floor p span {
+            font-weight: 100;
+            font-size: 10px;
+            float: right;
+            height: 10px;
+            line-height: 10px;
+            vertical-align: middle;
+            text-align: right;
+            margin-right: 10px;
+            transition: all 0.5s;
+        }
+        #lx_footWrap .foot-floor p span.on {
+            transform: rotate(-135deg);
+        }
+        #lx_footWrap .foot-floor ul {
+            display: none;
+        }
+        #lx_footWrap .foot-floor ul li {
+            padding-left: 10px;
+        }
+        #lx_footWrap .foot-floor ul li a {
+            padding: 6px 0;
+            display: block;
+        }
+        #lx_footWrap .foot-floor ul li a:hover {
+            text-decoration: none;
+            color: #acacac;
+        }
+        #lx_footWrap .foot-weiChat {
+            overflow: hidden;
+            padding: 30px 0;
+            border-bottom: 1px #ebebeb solid;
+        }
+        #lx_footWrap .foot-weiChat .foot-weiChat-text {
+            float: left;
+        }
+        #lx_footWrap .foot-weiChat .foot-weiChat-text h3 {
+            margin: 5px 0;
+        }
+        #lx_footWrap .foot-weiChat .foot-weiChat-text p {
+            color: #acacac;
+        }
+        #lx_footWrap .foot-weiChat .foot-weiChat-icon {
+            float: right;
+        }
+        #lx_footWrap .foot-weiChat .foot-weiChat-icon a {
+            display: block;
+            border-radius: 39px;
+            height: 39px;
+            line-height: 38px;
+            width: 130px;
+            color: #fff;
+            background-color: #666;
+            text-align: center;
+            padding: 3px ;
+            box-sizing: content-box;
+        }
+        #lx_footWrap .foot-weiChat .foot-copyRight {
+            color: #98979a;
+        }
+        #lx_footWrap .foot-weiChat .foot-copyRight a {
+            color: inherit;
+        }
+        @media (min-width: 768px) {
+            #lx_footWrap {
+                display: none;
+            }
+            #lx_foot1 {
+                display: block;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+<!--<footer id="oc-footer" class="oc-footer">-->
+    <!--底部第一套-->
+    <div id="lx_foot1">
+        <section class="of-nav ">
+            <div class="container lr_con">
+                <!--四栏-->
+                <nav class="of-directory ">
+                    <dl class="active">
+                        <dt>推荐机型<b class="oc-icon oc-iconfont-expandtiny"></b></dt>
+                        <dd><a href="CJ_index.html" target="_blank" target="view_window">R11s</a></dd>
+                        <dd><a href="####" target="_blank">A73</a></dd>
+                        <dd><a href="####" target="_blank">A57</a></dd>
+                        <dd><a href="####" target="_blank">A79</a></dd>
+                    </dl>
+                    <dl class="active lr_of1">
+                        <dt>服务<b class="oc-icon oc-iconfont-expandtiny"></b></dt>
+                        <dd><a href="prev2.html" target="_blank" target="view_window">服务网点查询</a></dd>
+                        <dd><a href="####" target="_blank">零配件价格查询</a></dd>
+                        <dd><a href="####" target="_blank">官方授权网店</a></dd>
+                        <dd><a href="####" target="_blank">预置软件公示</a></dd>
+                    </dl>
+                    <dl class="active lr_of1">
+                        <dt>关于我们<b class="oc-icon oc-iconfont-expandtiny"></b></dt>
+                        <dd><a href="main.html" target="_blank">关于 OPPO</a></dd>
+                        <dd><a href="" target="_blank">加入我们</a></dd>
+                    </dl>
+                    <dl class="lr_of1">
+                        <dt>商务合作<b class="oc-icon oc-iconfont-expandtiny"></b></dt>
+                        <dd><a href="index_lr.html" target="_blank">开放平台</a></dd>
+                        <dd><a href="####" target="_blank">采购相关</a></dd>
+                    </dl>
+                </nav>
+
+                <section class="of-service">
+                    <section class="of-serv-oppo">
+                        <a href="" target="_blank" class="of-ico oc-btn btn-size-bottom oppo-tj" data-tj="">
+                            <!--客服小图标-->
+                            <!--   <b class="oc-icon oc-iconfont-ooo"></b>-->
+                            <img src="../imgs/footer/P1A.png" width="46" height="42" style="margin-top: -8px">
+                            <span>在线客服</span>
+                        </a>
+                    </section>
+                    <section class="of-serv-tel">
+                        <h3>4001-666-888</h3>
+                        <p>24 小时全国热线</p>
+                        <!-- <a class="of-tel" href="tel:4001-666-888">4001-666-888</a>-->
+                    </section>
+                </section>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="row of-copyright">
+
+                <section class="of-cp-content">
+
+                    © 2005 - 2018 OPPO 版权所有
+                    <a href="" target="_blank">粤ICP备08130115号-1</a> 联系方式：4001-666-888
+                    <a href="http://wljg.gdgs.gov.cn/corpsrch.aspx?key=441900000436441" target="_blank" title="企业名称：广东欧珀电子工业有限公司
+法定代表人：金乐亲
+标识状态：已激活 粤工商备E191512001248
+电子标识有效期：2015-12-14～2020-12-16" class="of-gs-link">
+                        <b class="oc-icon oc-icon-gs">&nbsp;</b></a>
+                </section>
+                <section class="of-sns-content">
+                    <strong>关注我们：</strong>
+                    <a href="http://weibo.com/oppo" target="_blank" class="of-sns-link">
+                        <b class="oc-icon oc-iconfont-weibo"><i class="icon iconfont">&#xe655;</i></b>
+                        <span class="oc-text-inside">oppp官方 微博</span></a>
+                    <a class="of-sns-link" data-trigger="qrcode-wechat">
+                        <b class="oc-icon oc-iconfont-weixin"> <i class="icon iconfont">&#xe646;</i></b>
+                        <span class="oc-text-inside">oppp官方 微信</span>
+                    </a>
+                    <a href="http://p.alipay.com/P/iNeaUvUf" target="_blank" class="of-sns-link" data-trigger="qrcode-alipay">
+                        <b class="oc-icon oc-iconfont-alipay"><i class="icon iconfont">&#xe64b;</i></b>
+                        <span class="oc-text-inside">关注我们</span>
+                    </a>
+                    <a href="https://www.oppo.com/cn/global " target="_blank" class="of-sns-link of-global-link"><em>|</em>
+                        <b class="oc-icon oc-iconfont-global "><i class="icon iconfont">&#xe709;</i></b><span>Global</span></a>
+                </section>
+                <!--    微信栏-->
+                <section class="of-qrcode-model" style="visibility: hidden; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 15);">
+                    <section class="wechat-qrcode of-qrcode-view oc-row">
+                        <section class="qrcode-text col-6 col-xs-12">
+                            <p class="text-title">用微信扫描</p>
+                            <p class="text-title text-title-m">保存后可在微信扫码关注</p>
+                            <p class="text-des">关注 OPPO 公众号</p>
+                        </section>
+                        <section class="qrcode-figure col-6 col-xs-12">
+                            <i>
+                                <img src="../imgs/footer/lr_oc-qecode-alipay.png" data-srcset="." class="lazyload" alt="OPPO 公众号">
+                            </i>
+                        </section>
+                        <a class="download-link" href="" download="oppo-wechat">保存到手机<b class="oc-icon oc-iconfont-download"></b>
+                        </a>
+                    </section>
+                    <section class="alipay-qrcode of-qrcode-view oc-row">
+                        <section class="qrcode-text col-6 ">
+                            <p class="text-title">用支付宝扫描</p>
+                            <p class="text-title text-title-m">保存后可在支付宝扫码关注</p>
+                            <p class="text-des">关注 OPPO 生活号</p>
+                        </section>
+                        <!-- 微信栏-->
+                        <section class="qrcode-figure col-6 ">
+                            <i>
+                                <img src="../imgs/footer/lr_op_h.png" data-srcset="" class="lazyload" alt="OPPO 生活号">
+                            </i>
+                        </section>
+                        <a class="download-link" href="../" download="oppo-alipay">保存到手机
+                            <b class="oc-icon oc-iconfont-download"></b></a>
+                    </section>
+
+                </section>
+
+            </section>
+        </div>
+    </div>
+
+    <!--底部第二套-->
+    <div id="lx_footWrap">
+        <div >
+            <section class="foot-floor">
+                <p>推荐机型 <span class="glyphicon glyphicon-plus " aria-hidden="true"></span></p>
+                <ul>
+                    <li><a href="####">R11s</a></li>
+                    <li><a href="####">A73</a></li>
+                    <li><a href="####">A57</a></li>
+                    <li><a href="####">A79</a></li>
+                </ul>
+            </section>
+            <section class="foot-floor">
+                <p>服务<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></p>
+                <ul>
+                    <li><a href="####">服务网点查询</a></li>
+                    <li><a href="####">零配件价格查询</a></li>
+                    <li><a href="####">官方授权网店</a></li>
+                    <li><a href="####">预置软件公示</a></li>
+                </ul>
+            </section>
+            <section class="foot-floor">
+                <p>关于我们<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></p>
+                <ul>
+                    <li><a href="####">关于OPPO</a></li>
+                    <li><a href="####">加入我们</a></li>
+                </ul>
+            </section>
+            <section class="foot-floor">
+                <p>商务合作<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></p>
+                <ul>
+                    <li><a href="####">开放平台</a></li>
+                    <li><a href="####">采购相关</a></li>
+                </ul>
+            </section>
+        </div>
+        <div class="foot-weiChat">
+            <div class="foot-weiChat-text">
+                <p>24 小时全国热线</p>
+                <h3>4001-666-888</h3>
+            </div>
+            <div class="foot-weiChat-icon">
+                <a href="####" >
+                    <img src="../imgs/footer/P1A.png" width="46" height="42" style="margin-top: -8px">
+                    <span>在线客服</span>
+                </a>
+            </div>
+        </div>
+        <div class="foot-copyRight" style="padding: 20px 0">
+            <section style="margin-bottom: 20px">
+
+                <section class="">
+
+                    © 2005 - 2018 OPPO 版权所有
+                    <a href="" target="_blank">粤ICP备08130115号-1</a> 联系方式：4001-666-888
+                    <a href="http://wljg.gdgs.gov.cn/corpsrch.aspx?key=441900000436441" target="_blank" title="企业名称：广东欧珀电子工业有限公司
+法定代表人：金乐亲
+标识状态：已激活 粤工商备E191512001248
+电子标识有效期：2015-12-14～2020-12-16" class="of-gs-link">
+                        <b class="oc-icon oc-icon-gs">&nbsp;</b></a>
+                </section>
+                <section style="padding: 10px 0">
+                    <strong>关注我们：</strong>
+                    <a href="http://weibo.com/oppo" target="_blank" class="of-sns-link">
+                        <b class="oc-icon oc-iconfont-weibo"><i class="icon iconfont">&#xe655;</i></b>
+                        <span class="oc-text-inside">oppp官方 微博</span></a>
+                    <a class="of-sns-link" data-trigger="qrcode-wechat">
+                        <b class="oc-icon oc-iconfont-weixin"> <i class="icon iconfont">&#xe646;</i></b>
+                        <span class="oc-text-inside">oppp官方 微信</span>
+                    </a>
+                    <a href="http://p.alipay.com/P/iNeaUvUf" target="_blank" class="of-sns-link" data-trigger="qrcode-alipay">
+                        <b class="oc-icon oc-iconfont-alipay"><i class="icon iconfont">&#xe64b;</i></b>
+                        <span class="oc-text-inside">关注我们</span>
+                    </a>
+                    <a href="https://www.oppo.com/cn/global " target="_blank" class="of-sns-link of-global-link"><em>|</em>
+                        <b class="oc-icon oc-iconfont-global "><i class="icon iconfont">&#xe709;</i></b><span>Global</span></a>
+                </section>
+
+
+            </section>
+        </div>
+
+    </div>
+
+
+
+</footer>
+
+</body>
+</html>
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script>
+    !(function(doc, win) {
+        var docEle = doc.documentElement,
+                evt = "onorientationchange" in window ? "orientationchange" : "resize",
+                fn = function() {
+                    var width = docEle.clientWidth;
+                    width && (docEle.style.fontSize = 20 * (width / 320) + "px");
+                };
+
+        win.addEventListener(evt, fn, false);
+        doc.addEventListener("DOMContentLoaded", fn, false);
+
+    }(document, window));
+
+    $('#lx_footWrap .foot-floor span').click(function(){
+        $(this).toggleClass('on').parents('.foot-floor').find('ul').slideToggle();
+    })
+
+</script>

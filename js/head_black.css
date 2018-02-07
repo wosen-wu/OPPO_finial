@@ -1,0 +1,811 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    margin: 0;
+    padding: 0 25px; font-family : "�����ƺ� 508R W", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial;
+    color: #333;
+}
+
+/*------------------�����װ�-----------------------------*/
+#mySlideBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*height: 700px;*/
+    background: #ffffff;
+    display: none;
+}
+
+/* -----------------------------ͷ��-------------------------------------*/
+/* ���м��ɫ*/
+
+/*ͷ��*/
+#zsx_navTop {
+    position: fixed;
+    width: 100%;
+    /*top: -10px;*/
+    left: 0;
+    right: 0;
+    z-index: 999;
+    border: none;
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+/*#zsx_navTop>div{
+    position: relative;
+}*/
+.myNavHead {
+    position: relative;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border-color: #e7e7e7;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    opacity: .6;
+    color: #ccc;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #fff;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #333;
+}
+
+#oppo-logo-common {
+    width: 105px;
+    font-size: 15px;
+    fill: #000;
+    float: left;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-default .navbar-nav > li > a:hover {
+        opacity: 1;
+        color: #333;
+    }
+
+    #oppo-logo-common {
+        width: 105px;
+        font-size: 15px;
+        fill: #000;
+        float: left;
+        margin-right: 40px;
+    }
+
+    .navbar-brand {
+        display: inline-block;
+        float: none;
+    }
+
+    .navbar-toggle {
+        position: relative;
+        float: left;
+        padding: 9px 10px;
+        margin-top: 14px;
+        margin-right: 15px;
+        margin-bottom: 8px;
+        background-image: none;
+        border-radius: 0;
+    }
+
+    #xia li {
+        width: 100%;
+        text-align: left;
+        float: left;
+    }
+
+    .navbar-default .navbar-toggle {
+        background: transparent;
+        border: none;
+    }
+
+    .navbar-default .navbar-toggle:hover {
+        background: transparent;
+        border: none;
+    }
+
+    .topLi {
+        /*height: 300px;*/
+        overflow-y: scroll;
+    }
+
+    .topLi::-webkit-scrollbar {
+        display: none;
+    }
+
+    .topLi > ul {
+        width: 85%;
+        left: 0;
+
+    }
+
+    .topLi ul li a {
+        padding: 0 25px; opacity : 1;
+        border-bottom: 1px rgba(0, 0, 0, .082) solid;
+        height: 46px;
+        z-index: 2;
+        font-size: 16px;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+        color: #333;
+    }
+
+    /*�Ŵ�*/
+    .navbar-default .navbar-brand {
+        color: #000;
+    }
+
+    /* ��������߿�ȡ��*/
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+        border-color: transparent;
+    }
+
+    .navbar-default .navbar-toggle:focus {
+        background-color: transparent;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .navbar-default .navbar-nav > li {
+        float: left;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+        color: #000;
+        margin-top: 14px;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .navbar-default .navbar-nav > li > a {
+        color: #000;
+        margin-top: 10px;
+        padding: 0 25px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .navbar-default .navbar-nav > li > a {
+        color: #000;
+        margin-top: 4px;
+        padding: 0 27px;
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+/*------------------------ͷ������--------------*/
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #000;
+}
+
+.topLi {
+    text-align: center;
+    /*display: none;*/
+}
+
+/*hover��ʱ��������ʽ*/
+#zsx_navTop.active {
+    background: #fff;
+
+}
+
+#zsx_navTop.active .topLi .navbar-nav > li > a {
+    color: #000;
+}
+
+#zsx_navTop.mySlide #oppo-logo-common, #zsx_navTop.active #oppo-logo-common, #zsx_navTop.active .Tbziti, #zsx_navTop.mySlide .Tbziti {
+    fill: #000;
+}
+
+#zsx_navTop.mySlide #title-openMenu .open-menu-bar {
+    background: #000;
+}
+
+/*#zsx_navTop.mySlide > div {
+    background: #fff;
+}*/
+
+#xia {
+    display: inline-block;
+    float: none;
+}
+
+.Tbziti {
+    position: absolute;
+    right: 5%;
+    top: 0;
+    fill: #fff;
+}
+
+/*
+ͷ����꾭�� ����1200*/
+
+@media screen and (max-width: 768px) {
+    #zsx_navTop {
+        /*background: #fff;*/
+    }
+
+    .zsx_lt_bot {
+        display: none;
+    }
+
+    .zsx_lt_bot ul {
+        width: 100%;
+        float: left;
+    }
+
+    .zsx_lt_bot ul li {
+        margin-top: 10px;
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100px;
+        border-bottom: 1px rgba(0, 0, 0, .082) solid;
+    }
+
+    .zsx_lt_bot ul li h3 {
+        font-size: 14px;
+        bottom: 42.5%;
+        left: 60%;
+        margin-right: 8%;
+        float: right;
+        line-height: 90px;
+    }
+
+    .zsx_lt_bot ul li:nth-child(1) h3 {
+        margin-right: 0;
+    }
+
+    .zsx_lt_bot ul li img {
+        width: 80px;
+        height: 90px;
+    }
+
+    .zsx_lt_bot ul li img:nth-child(2) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 80px;
+        height: 90px;
+    }
+
+    .zsx_hoVer {
+        display: none;
+    }
+
+    .zsx_lt_bot {
+        width: 100%;
+        border-bottom: 1px rgba(0, 0, 0, .082) solid;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .zsx_lt_pict {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: -10px
+    }
+
+    .zsx_lt_pict img {
+        height: auto;
+        width: 100%;
+    }
+
+    .zsx_lt_pict img:nth-child(2) {
+        position: absolute;
+        right: 50px;
+        top: 120px;
+        width: 200px;
+        height: auto;
+    }
+
+    .zsx_lt_pict .zsx_bian {
+        cursor: pointer;
+        transition: all 0.8s;
+    }
+
+    .zsx_lt_pict:hover > .zsx_bian {
+        transform: scale(1.2);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .glyphicon {
+        display: block;
+    }
+
+    .zsx_lt_bot, .open-menu2 {
+        display: none;
+    }
+
+    .zsx_hoVer {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 350px;
+        /*background: #f3f3f3;*/
+        opacity: 0;
+        background: #f2f2f2;
+        left: 0;
+        top: 100%;
+        z-index: 2;
+    }
+
+    .zsx_hoVerbox {
+        position: relative;
+        left: 0;
+        top: 11%;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .zsx_lt_navTop {
+        overflow: hidden;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .zsx_navTopLeft {
+        margin-left: 30px;
+        float: left;
+        width: 290px;
+        height: 250px;
+        background: #f3f3f3;
+        overflow: hidden;
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+    }
+
+    .zsx_navTopLeft img {
+        width: 580px;
+        height: 250px;
+        margin-left: -40px;
+    }
+
+    .zsx_navTopLeft img:nth-child(2) {
+        position: absolute;
+        bottom: 8%;
+        width: 50%;
+        height: auto;
+        left: 40%;
+    }
+
+    .zsx_navTopLeft .zsx_bian {
+        cursor: pointer;
+        transition: all 0.8s;
+    }
+
+    .zsx_navTopLeft:hover > .zsx_bian {
+        transform: scale(1.2);
+    }
+
+    .zsx_navToprigh {
+        margin-left: 10px;
+        float: left;
+        width: 430px;
+        height: 270px;
+        background: transparent;
+    }
+
+    .zsx_navToprigh ul li {
+        position: relative;
+        margin: 6px 5px;
+        float: left;
+        width: 115px;
+        height: 115px;
+        background: #fff;
+        overflow: hidden;
+    }
+
+    .zsx_navToprigh ul li h3 {
+        font-family: "�����ƺ� 510M W", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 15px;
+        text-align: center;
+        font-size: 16px;
+        color: #333;
+        font-weight: 400;
+        line-height: 1;
+        white-space: nowrap;
+        -webkit-transition: color .35s ease;
+        transition: color .35s ease;
+    }
+
+    .zsx_navToprigh ul li img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        top: -10px;
+        /*  position: absolute;
+          top: 20px;*/
+    }
+
+    .topFloat {
+        top: -20px;
+    }
+
+    .botFloat {
+        top: 0;
+    }
+
+    #zsx_navTop {
+        background: transparent;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #zsx_navTop {
+        background: transparent;
+    }
+
+    .glyphicon {
+        display: block;
+    }
+
+    .zsx_lt_bot, .open-menu2 {
+        display: none;
+    }
+
+    .zsx_lt_bot, .open-menu2, .glyphicon {
+        display: none;
+    }
+
+    .zsx_hoVer {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 416px;
+        opacity: 0;
+        background: #f2f2f2;
+        left: 0;
+        top: 100%;
+        z-index: 2;
+    }
+
+    .zsx_hoVerbox {
+        position: relative;
+        top: 12%;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .zsx_navTopLeft {
+        float: left;
+        width: 410px;
+        height: 313px;
+        background: #f3f3f3;
+        overflow: hidden;
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+    }
+
+    .zsx_navTopLeft img {
+        width: 710px;
+        height: 313px;
+        margin-left: -40px;
+    }
+
+    .zsx_navTopLeft img:nth-child(2) {
+        position: absolute;
+        bottom: 8%;
+        width: 40%;
+        height: auto;
+        left: 40%;
+    }
+
+    .zsx_navTopLeft .zsx_bian {
+        cursor: pointer;
+        transition: all 0.8s;
+    }
+
+    .zsx_navTopLeft:hover > .zsx_bian {
+        transform: scale(1.2);
+    }
+
+    .zsx_navToprigh {
+        margin-left: 20px;
+        float: left;
+        width: 504px;
+        height: 313px;
+        background: transparent;
+    }
+
+    .zsx_navToprigh ul li {
+        position: relative;
+        margin: 5px 5px;
+        float: left;
+        width: 150px;
+        height: 150px;
+        background: #fff;
+        overflow: hidden;
+    }
+
+    .zsx_navToprigh ul li h3 {
+        font-family: "�����ƺ� 510M W", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 15px;
+        text-align: center;
+        font-size: 16px;
+        color: #333;
+        font-weight: 400;
+        line-height: 1;
+        white-space: nowrap;
+        -webkit-transition: color .35s ease;
+        transition: color .35s ease;
+    }
+
+    .zsx_navToprigh ul li img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        top: -10px;
+        /*  position: absolute;
+          top: 20px;*/
+    }
+
+    .topFloat {
+        top: -20px;
+    }
+
+    .botFloat {
+        top: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #zsx_navTop {
+        background: transparent;
+    }
+
+    .glyphicon {
+        display: block;
+    }
+
+    .zsx_lt_bot, .open-menu2 {
+        display: none;
+    }
+
+    .zsx_hoVer {
+        display: none;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 416px;
+        /*background: #f3f3f3;*/
+        background: #f2f2f2;
+        left: 0;
+        top: 100%;
+        z-index: 2;
+    }
+
+    .zsx_hoVerbox {
+        position: relative;
+        top: 12%;
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .zsx_navTopLeft {
+        float: left;
+        width: 410px;
+        height: 313px;
+        background: #f3f3f3;
+        overflow: hidden;
+        position: relative;
+        left: 0;
+        top: 0;
+        right: 0;
+    }
+
+    .zsx_navTopLeft img {
+        width: 710px;
+        height: 313px;
+        margin-left: -40px;
+    }
+
+    .zsx_navTopLeft img:nth-child(2) {
+        position: absolute;
+        bottom: 8%;
+        width: 40%;
+        height: auto;
+        left: 40%;
+    }
+
+    .zsx_navTopLeft .zsx_bian {
+        cursor: pointer;
+        transition: all 0.8s;
+    }
+
+    .zsx_navTopLeft:hover > .zsx_bian {
+        transform: scale(1.2);
+    }
+
+    .zsx_navToprigh {
+        margin-left: 20px;
+        float: left;
+        width: 504px;
+        height: 313px;
+        background: transparent;
+    }
+
+    .zsx_navToprigh ul li {
+        position: relative;
+        margin: 5px 5px;
+        float: left;
+        width: 150px;
+        height: 150px;
+        background: #fff;
+        overflow: hidden;
+    }
+
+    .zsx_navToprigh ul li h3 {
+        font-family: "�����ƺ� 510M W", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 15px;
+        text-align: center;
+        font-size: 16px;
+        color: #333;
+        font-weight: 400;
+        line-height: 1;
+        white-space: nowrap;
+        -webkit-transition: color .35s ease;
+        transition: color .35s ease;
+    }
+
+    .zsx_navToprigh ul li img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        top: -10px;
+        /*  position: absolute;
+          top: 20px;*/
+    }
+
+    .topFloat {
+        top: -20px;
+    }
+
+    .botFloat {
+        top: 0;
+    }
+}
+
+/*��꾭��li��Ӱ*/
+.zsx_boxShadw {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /*z-index: 10;*/
+    width: 100%;
+    /*height: 700px;*/
+    opacity: 0;
+    background: #fff;
+}
+
+/* ------------------------------------------ͷ������--------------------------------------------------*/
+
+/* ------------------------------------------ͷ��--------------------------------------------------*/
+/* ���м��ťת��*/
+#title-openMenu .open-menu {
+    position: relative;
+    top: 10px;
+    left: 30px;
+    width: 30px;
+    height: 34px;
+    color: #00A5E0;
+    /*overflow: hidden;*/
+}
+
+#title-openMenu .open-menu-bar /*,.open-menu-bar::after,.open-menu-bar::before*/
+{
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 20px;
+    height: 1px;
+    background-color: #000;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+#title-openMenu .open-menu-bar:first-child {
+    top: 0;
+}
+
+#title-openMenu .open-menu-bar:last-child {
+    top: 14px;
+}
+
+/*#title-openMenu.isOpen>i:first-child {
+    -webkit-transform: rotate(-45deg) translate3d(-2px, -4px, 0);
+    transform: rotate(-45deg) translate3d(-2px, -4px, 0);
+}*/
+#title-openMenu.isOpen > i:first-child {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#title-openMenu.isOpen > i:nth-child(2) {
+    opacity: 0
+}
+
+/*#title-openMenu.isOpen>i:last-child {
+    -webkit-transform: rotate(45deg) translate3d(-2px, 4px, 0);
+    transform: rotate(45deg) translate3d(-2px, 4px, 0);
+}*/
+#title-openMenu.isOpen > i:last-child {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/*��ת��ͷͼ��*/
+#title-openMenu2 .open-menu2 {
+    position: relative;
+    top: 0;
+    right: -94%;
+}
+
+.zsx_down {
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 0;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transform-origin: center;
+}
+
+#title-openMenu2.isOpen span > i:first-child {
+    -webkit-transform: rotate(-180deg) translate3d(-4px, -1px, 0);
+    transform: rotate(-180deg) translate3d(-4px, -1px, 0);
+}
+
+/* ------------------------------------------ͷ������--------------------------------------------------*/

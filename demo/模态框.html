@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/oppo-boyfriends-wosen.css">
+    <link rel="stylesheet" href="../css/globle.css">
+    <link href="//at.alicdn.com/t/font_488056_msg23kar4yousor.css" rel="stylesheet">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_488056_ttrl8n0cetcblnmi.css">
+    <!--cc:ie-->
+    <!--[if lt IE 9]-->
+    <script src="../bootstrap/js/html5shiv.min.js"></script>
+    <script src="../bootstrap/js/respond.min.js"></script>
+    <!--[endif]-->
+    <style>
+        .bg{
+            background-color: #000;
+            height: 668px;
+          /*  width: 432px;*/
+        }
+        .vid{
+            margin: 0 auto;
+           margin-left: 230px;
+        }
+        .close{
+            z-index: 9999;
+            width: 50px;
+            height: 50px;
+            right: -130px;
+            top: 65px;
+            position: fixed;
+            background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/close.svg?201707261604);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+        .modal-backdrop.in{opacity: 0;
+
+        }
+    </style>
+</head>
+<body>
+<!--<div class="box"></div>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">模态框</button>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <video width="432" class="vid1" height="688" autoplay>
+                <source src="../imgs/wosen-boyfriends/video_1.mp4">
+            </video>
+        </div>
+    </div>
+</div>-->
+<a data-toggle="modal" data-target=".aa">模态框</a>
+<!-- Large modal -->
+<div class="modal fade bs-example-modal-lg bg  aa" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="overflow-y: hidden;">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content bg">
+            <div class="close"></div>
+            <video  class="vid1" width="432" autoplay loop>
+                <source src="../imgs/wosen-boyfriends/video_1.mp4">
+            </video>
+        </div>
+    </div>
+</div>
+<a data-toggle="modal" data-target=".bs-example-modal-lg">模态框2</a>
+<!-- Large modal -->
+<div class="modal fade bs-example-modal-lg bg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="overflow-y: hidden;">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content bg">
+            <div class="close"></div>
+            <video  class="vid" width="432" autoplay loop>
+                <source src="../imgs/wosen-boyfriends/video_2.mp4">
+            </video>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../js/oppo-boyfriends-wosen.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script>
+    $(".close").click(function(){
+        $('.modal').slideUp();
+        $(".modal-backdrop").removeClass().addClass("");
+
+    });
+</script>

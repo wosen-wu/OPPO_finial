@@ -1,0 +1,246 @@
+
+
+i{
+    background: url("../imgs/zx/logo.png");    /*******图片链接地址************8*/
+    /*background-repeat: no-repeat;*/     /*修改部分*/
+    background-position: -397px -40px;
+}
+.ff_header{
+    position: relative;
+    background-color: white;
+}
+.ff_header .container{
+     width: 90%;
+     /*min-width: 1200px;*/
+    position: relative;
+    margin:  0 auto;
+    padding: 0;
+    z-index: 60;
+    /*background-color: white;*/
+}
+.ff_header  .header-nav{
+    /*position: absolute;*/
+    width: 100%;
+    height: 60px;
+}
+.ff_header .logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    display: table;
+}
+.header-nav  .logo_i{
+    display: block;
+    width: 125px;
+    height: 23px;
+    background-position: -85px -295px;
+}
+.header-nav .logo a {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+/*a {
+    outline: 0;
+    color: inherit;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}*/
+.header-nav .nav{
+    height: 60px;
+    line-height: 60px;
+}
+.header-nav .nav a{
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+    transition: all 0.5s;
+}
+.header-nav .nav ul{
+    text-align: center;
+    width: 100%;
+}
+.header-nav .nav li{
+    width: 8%;
+    color: white;
+    display: inline-block;
+}
+.header-nav .nav a:hover{
+    color: #666666;
+}
+.header-nav .right-nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 167px;
+    height: 60px;
+    /*border: 1px solid #000000;*/
+}
+.right-nav a{
+    text-align: right;
+    display: inline-block;
+    margin-left: 45px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+}
+.right-nav a .right_nav-i1{
+    background-position: -432px -216px;
+    display: inline-block;
+    width: 0px;
+    height: 23px;
+}
+.right-nav a .right_nav-i2{
+    background-position: -432px -279px;
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+}
+/****logo*********/
+.ff_small-heard{
+    position: relative;
+    width: 100%;
+    height: 1.7rem;
+}
+.ff_small-heard .heard-btnCol{
+    float: left;
+    width: 1.2rem;
+    height: 1.2rem;
+    position: absolute;
+    left: 0;
+}
+.ff_small-heard .small-logo{
+    width: 100%;
+    height: 1.7rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: table;
+}
+.ff_small-heard .small-logo a {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+/*.ff_small-heard .small-logo i{
+    background: url("../imgs/ff/logo.png");
+    background-repeat: no-repeat;
+    background-position: -397px -40px;
+}*/
+.ff_small-heard  .slogo_i{
+    display: inline-block;
+    background-position: -85.4px -292.9px;
+    /*background-size: 14.08888889rem 13.5rem;*/
+    width: 125px;
+    height: 30px;
+}
+/*****小按钮*********/
+.ff_nav{
+    position: fixed;
+    height: 0;
+    width: 100%;
+    z-index: 20;
+    display: table;
+    background-color: white;
+    overflow: hidden;
+}
+.ff_nav .ff_over-btn{
+    width: 100%;
+    padding-top: 60px;
+    display: table-cell;
+    /*text-align: center;*/
+    /*text-align: right;*/
+    /*vertical-align: middle;*/
+    height: 100%;
+    z-index: 999;
+    position: absolute;
+    /*text-align: center;*/
+    left: 99%;
+    /*transform: translateX(-30px);*/
+}
+.ff_over-btn li{
+    display: inline-block;
+    width: 80%;
+    position: relative;
+    opacity: 0;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px #EAEAEA solid;
+}
+.ff_over-btn li a{
+    width: 100%;
+    outline: 0;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    color: black;
+}
+.ff_over-btn li a:hover{
+    color: black;
+    text-decoration: none;
+}
+/*****头像*****/
+.ff_man{
+    position: absolute;
+    right: 3%;
+    top: 29%;
+    /*width: 1.2rem;
+     height: 1.2rem;*/
+
+}
+.ff_man a{
+    /*display: inline-block;*/
+
+}
+.ff_man .ff_head-i{
+    display: inline-block;
+    background-position: -13.4rem -22.5rem;
+    background-size: 14.08888889rem 13.5rem;
+    width: 0.7rem;
+    height: 0.9rem;
+}
+/*******标题按钮****************/
+.ff_small-heard .heard-btnCol{
+    z-index:9999;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+#openMenu .open-menu-bar/*,.open-menu-bar::after,.open-menu-bar::before*/{
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 0;
+    width: 0.85rem;
+    height: 0.03rem;
+    background-color: white;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transform-origin: right;
+}
+#openMenu .open-menu-bar:first-child{
+    top: 0;
+}
+#openMenu .open-menu-bar:last-child{
+    top: 22px;
+}
+/**::before, *::after {
+    box-sizing: border-box;
+}*/
+
+#openMenu.isOpen>i:first-child {
+    -webkit-transform: rotate(-45deg) translate3d(-4px, -1px, 0);
+    transform: rotate(-45deg) translate3d(-4px, -1px, 0);
+}
+#openMenu.isOpen>i:nth-child(2) {
+    opacity: 0
+}
+#openMenu.isOpen>i:last-child {
+    -webkit-transform: rotate(45deg) translate3d(-2px, 4px, 0);
+    transform: rotate(45deg) translate3d(-2px, 4px, 0);
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--meta:vp-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--meta:compat-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../Font-Awesome-3.2.1/css/font-awesome.css">
+    <!--  cc:ie-->
+    <!--[if lt IE 9]>
+        <script src="../bootstrap/js/html5shiv.min.js"></script>
+        <script src="../bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .open-menu2{
+            position:relative;
+            top: 30px;
+            left: 100px;
+            /*overflow: hidden;*/
+        }
+
+        .zsx_down /*,.open-menu-bar::after,.open-menu-bar::before*/{
+            content: '';
+            position: absolute;
+            top: 11px;
+            left: 0;
+            transition: all .3s ease-in-out;
+            -webkit-transition: all .3s ease-in-out;
+            transform-origin: center;
+        }
+
+
+        #openMenu2.isOpen>i:first-child {
+            -webkit-transform: rotate(-180deg) translate3d(-4px, -1px, 0);
+            transform: rotate(-180deg) translate3d(-4px, -1px, 0);
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+        .box:hover a{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<a id="openMenu2" class="open-menu2">
+    <i class="glyphicon glyphicon-menu-down zsx_down"></i>
+</a>
+<div class="box">
+    <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore?</a>
+</div>
+</body>
+</html>
+<script src="../bootstrap/js/jquery-1.11.3.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script>
+    $('#openMenu2').click(function(){
+        $(this).toggleClass('isOpen');
+    })
+</script>

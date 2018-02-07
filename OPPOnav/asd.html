@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    circle {
+        -webkit-transition: stroke-dasharray .25s;
+        transition: stroke-dasharray .25s;
+    }
+</style>
+<body>
+<svg width="20" height="20" viewbox="0 0 440 440">
+    <circle cx="220" cy="220" r="170" stroke-width="50" stroke="#D1D3D7" fill="none"></circle>
+    <circle cx="220" cy="220" r="170" stroke-width="50" stroke="#00A5E0" fill="none" transform="matrix(0,-1,1,0,0,440)" stroke-dasharray="0 1069"></circle>
+</svg>
+<input type="button" id="btn"/>
+</body>
+</html>
+<script>
+    var index=0;
+    function change(){
+        index+=0.02;
+            var circle = document.querySelectorAll("circle")[1];
+            var percent = index;
+            var perimeter = Math.PI * 2 * 170;
+            circle.setAttribute('stroke-dasharray', perimeter * percent + " " + perimeter *   (1- percent));
+    }
+    setInterval(change,100);
+
+
+</script>

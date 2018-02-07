@@ -1,0 +1,910 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+body {
+  overflow-x: hidden;
+}
+/*头部*/
+#xf-Head {
+  visibility: visible;
+  /* visibility: hidden;*/
+  transition: all 0.3s;
+  float: left;
+  z-index: 10;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.95);
+}
+#xf-Head .Logo-Box {
+  width: 980px;
+  top: 0;
+  position: relative;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.95);
+  margin: 0 auto;
+}
+#xf-Head .Logo-Box .logo {
+  position: relative;
+  top: 12px;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  display: inline-block;
+  width: 100px;
+  height: 17px;
+  background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/logo.svg?201707261604);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+#xf-Head .Back-Box {
+  text-decoration: none;
+  position: relative;
+  top: 10px;
+  font-size: 16px;
+  float: right;
+  display: block;
+  width: auto;
+  height: auto;
+  color: #fff;
+  font-weight: 400;
+}
+/*头部结束*/
+/*巨幕背景部分*/
+#xf-HugeBg {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 710px;
+  /*border: 1px solid #0f0;*/
+}
+#xf-HugeBg .xf-HugeBg-Vid {
+  float: left;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 710px;
+}
+/*这是管视频的*/
+#HugeBg-play {
+  display: block;
+  width: 100%;
+  /*width: 100%;*/
+  position: relative;
+  left: 0;
+}
+/*这是视频*/
+.bg {
+  background-color: #000;
+  height: 668px;
+  /*  width: 432px;*/
+}
+/*vid1{
+
+}*/
+.vidx {
+  /*margin: 0 auto;
+  margin-left: 230px;*/
+}
+.close {
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  right: -130px;
+  top: 65px;
+  position: fixed;
+  background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/close.svg?201707261604);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  opacity: 1;
+}
+.modal-backdrop {
+  position: relative;
+  z-index: 0;
+}
+.modal-backdrop .in {
+  opacity: 0;
+}
+/*巨幕背景部分结束*/
+/*巨幕内容部分*/
+@keyframes pop1 {
+  from {
+    top: 50px;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+#xf-HugeBg-Cont {
+  position: absolute;
+  width: 980px;
+  margin: auto 14%;
+  z-index: 3;
+  padding-top: 180px;
+  background: rgba(255, 255, 255, 0);
+  color: white;
+  line-height: 50px;
+  opacity: 0;
+  animation: pop1 1s forwards cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+#xf-HugeBg-Cont h2 {
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+#xf-HugeBg-Cont h1 {
+  font-family: FZLTZH;
+  margin-bottom: 20px;
+  font-size: 48px;
+}
+#xf-HugeBg-Cont p {
+  margin-top: 30px;
+  line-height: 30px;
+  width: 350px;
+  height: 120px;
+  font-size: 18px;
+  letter-spacing: 0.35px;
+}
+.play {
+  margin-top: 50px;
+  text-align: center;
+  display: inline-block;
+  border: 2px solid #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  color: #fff;
+  cursor: pointer;
+}
+.play i {
+  line-height: 60px;
+  height: 30px;
+  font-size: 31px;
+  margin-left: 3px;
+}
+/*巨幕内容部分结束*/
+/*中间内容部分*/
+@keyframes pop {
+  from {
+    top: 200px;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+#xf-Body {
+  float: left;
+  width: 100%;
+  height: auto;
+  /*中间内容部分1*/
+  /*中间内容部分1结束*/
+  /*中间轮播部分1*/
+  /*轮播一结束*/
+  /*中间内容部分2*/
+  /*中间内容部分2结束*/
+  /*中间轮播部分2*/
+  /*中间轮播部分2结束*/
+  /*中间内容部分3*/
+  /*中间内容部分3结束*/
+  /*这是点击图片的效果 未完成*/
+  /*.real{
+    !*点击弹出模态框的图片*!
+    margin: 30px;
+    width: 250px;
+    border-radius:6px;
+  }
+  .motai{
+    display: none;!*隐藏*!
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+  }
+  .motaiimg{
+    display: block;
+    margin:25px auto;
+    min-height: 500px;
+    max-width: 750px;
+    border: 1px solid #000;
+  }
+  .caption{
+    text-align: center;
+    margin: 15px auto;
+    width: 60%;
+    max-height: 750px;
+    font-size: 20px;
+    color:#ccc;
+  }
+  .motaiimg,.caption{
+    -webkit-animation: first 1s;
+    -o-animation: first 1s;
+    animation: first 1s;
+  }
+  @keyframes first{
+    from{transform: scale(0.1);}
+    to{transform: scale(1);}
+  }
+  .closeimg{
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 14%;
+    color:#f1f1f1;
+  }
+  .closeimg:hover,
+  .closeimg:focus{
+    color:#bbb;
+    cursor:pointer;
+  }
+  @media only screen and(max-width:750px ) {
+    .motaiimg{
+      width: 100%;
+    }
+  }*/
+  /*中间轮播部分3*/
+  /*中间轮播部分3结束*/
+}
+#xf-Body .xf-Body-Cont {
+  background: #E7EEEA;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  float: left;
+  width: 70%;
+  height: 656px;
+  margin-left: 15%;
+}
+#xf-Body .xf-Body-Cont .xf-Body-Cont-Font {
+  position: relative;
+  background: #E7EEEA;
+  float: left;
+  width: 50%;
+  height: 100%;
+  padding: 80px 0;
+}
+#xf-Body .xf-Body-Cont .xf-Body-Cont-Font .xf-Body-Cont-Font-inner {
+  opacity: 0;
+  animation: pop 1s forwards cubic-bezier(0.39, 0.575, 0.565, 1);
+  position: relative;
+  padding: 80px 0;
+  width: 900px;
+  box-sizing: border-box;
+  padding-left: 80px;
+}
+#xf-Body .xf-Body-Cont .xf-Body-Cont-Font .xf-Body-Cont-Font-inner h2 {
+  font-size: 32px;
+  letter-spacing: 1.1px;
+}
+#xf-Body .xf-Body-Cont .xf-Body-Cont-Font .xf-Body-Cont-Font-inner h3 {
+  font-weight: 600;
+  padding-top: 24px;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: .62px;
+}
+#xf-Body .xf-Body-Cont .xf-Body-Cont-Font .xf-Body-Cont-Font-inner p {
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 1px;
+  margin-top: 48px;
+  width: 335px;
+  color: #333;
+}
+#xf-Body .xf-Body-Cont .xf-Body-Cont-Img {
+  float: right;
+  width: 50%;
+  height: 100%;
+}
+@media only screen and (max-width: 1920px) and (min-width: 1024px) {
+  #xf-Body .xf-Body-Cont-Img {
+    background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/photo1.jpg?201707261604);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 490px;
+    height: 656px;
+  }
+  #xf-Body .xf-Body-Cont-Img2 {
+    background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/photo2.jpg?201707261604);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  #xf-Body .xf-Body-Cont-Img3 {
+    background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/photo3.jpg?201707261604);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+}
+#xf-Body .xf-Body-Carousel1 {
+  width: 100%;
+  float: right;
+  /*中间轮播部分1结束*/
+}
+#xf-Body .xf-Body-Carousel1 .xf-slider {
+  margin: 0 auto 10px !important;
+}
+#xf-Body .xf-Body-Carousel1 .slider {
+  width: 100%;
+  overflow: hidden;
+}
+#xf-Body .xf-Body-Carousel1 .xf-slider .cnt {
+  position: relative;
+  left: 0;
+  width: 2000%;
+  top: 0;
+}
+#xf-Body .xf-Body-Carousel1 .xf-slider .cnt li {
+  float: left;
+  height: 248px;
+  margin-right: 5px;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+}
+#xf-Body .xf-Body-Carousel1 .xf-slider .cnt img {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+}
+#xf-Body .xf-Body-Carousel1 .xf-slider .cnt p {
+  margin: 10px 0;
+}
+#xf-Body .xf-Body-Carousel1 .xf-slider .xf-icons {
+  text-align: center;
+  color: #000;
+  position: relative;
+  z-index: 999;
+}
+#xf-Body .xf-Body-Carousel1 .xf-slider .xf-icons span {
+  background: #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 2px #b0b0b0 inset;
+  display: inline-block;
+  height: 10px;
+  margin: 0 3px;
+  overflow: hidden;
+  text-indent: -99em;
+  width: 10px;
+}
+#xf-Body .xf-Body-Carousel1 .xf-slider .xf-icons .curr {
+  background: #808b86;
+}
+#xf-Body .xf-Body-Carousel1 .carousel-control {
+  top: -156px;
+  position: relative;
+  width: 100%;
+}
+#xf-Body .xf-Body-Carousel1 .carousel-control .right:hover {
+  background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/next.svg?201707261604);
+}
+#xf-Body .xf-Body-Carousel1 .carousel-control .left:hover {
+  background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/pre.svg?201707261604);
+}
+#xf-Body .xf-Body-Carousel1 .carousel-control .left {
+  float: left;
+  width: 40px;
+  height: 40px;
+  background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/pre-default.svg?201707261604);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+#xf-Body .xf-Body-Carousel1 .carousel-control .right {
+  width: 40px;
+  height: 40px;
+  float: right;
+  background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/next-default.svg?201707261604);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+#xf-Body .xf-Body-Cont-Img2 {
+  float: right;
+  width: 50%;
+  height: 100%;
+}
+#xf-Body .xf-Body-Carousel2 {
+  width: 100%;
+  float: right;
+  /*中间轮播部分1结束*/
+}
+#xf-Body .xf-Body-Carousel2 .xf-slider {
+  margin: 0 auto 10px !important;
+}
+#xf-Body .xf-Body-Carousel2 .slider {
+  width: 100%;
+  overflow: hidden;
+}
+#xf-Body .xf-Body-Carousel2 .xf-slider .cnt {
+  position: relative;
+  left: 0;
+  width: 2000%;
+  top: 0;
+}
+#xf-Body .xf-Body-Carousel2 .xf-slider .cnt li {
+  float: left;
+  height: 248px;
+  margin-right: 5px;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+}
+#xf-Body .xf-Body-Carousel2 .xf-slider .cnt img {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+}
+#xf-Body .xf-Body-Carousel2 .xf-slider .cnt p {
+  margin: 10px 0;
+}
+#xf-Body .xf-Body-Carousel2 .xf-slider .xf-icons {
+  text-align: center;
+  color: #000;
+  position: relative;
+  z-index: 999;
+}
+#xf-Body .xf-Body-Carousel2 .xf-slider .xf-icons span {
+  background: #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 2px #b0b0b0 inset;
+  display: inline-block;
+  height: 10px;
+  margin: 0 3px;
+  overflow: hidden;
+  text-indent: -99em;
+  width: 10px;
+}
+#xf-Body .xf-Body-Carousel2 .xf-slider .xf-icons .curr {
+  background: #808b86;
+  box-shadow: 0 0 2px #b0b0b0 inset;
+}
+#xf-Body .xf-Body-Carousel2 .carousel-control {
+  top: -156px;
+  position: relative;
+  width: 100%;
+}
+#xf-Body .xf-Body-Carousel2 .carousel-control .right:hover {
+  background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/next.svg?201707261604);
+}
+#xf-Body .xf-Body-Carousel2 .carousel-control .left:hover {
+  background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/pre.svg?201707261604);
+}
+#xf-Body .xf-Body-Carousel2 .carousel-control .left {
+  float: left;
+  width: 40px;
+  height: 40px;
+  background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/pre-default.svg?201707261604);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+#xf-Body .xf-Body-Carousel2 .carousel-control .right {
+  width: 40px;
+  height: 40px;
+  float: right;
+  background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/next-default.svg?201707261604);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+#xf-Body .xf-Body-Cont-Img3 {
+  float: right;
+  width: 50%;
+  height: 100%;
+}
+#xf-Body .xf-Body-Carousel3 {
+  width: 100%;
+  float: right;
+  /*中间轮播部分1结束*/
+}
+#xf-Body .xf-Body-Carousel3 .xf-slider {
+  margin: 0 auto 10px !important;
+}
+#xf-Body .xf-Body-Carousel3 .slider {
+  width: 100%;
+  overflow: hidden;
+}
+#xf-Body .xf-Body-Carousel3 .xf-slider .cnt {
+  position: relative;
+  left: 0;
+  width: 2000%;
+  top: 0;
+}
+#xf-Body .xf-Body-Carousel3 .xf-slider .cnt li {
+  float: left;
+  height: 248px;
+  margin-right: 5px;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+}
+#xf-Body .xf-Body-Carousel3 .xf-slider .cnt img {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+}
+#xf-Body .xf-Body-Carousel3 .xf-slider .cnt p {
+  margin: 10px 0;
+}
+#xf-Body .xf-Body-Carousel3 .xf-slider .xf-icons {
+  text-align: center;
+  color: #000;
+  position: relative;
+  z-index: 999;
+}
+#xf-Body .xf-Body-Carousel3 .xf-slider .xf-icons span {
+  background: #cccccc;
+  border-radius: 5px;
+  box-shadow: 0 0 2px #b0b0b0 inset;
+  display: inline-block;
+  height: 10px;
+  margin: 0 3px;
+  overflow: hidden;
+  text-indent: -99em;
+  width: 10px;
+}
+#xf-Body .xf-Body-Carousel3 .xf-slider .xf-icons .curr {
+  background: #808b86;
+}
+#xf-Body .xf-Body-Carousel3 .carousel-control {
+  top: -156px;
+  position: relative;
+  width: 100%;
+}
+#xf-Body .xf-Body-Carousel3 .carousel-control .right:hover {
+  background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/next.svg?201707261604);
+}
+#xf-Body .xf-Body-Carousel3 .carousel-control .left:hover {
+  background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/pre.svg?201707261604);
+}
+#xf-Body .xf-Body-Carousel3 .carousel-control .left {
+  float: left;
+  width: 40px;
+  height: 40px;
+  background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/pre-default.svg?201707261604);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+#xf-Body .xf-Body-Carousel3 .carousel-control .right {
+  width: 40px;
+  height: 40px;
+  float: right;
+  background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/next-default.svg?201707261604);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+/*中间内容部分结束*/
+/*中间拍照指南部分*/
+/*这是h2的*/
+@keyframes pop2 {
+  from {
+    top: 160px;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+#xf-Body-PhGuide {
+  background-color: #F6F1F1;
+  float: left;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+#xf-Body-PhGuide h2 {
+  position: relative;
+  opacity: 0;
+  animation: pop2 1s forwards cubic-bezier(0.39, 0.575, 0.565, 1);
+  font-family: FZLTZH;
+  font-weight: 600;
+  color: #333;
+  margin-top: 100px;
+  font-size: 32px;
+  letter-spacing: 1.23px;
+}
+#xf-Body-PhGuide p {
+  position: relative;
+  opacity: 0;
+  animation: pop 1s forwards cubic-bezier(0.39, 0.575, 0.565, 1);
+  font-family: 'FZLTXHJW';
+  font-size: 22px;
+  letter-spacing: .68px;
+  margin-top: 20px;
+  color: #333333;
+}
+#xf-Body-PhGuide .xf-Body-PhGuide-cont {
+  position: relative;
+  opacity: 0;
+  animation: pop 1s forwards cubic-bezier(0.39, 0.575, 0.565, 1);
+  margin-top: 50px;
+  float: left;
+  margin-left: 14%;
+  max-height: 800px;
+}
+#xf-Body-PhGuide .xf-Body-PhGuide-cont .xf-Guide-Video {
+  width: 100%;
+  height: 364px;
+}
+#xf-Body-PhGuide .xf-Body-PhGuide-cont .xf-Guide-Video .vid {
+  z-index: 5;
+  position: relative;
+  margin-right: 4px;
+  width: 242px;
+  height: 364px;
+  float: left;
+  opacity: 0;
+}
+#xf-Body-PhGuide .xf-Body-PhGuide-cont .xf-Guide-Video .vid .inner-font {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+#xf-Body-PhGuide .xf-Body-PhGuide-cont .xf-Guide-Video .vid .inner-font h3 {
+  line-height: 50px;
+  font-weight: 500;
+  font-family: FZLTZH;
+  font-size: 30px;
+  letter-spacing: 2.31px;
+  display: inline-block;
+  padding: 40px 24px 0;
+  text-align: left;
+}
+#xf-Body-PhGuide .xf-Body-PhGuide-cont .xf-Guide-Video .vid .inner-font .vid-play {
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-left: 24px;
+  margin-top: 146px;
+  background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/play.svg?201707261604);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+#xf-Body-PhGuide .xf-Body-PhGuide-cont .xf-Guide-Video .Vid1 {
+  position: relative;
+  opacity: 0;
+  animation: pop3 0.8s forwards cubic-bezier(0.39, 0.575, 0.565, 1);
+  background: url("../imgs/wosen-boyfriends/mobile1.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  /*这是视频*/
+}
+@keyframes pop3 {
+  from {
+    top: 150px;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+#xf-Body-PhGuide .xf-Body-PhGuide-cont .xf-Guide-Video .Vid1 .dg1 {
+  float: left;
+  opacity: 0;
+  width: 1600px;
+  height: 800px;
+  z-index: 30;
+  background: #000000;
+  position: fixed;
+  top: -100%;
+  left: 0;
+  margin-top: -300px;
+  transition: all .6s linear;
+}
+#xf-Body-PhGuide .xf-Body-PhGuide-cont .xf-Guide-Video .Vid1 .dg1 .close1 {
+  width: 50px;
+  height: 50px;
+  right: 50px;
+  top: 67px;
+  position: fixed;
+  background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/close.svg?201707261604);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+#xf-Body-PhGuide .xf-Body-PhGuide-cont .xf-Guide-Video .Vid1 .dg1 .vid1 {
+  margin-top: 80px;
+  margin-left: 170px;
+}
+#xf-Body-PhGuide .xf-Body-PhGuide-cont .xf-Guide-Video .Vid2 {
+  position: relative;
+  opacity: 0;
+  animation: pop4 1s forwards cubic-bezier(0.39, 0.575, 0.565, 1);
+  background: url("../imgs/wosen-boyfriends/mobile2.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+@keyframes pop4 {
+  from {
+    top: 160px;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+#xf-Body-PhGuide .xf-Body-PhGuide-cont .xf-Guide-Video .Vid3 {
+  position: relative;
+  opacity: 0;
+  animation: pop5 1.2s forwards cubic-bezier(0.39, 0.575, 0.565, 1);
+  background: url("../imgs/wosen-boyfriends/mobile3.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+@keyframes pop5 {
+  from {
+    top: 170px;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+#xf-Body-PhGuide .xf-Body-PhGuide-cont .xf-Guide-Video .Vid4 {
+  position: relative;
+  opacity: 0;
+  animation: pop6 1.5s forwards cubic-bezier(0.39, 0.575, 0.565, 1);
+  background: url("../imgs/wosen-boyfriends/mobile4.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+@keyframes pop6 {
+  from {
+    top: 185px;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+/*.xf-Guide-Video-vid{
+  opacity: 0;
+}*/
+/*中间拍照指南部分结束*/
+/*中间产品介绍部分*/
+#xf-Body-Product {
+  opacity: 0;
+  animation: pop6 1.5s forwards cubic-bezier(0.39, 0.575, 0.565, 1);
+  margin-top: 100px;
+  float: left;
+  width: 980px;
+  height: 1126px;
+  margin-left: 180px;
+}
+#xf-Body-Product .xf-Body-Product-cont {
+  width: 100%;
+  float: left;
+  height: 825px;
+}
+#xf-Body-Product .xf-Body-Product-cont .Product-cont-img {
+  /*width:453px;*/
+  height: 825px;
+  position: relative;
+  background-image: url(../imgs/wosen-boyfriends/group.png);
+  float: left;
+  background-size: 100% 100%;
+  width: 50%;
+}
+@keyframes pop6 {
+  from {
+    top: 185px;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+#xf-Body-Product .xf-Body-Product-cont .Product-cont-font {
+  padding-top: 200px;
+  padding-left: 65px;
+  float: right;
+  width: 50%;
+  height: 100%;
+}
+#xf-Body-Product .xf-Body-Product-cont .Product-cont-font h2 {
+  letter-spacing: .001rem;
+  font-weight: 600;
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+#xf-Body-Product .xf-Body-Product-cont .Product-cont-font h1 {
+  font-family: FZLTZH;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+#xf-Body-Product .xf-Body-Product-cont .Product-cont-font p {
+  /*margin-top:30px;*/
+  line-height: 30px;
+  height: 120px;
+  font-size: 18px;
+  letter-spacing: 0.35px;
+}
+#xf-Body-Product .xf-Body-Product-cont .Product-cont-font a {
+  text-decoration: none;
+  display: inline-block;
+  width: 140px;
+  height: 44px;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 44px;
+  border-radius: 22px;
+  font-family: FZLTZH;
+  font-size: 18px;
+  font-weight: 500;
+}
+#xf-Body-Product .xf-Body-Product-cont .Product-cont-font .a1 {
+  color: #333;
+}
+#xf-Body-Product .xf-Body-Product-cont .Product-cont-font .a2 {
+  color: white;
+  background-color: #00925f;
+}
+/*中间产品介绍部分结束*/
+/*底部注释部分*/
+#xf-Foot-Remark {
+  float: left;
+  width: 100%;
+  height: 60px;
+  background-color: #F7F7F7;
+  font-size: 12px;
+}
+#xf-Foot-Remark p {
+  margin-top: 20px;
+  text-align: center;
+}
+/*底部注释部分结束*/
+/*底部版权部分结束*/
+#xf-Bottom-State {
+  float: left;
+  width: 100%;
+  height: 100px;
+  border: 1px solid #000;
+  text-align: center;
+  background-color: #333333;
+}
+#xf-Bottom-State a {
+  position: relative;
+  top: 30px;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  display: inline-block;
+  width: 100px;
+  height: 17px;
+  background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/logo.svg?201707261604);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-left: -65px;
+}
+#xf-Bottom-State .xf-text-copyright {
+  color: white;
+  margin-top: 10px;
+  top: 20px;
+  position: relative;
+  font-size: 12px;
+}
+/*底部版权部分结束*/

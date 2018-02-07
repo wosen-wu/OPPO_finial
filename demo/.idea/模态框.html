@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .mask{
+            background: rgba(0,0,0,.4);
+            position: absolute;
+            z-index: 10;
+            display: none;
+        }
+        .box{
+            width:296px;
+            height:180px;
+            position: relative;
+            margin:0 auto;
+        }
+        #btn{
+            position: absolute;
+            left:0;
+            bottom: 0;
+        }
+        .dg{
+            opacity: 0;
+            width: 700px;
+            height: 400px;
+            z-index: 20;
+            position: fixed;
+            left: 50%;
+            margin-left: -350px;
+            top:-100%;
+            margin-top: -200px;
+            background: greenyellow;
+            transition: all .6s linear;
+        }
+        .dg img{
+            width: 100%;
+            height: 100%;
+        }
+        .close{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 40px;
+            height: 40px;
+            background: #aa0000;
+            cursor: pointer;
+        }
+        .dg h2{
+            height: 60px;
+            line-height: 60px;
+            font-size: 20px;
+            font-weight: normal;
+            padding-left: 20px;
+            background: #666;
+            color:#ddd;
+        }
+    </style>
+</head>
+<body>
+<div class="mask" id="Mask"></div><!--遮罩层-->
+<!--//弹出框-->
+<div class="mask-bg"></div><!--遮罩层-->
+<!--//弹出框-->
+<div class="dg">
+    <div class="close"></div>
+    <video width="100%" class="vid" autoplay>
+        <source src="../imgs/wosen-boyfriends/head_video.mp4">
+    </video>
+</div>
+</div>
+
+</body>
+</html>
+<script src="jquery-1.11.3.js"></script>
+<script>
+    $('#HugeBg-play-vid').on("click", function(){
+                $('.Mask-bg').slideDown('fast');
+                $(".dg").css({'opacity':'1','top':'300px'});
+                /*$("#xf-Head").css("display","none");*/
+                $("body").toggleClass("overflow-y","hidden");
+                $('.Mask-bg').css("display","block");
+            }
+
+    );
+    $(".close").on("click",function(){
+        setTimeout(function(){
+            $('.Mask-bg').slideUp();
+        },600);
+        $(".dg").css({'opacity':'0','top':'-100%'});
+    });
+
+
+</script>

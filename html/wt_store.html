@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>北京市OPPO体验店-OPPO智能手机官网</title>
+    <link rel="icon" href="../imgs/op_icon.jpg" type="image/x-icon"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!--<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">-->
+    <link rel="stylesheet" href="../bootstrap/css/Zsxbootstrap.css"/>
+    <link rel="stylesheet" href="../css/wt_store.css">
+    <link rel="stylesheet" href="../css/globle.css">
+    <link href="//at.alicdn.com/t/font_488056_msg23kar4yousor.css" rel="stylesheet">
+    <link rel="stylesheet" href="../OPPOnav/css/head_white.css">
+    <!--<link rel="icon" href="../imgs/wt/op_icon.jpg" type="image/x-icon"/>-->
+    <!--[if IE 9]>
+    <script src="../bootstrap/js/html5shiv.min.js"></script>
+    <script src="../bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        #zsx_navTop{
+            position: absolute;
+            background: transparent;
+        }
+        /* ------------------------------------------头部--------------------------------------------------*/
+        /* 面包屑按钮转换*/
+        .open-menu{
+            position:relative;
+            top: 10px;
+            left: 10px;
+            width: 30px;
+            height: 34px;
+            color: #00A5E0;
+            float: left;
+            /*overflow: hidden;*/
+        }
+
+        .open-menu-bar/*,.open-menu-bar::after,.open-menu-bar::before*/{
+            content: '';
+            position: absolute;
+            top: 9px;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background-color: #fff;
+            transition: all .3s ease-in-out;
+            -webkit-transition: all .3s ease-in-out;
+            transform-origin: right;
+        }
+        .open-menu-bar:first-child{
+            top: 0;
+        }
+        .open-menu-bar:last-child{
+            top: 18px;
+        }
+        #openMenu.isOpen>i:first-child {
+            -webkit-transform: rotate(-45deg) translate3d(-2px, -4px, 0);
+            transform: rotate(-45deg) translate3d(-2px, -4px, 0);
+        }
+        #openMenu.isOpen>i:nth-child(2) {
+            opacity: 0
+        }
+        #openMenu.isOpen>i:last-child {
+            -webkit-transform: rotate(45deg) translate3d(-2px, 4px, 0);
+            transform: rotate(45deg) translate3d(-2px, 4px, 0);
+        }
+
+
+        /*旋转箭头图标*/
+        .open-menu2{
+            position:relative;
+            top: 0px;
+            right: -94%;
+            /*overflow: hidden;*/
+        }
+        .zsx_down /*,.open-menu-bar::after,.open-menu-bar::before*/{
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 0;
+            transition: all .3s ease-in-out;
+            -webkit-transition: all .3s ease-in-out;
+            transform-origin: center;
+        }
+
+
+        #openMenu2.isOpen span >i:first-child {
+            -webkit-transform: rotate(-180deg) translate3d(-4px, -1px, 0);
+            transform: rotate(-180deg) translate3d(-4px, -1px, 0);
+        }
+        /* ------------------------------------------头部结束--------------------------------------------------*/
+        /* .navbar-nav.active li a{
+             color: #fff;
+         }
+        .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+                 color: #555;
+                 background-color: #fff;
+             }*/
+        #Col .navbar-nav > li.actv a{
+            color: #fff;
+        }
+        #Col .navbar-nav > li.actv2 a{
+            color: #333;
+        }
+        #zsx_navTop .container .navbar-header>.zsxActiv.actv3 svg{
+            fill:#fff ;
+        }
+        #zsx_navTop .container .navbar-header>.zsxActiv.actv4 svg{
+            fill:#333 ;
+        }
+        #Col.zsxAct i{
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+<!--toubuzsx-->
+<div class="navbar navbar-default zsx_bg" id="zsx_navTop">
+    <div class="container">
+        <div class="navbar-header" style="text-align: center">
+            <button class="navbar-toggle open-menu" id="openMenu" data-toggle="collapse" data-target="#Col">
+                <i class="open-menu-bar"></i>
+                <i class="open-menu-bar"></i>
+                <i class="open-menu-bar"></i>
+            </button>
+            <a href="" class="navbar-brand svg_z zsxActiv">
+                <svg class="oppo-logo-common" viewBox="0 0 415 67" width="100%" height="100%" class="icon">
+                    <path d="M48.9.3C22.1.3.3 11.2.3 24.5s21.8 24.2 48.6 24.2 48.6-10.8 48.6-24.2S75.8.3 48.9.3zm-4.7 41.4c-17.9 0-32.4-7.8-32.4-17.5S26.3 6.7 44.2 6.7s32.4 7.8 32.4 17.5-14.5 17.5-32.4 17.5zM366.1.3c-26.9 0-48.6 10.8-48.6 24.2s21.8 24.2 48.6 24.2 48.6-10.8 48.6-24.2S392.9.3 366.1.3zm-4.8 41.4c-17.9 0-32.4-7.8-32.4-17.5s14.5-17.5 32.4-17.5 32.4 7.8 32.4 17.5-14.4 17.5-32.4 17.5zM156.1.3c-8.3 0-16.7 1-22.7 2.9v6.6c5.8-2.1 11.9-3.1 18-3 17.9 0 32.3 7.8 32.3 17.5s-14.5 17.5-32.4 17.5c-12.6 0-23.9-3.9-28.9-9.6V1.7h-18v65h18V42c9 4.1 20.5 6.7 33.5 6.7 26.8 0 48.7-10.8 48.7-24.2S182.9.3 156.1.3zM262.6.3c-7.8 0-15.6.9-23.2 2.9v6.6c6-2 12.2-3 18.5-3 17.9 0 32.5 7.8 32.5 17.5S276 41.7 258.1 41.7c-12.6 0-23.7-3.9-28.7-9.6V1.7h-18v65h17.8V42.3c8.7 4.1 20.5 6.6 33.6 6.6 26.8 0 48.5-10.9 48.5-24.3S289.4.3 262.6.3z"></path></svg>
+            </a>
+            <a href="" class="navbar-brand Tbziti zsxActiv">
+                <svg t="1516584944160" class="icon" style="width: 20px;height: 20px;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1359" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><defs><style type="text/css"></style></defs><path d="M818.031487 66.875107 205.966467 66.875107c-46.02422 0-83.463923 37.439704-83.463923 83.463923L122.502543 873.66097c0 46.078455 37.438681 83.463923 83.463923 83.463923l612.06502 0c46.025243 0 83.463923-37.384445 83.463923-83.463923L901.49541 150.338007C901.49541 104.314811 864.05673 66.875107 818.031487 66.875107zM845.853136 873.66097c0 15.32401-12.497639 27.821649-27.821649 27.821649L205.966467 901.482619c-15.322987 0-27.821649-12.497639-27.821649-27.821649l0-83.463923 667.707294 0L845.852112 873.66097zM845.853136 734.582401l-667.707294 0L178.145841 150.338007c0-15.322987 12.497639-27.821649 27.821649-27.821649l612.06502 0c15.32401 0 27.821649 12.498662 27.821649 27.821649L845.854159 734.582401z" p-id="1360"></path><path d="M743.262596 234.725976c-0.272199 0-0.543376 0-0.86981 0-15.32401 0.48914-27.386744 13.313214-26.951839 28.635177 0.055259 0.86981 1.738597 86.451978-53.360302 143.126768-33.744545 34.667567-82.649372 52.218292-145.462976 52.218292-203.822129 0-214.09203-195.617259-214.418464-203.930599-0.651846-15.32401-12.986779-26.298969-28.853142-26.733874-15.322987 0.597611-27.331485 13.420661-26.789133 28.744671 0.10847 2.554172 12.063757 257.562077 270.060739 257.562077 78.682014 0 141.170207-23.36515 185.782264-69.49784 71.50966-74.008574 68.792782-178.88211 68.683289-183.282327C770.539846 246.517533 758.204913 234.725976 743.262596 234.725976z" p-id="1361"></path></svg>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse topLi" id="Col">
+            <ul class="nav navbar-nav" id="xia">
+                <li class="xians"  id="openMenu2">
+                    <a href="#">手机
+                     <span class="open-menu2">
+                        <i class="glyphicon glyphicon-menu-down zsx_down"></i>
+                    </span>
+                    </a>
+                    <div class="zsx_hoVer">
+                        <div class="zsx_hoVerbox">
+                            <div class="zsx_navTopLeft">
+                                <img src="../imgs/zsx/zsx_topWrap1bot.jpg" class="zsx_bian" alt=""/>
+                                <img src="../imgs/zsx/zsx_lt_bota.png" alt=""/>
+                            </div>
+                            <div class="zsx_navToprigh">
+                                <ul>
+                                    <li>
+                                        <img src="../imgs/zsx/zsx_topWrap1left.jpg" alt=""/>
+                                        <img src="../imgs/zsx/zsx_topWrap1rig.png" alt=""/>
+                                        <h3>R11s 高配版</h3>
+                                    </li>
+                                    <li>
+                                        <img src="../imgs/zsx/zsx_topWrap2rig.jpg" alt=""/>
+                                        <img src="../imgs/zsx/zsx_topWrap2left.png" alt=""/>
+                                        <h3>A79</h3>
+                                    </li>
+                                    <li>
+                                        <img src="../imgs/zsx/zsx_topWrap3rig.jpg" alt=""/>
+                                        <img src="../imgs/zsx/zsx_topWrap3left.png" alt=""/>
+                                        <h3>A73</h3>
+                                    </li>
+                                    <li>
+                                        <img src="../imgs/zsx/zsx_topWrap4rig.jpg" alt=""/>
+                                        <img src="../imgs/zsx/zsx_topWrap4left.png" alt=""/>
+                                        <h3>A57</h3>
+                                    </li>
+                                    <li>
+                                        <img src="../imgs/zsx/zsx_topWrap5rig.jpg" alt=""/>
+                                        <img src="../imgs/zsx/zsx_topWrap5left.png" alt=""/>
+                                        <h3>A83</h3>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--点击箭头触发下拉菜单-->
+                    <div class="zsx_lt_bot">
+                        <div class="zsx_lt_navTop">
+                            <div class="zsx_lt_pict">
+                                <img src="../imgs/zsx/zsx_topWrap1bot.jpg" alt="" class="zsx_bian"/>
+                                <img src="../imgs/zsx/zsx_lt_bota.png" alt=""/>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="../imgs/zsx/zsx_topWrap1left.jpg" alt=""/>
+                                    <img src="../imgs/zsx/zsx_topWrap1rig.png" alt=""/>
+                                </a>
+                                <h3>R11s 高配版</h3>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../imgs/zsx/zsx_topWrap2rig.jpg" alt=""/>
+                                    <img src="../imgs/zsx/zsx_topWrap2left.png" alt=""/>
+                                </a>
+                                <h3>A79</h3>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../imgs/zsx/zsx_topWrap3rig.jpg" alt=""/>
+                                    <img src="../imgs/zsx/zsx_topWrap3left.png" alt=""/>
+                                </a>
+                                <h3>A73</h3>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../imgs/zsx/zsx_topWrap4rig.jpg" alt=""/>
+                                    <img src="../imgs/zsx/zsx_topWrap4left.png" alt=""/>
+                                </a>
+                                <h3>A57</h3>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../imgs/zsx/zsx_topWrap5rig.jpg" alt=""/>
+                                    <img src="../imgs/zsx/zsx_topWrap5left.png" alt=""/>
+                                </a>
+                                <h3>A83</h3>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="" >品牌</a></li>
+                <li><a href="#" >商城</a></li>
+                <li><a href="#" >体验店</a></li>
+                <li><a href="#" >服务</a></li>
+                <li><a href="#" >社区</a></li>
+                <li><a href="#" >ColorOS</a></li>
+                <li><a href="#" >云服务</a></li>
+            </ul>
+            <div class="zsx_ulBox"></div>
+        </div>
+    </div>
+</div>
+<!--头部点击按钮阴影遮罩层-->
+<div class="zsx_boxShadw"></div>
+
+
+<!--背景1-->
+<div class="wt_header">
+    <div class="banner">
+        <!-- 搜索1-->
+        <div class="wt_search">
+            <h2>查找体验店</h2>
+            <div class="search-input">
+                <i class="iconfont icon-sousuo4"></i> <input type="search" placeholder="搜索体验店" class="sec_input">
+
+            </div>
+            <div class="search-link">
+                <a href="#">查看所有体验店</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--背景2-->
+<div class="wt_header2" style="display: none">
+    <div class="banner2">
+        <!-- 搜索-->
+        <div class="wt_search2">
+            <h2>查找体验店</h2>
+            <div class="search-input2">
+                <i class="iconfont icon-sousuo4"></i>
+                <input type="search" placeholder="搜索体验店" class="sec_input2">
+            </div>
+            <div class="search-link2">
+                <a href="#">查看所有体验店</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--背景3-->
+<div class="wt_header3" style="display: none">
+    <div class="banner3">
+        <!-- 搜索-->
+        <div class="wt_search3">
+            <h2>查找体验店</h2>
+            <div class="search-input3">
+                <i class="iconfont icon-sousuo4"></i>
+                <input type="search" placeholder="搜索体验店" class="sec_input3">
+            </div>
+            <div class="search-link3">
+                <a href="#">查看所有体验店</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--背景4-->
+<div class="wt_header4" style="display: none">
+    <div class="banner4">
+        <!-- 搜索4-->
+        <div class="wt_search4">
+            <h2>查找体验店</h2>
+            <div class="search-input4">
+             <i class="iconfont icon-sousuo4"></i> <input type="search" placeholder="搜索体验店" class="sec_input4">
+
+            </div>
+            <div class="search-link4">
+                <a href="#">查看所有体验店</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--附近明星店-->
+<div class="wt_star container clearfix">
+    <div class="star-conter clearfix">
+        <div class="star-store">
+            <h2>附近明星店</h2>
+            <a href="#">查看更多</a>
+        </div>
+        <!-- 体验店列表-->
+        <div class="Exp-store clearfix">
+            <ul>
+                <li class="col-4 col-sm-6 col-xs-12">
+                            <dl >
+                                <dt>
+                                <h3>北京昌平华光店</h3>
+                                </dt
+                                <dd class="address">北京市昌平区鼓楼南大街20号华光电器城一层</dd>
+                                <dd class="tel">17310250930</dd>
+                            </dl>
+                </li>
+                <li class="col-4 col-sm-6 col-xs-12">
+                <dl>
+                    <dt>
+                    <h3>北京海淀五道口店</h3>
+                    </dt>
+                    <dd class="address">北京市海淀区成府路华清嘉园东北门</dd>
+                    <dd class="tel">010-82888189</dd>
+                </dl>
+            </li>
+                <li class="col-4 col-sm-6 col-xs-12">
+                    <dl>
+                        <dt>
+                        <h3>北京房山城关店</h3>
+                        </dt>
+                        <dd class="address">北京市房山区城关南大街大华百货底商</dd>
+                        <dd class="tel">010-69322339</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--附近明星店2-->
+<div class="wt_star2" style="display: none;">
+    <div class="star-conter2">
+        <div class="star-store2">
+            <h2>附近明星店</h2>
+            <a href="http://www.oppo.com/cn/shops/110100.html" class="ste-arraw-link" target="_blank">查看更多</a>
+        </div>
+        <div class="Exp-store2">
+            <ul>
+                <li class="col-4 col-sm-6 col-xs-12">
+                    <dl>
+                        <dt>
+                        <h3>北京昌平华光店</h3>
+                        <a class="ste-staritem-navi" href="//api.map.baidu.com/marker?location=40.224847,116.24064&amp;title=北京市[OPPO专卖店]&amp;content=OPPO专卖店 北京市昌平区鼓楼南大街20号华光电器城一层&amp;output=html"><i class="iconfont icon-daohang"></i>导航</a>
+                        </dt
+                        <dd class="address">北京市昌平区鼓楼南大街20号华光电器城一层</dd>
+                        <dd class="tel">17310250930</dd>
+                    </dl>
+                </li>
+                <li class="col-4 col-sm-6 col-xs-12">
+                    <dl >
+                        <dt>
+                        <h3>北京昌平华光店</h3>
+                        <a class="ste-staritem-navi" href="//api.map.baidu.com/marker?location=40.224847,116.24064&amp;title=北京市[OPPO专卖店]&amp;content=OPPO专卖店 北京市昌平区鼓楼南大街20号华光电器城一层&amp;output=html"><i class="iconfont icon-daohang"></i>导航</a>
+                        </dt
+                        <dd class="address">北京市昌平区鼓楼南大街20号华光电器城一层</dd>
+                        <dd class="tel">17310250930</dd>
+                    </dl>
+                </li>
+                <li class="col-4 col-sm-6 col-xs-12">
+                    <dl >
+                        <dt>
+                        <h3>北京昌平华光店</h3>
+                        <a class="ste-staritem-navi" href="//api.map.baidu.com/marker?location=40.224847,116.24064&amp;title=北京市[OPPO专卖店]&amp;content=OPPO专卖店 北京市昌平区鼓楼南大街20号华光电器城一层&amp;output=html"><i class="iconfont icon-daohang"></i>导航</a>
+                        </dt
+                        <dd class="address">北京市昌平区鼓楼南大街20号华光电器城一层</dd>
+                        <dd class="tel">17310250930</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--体验店活动-->
+<div class="wt_star-activity clearfix" >
+    <div class="activity-conter ">
+        <div class="activity-title">
+            <h2>体验店活动</h2>
+        </div>
+        <div class="activity-events clearfix">
+            <ul>
+                <li>
+                    <div class="ste-item-wrapper">
+                    <h2>OPPO 上海超级旗舰店开业</h2>
+                    <h3>开业时间：2017 年 12 月 24 日 15:00</h3>
+                        <p>12月24日，魔都上海，在这个时尚界必争之地，OPPO 首家超级旗舰店将在这里盛大开业。开业惊喜连连，我们在上海等你！</p>
+                        <div>
+                        <a href="#" alt="OPPO 全球首家超级旗舰店即将开业" title="OPPO 上海超级旗舰店开业" target="_blank" class="ste-arraw-link">了解更多</a>
+                       </div>
+                    </div>
+                </li>
+                <li >
+                    <div style="height: 100%;">
+                        <picture style="display: inline-block; height: 100%; width: auto;"><img src="../imgs/wt/activity-top.jpg" style="height: 100%"></picture>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li >
+                    <div class="ste-item-wrapper">
+                        <h2>OPPO Beauty Box快闪店</h2>
+                        <h3>时间：2017 年 11 月 10 日~11 月 19 日</h3>
+                        <p>OPPO Beauty Box 快闪店空降北上广深，时尚气息爆棚的设计风格吸引了大批时尚潮人和网红前来打卡，成为年轻用户新的拍照圣地。</p>
+                        <div>
+                            <a href="#" alt="OPPO 全球首家超级旗舰店即将开业" title="OPPO 上海超级旗舰店开业" target="_blank" class="ste-arraw-link">了解更多</a>
+                        </div>
+                    </div>
+                </li>
+                <li >
+                    <div style="height: 100%;">
+                        <picture style="display: inline-block; height: 100%; width: auto;"><img src="../imgs/wt/activity-bottom.jpg" style="height: 100%;"></picture>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--体验店活动2-->
+<div class="wt_star-activity2 clearfix" style="display: none">
+    <div class="activity-conter2 ">
+        <div class="activity-title2">
+            <h2>体验店活动</h2>
+        </div>
+        <div class="activity-events2 clearfix">
+            <ul>
+                <li>
+                    <div style="height: 100%;">
+                        <picture style="display: inline-block; height: 100%; width: auto;"><img src="../imgs/wt/activity-top.jpg" style="height: 100%"></picture>
+                    </div>
+                </li>
+                <li>
+                    <div class="ste-item-wrapper2">
+                        <h2>OPPO 上海超级旗舰店开业</h2>
+                        <h3>开业时间：2017 年 12 月 24 日 15:00</h3>
+                        <p>12月24日，魔都上海，在这个时尚界必争之地，OPPO 首家超级旗舰店将在这里盛大开业。开业惊喜连连，我们在上海等你！</p>
+                        <div>
+                            <a href="#" alt="OPPO 全球首家超级旗舰店即将开业" title="OPPO 上海超级旗舰店开业" target="_blank" class="ste-arraw-link2">了解更多</a>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+            <ul>
+                <li>
+                    <div style="height: 100%;">
+                        <picture style="display: inline-block; height: 100%; width: auto;"><img src="../imgs/wt/activity-bottom.jpg" style="height: 100%;"></picture>
+                    </div>
+                </li>
+                <li >
+                    <div class="ste-item-wrapper2">
+                        <h2>OPPO Beauty Box快闪店</h2>
+                        <h3>时间：2017 年 11 月 10 日~11 月 19 日</h3>
+                        <p>OPPO Beauty Box 快闪店空降北上广深，时尚气息爆棚的设计风格吸引了大批时尚潮人和网红前来打卡，成为年轻用户新的拍照圣地。</p>
+                        <div>
+                            <a href="#" alt="OPPO 全球首家超级旗舰店即将开业" title="OPPO 上海超级旗舰店开业" target="_blank" class="ste-arraw-link">了解更多</a>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<!--会员权益-->
+<div class="wt_Member">
+    <div class="Member-service container">
+        <h2>oppo 会员权益</h2>
+        <!-- 权益列表-->
+        <div class="Member-service-conter">
+            <ul>
+                <li>
+                   <img src="../imgs/wt/service1.png">
+                    <p>贴膜服务</p>
+                </li>
+                <li>
+                    <img src="../imgs/wt/service2.png">
+                    <p>碎屏无忧</p>
+                </li>
+                <li>
+                    <img src="../imgs/wt/service3.png">
+                    <p>维修费折扣</p>
+                </li>
+                <li>
+                    <img src="../imgs/wt/service4.png">
+                    <p>备用机</p>
+                </li>
+                <li>
+                    <img src="../imgs/wt/service5.png">
+                    <p>手机养护</p>
+                </li>
+                <li>
+                    <img src="../imgs/wt/service6.png">
+                    <p>会员积分</p>
+                </li>
+                <li>
+                    <img src="../imgs/wt/service7.png">
+                    <p>会员专属价</p>
+                </li>
+                <li>
+                    <img src="../imgs/wt/service8.png">
+                    <p>新机试用权</p>
+                </li>
+                <li>
+                    <img src="../imgs/wt/service9.png">
+                    <p>官方专属活动</p>
+                </li>
+                <li>
+                    <img src="../imgs/wt/service10.png">
+                    <p>生活权益</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--这是底部-->
+<iframe src="footer.html" frameborder="0" width="100%" scrolling="no" id="external-frame" onload="setIframeHeight(this)"></iframe>
+</body>
+</html>
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script src="../js/index_zsx.js"></script>
+<script>
+
+
+    /*  -----------------------------------头部导航结束-----------------------------------*/
+    /*底部*/
+    function setIframeHeight(iframe) {
+        if (iframe) {
+            var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+            if (iframeWin.document.body) {
+                iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+            }
+        }
+    }
+
+
+</script>
+

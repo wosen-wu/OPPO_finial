@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+
+    <title>OPPO手机摄影廊-使用OPPO手机拍摄作品</title>
+    <link rel="icon" href="../imgs/op_icon.jpg" type="image/x-icon"/>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/globle.css"/>
+    <link rel="stylesheet" href="../css/lx2.css"/>
+    <link rel="stylesheet" href="../css/head_white.css"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .lr_con{
+            padding: 20px 0;
+            border-top: 1px #ebebeb solid;
+        }
+
+        #oc-footer{
+            position: relative;
+            z-index: 10;
+            padding: 20px 0;
+        }
+        .co-footer{
+            font-size: 14px;
+        }
+        .of-nav{
+            position: relative;
+            width: 16rem;
+            margin: 0 auto;
+        }
+        .of-nav .of-directory{
+            float: left;
+            display: flex;
+            overflow: hidden;
+            width: 62%;
+        }
+        .of-nav .of-directory dl{
+            position: relative;
+            display: block;
+            box-sizing: border-box;
+            flex: 1;
+        }
+        dl{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-weight: 400;
+            float: left;
+
+
+        }
+        a {
+            background-color: transparent;
+        }
+        .of-nav .of-directory:after{
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        .of-nav .of-service{
+            float: right;
+            text-align: right;
+        }
+        .of-nav .of-service .of-serv-oppo{
+            margin-top: -5px;
+            margin-bottom: 20px;
+        }
+        .of-nav .of-service .of-serv-oppo .of-ico{
+            color: #ffffff;
+            background: #666666;
+            text-align: center;
+            transition: background .35s ease;
+            /* z-index: 20;*/
+        }
+        .btn-size-bottom{
+            width: 173px;
+            height: 51px;
+            line-height: 51px;
+            border-radius: 25.5px;
+
+        }
+        .oc-btn{
+            display: inline-block;
+            margin-bottom: 0;
+            vertical-align: middle;
+        }
+        b{
+            font-weight: 700;
+        }
+        .oc-iconfont-ooo:before{
+            content: "";
+        }
+        .oc-icon:before{
+            display: inline-block;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+        }
+        .of-nav .of-service .of-serv-oppo .of-ico span{
+            display: inline-block;
+            font-size: 15px;
+        }
+        .of-nav .of-service .of-serv-tel h3{
+            font-size: 24px;
+            line-height: 1;
+            font-weight: 400;
+            color:#333333;
+            margin: 0 0 7px 0;
+            padding: 0;
+            display: block;
+        }
+        .of-nav .of-service .of-serv-tel p{
+            font-size: 14px;
+            color: #828282;
+            margin: 0;
+            padding: 0;
+            font-weight: 400;
+            display: block;
+        }
+        .of-nav .of-service .of-serv-tel .of-tel {
+            /* display: none;*/
+        }
+
+        .of-nav .of-service .of-serv-tel .of-tel{
+            font-size: 24px;
+            line-height: 1;
+            font-weight: 400;
+            color: #333;
+            margin: 0 0 7px 0;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .of-copyright {
+            display: flex;
+            position: relative;
+            /*width: 14rem;*/
+            margin: 72px auto 0 auto;
+            padding-top: 24px;
+            color: #98979a;
+            box-sizing: border-box;
+            border-top: 1px #ebebeb solid;
+        }
+        .of-copyright .of-cp-content {
+            -webkit-box-flex: 1;
+            flex: 1;
+            font-size: 13px;
+            line-height: 25px;
+        }
+        .of-copyright .of-cp-content a {
+            color: inherit;
+        }
+
+        .of-copyright .of-gs-link {
+            display: inline-block;
+        }
+        .of-copyright .of-sns-content{
+            font-size: 13px;
+            text-align: right;
+            /* padding: 2em;*/
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .of-copyright .of-sns-content strong {
+            font-weight: 400;
+            display: inline-block;
+            vertical-align: middle;
+            font-style: normal;
+        }
+        .of-copyright .of-sns-content a{
+            color:#999;
+            font-size: 20px;
+            vertical-align: middle;
+            margin-left: 10px;
+            transition: color .35s ease;
+        }
+        .of-copyright .of-sns-content a b {
+            font-size: 16px;
+            vertical-align: middle;
+        }
+        .of-copyright .of-sns-content a.of-global-link {
+            margin-left: 15px;
+            padding-left: 10px;
+            position: relative;
+        }
+        .of-copyright .of-qrcode-model {
+            position: absolute;
+            display: none;
+            width: 296px;
+            height: 148px;
+            background-color: #fff;
+            border: 1px #ebebeb solid;
+            box-sizing: border-box;
+            right: 0;
+            bottom: 100%;
+            padding: 12px;
+        }
+        .of-copyright .of-qrcode-model .of-qrcode-view {
+            display: none;
+            height: 100%;
+        }
+        .of-copyright .of-qrcode-model .of-qrcode-view .qrcode-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 30px 0;
+        }
+        .oc-row .col-6 {
+            -webkit-box-flex: 0;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .of-copyright .of-sns-content a span {
+            font-size: 13px;
+            padding-left: .5em;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .oc-text-inside {
+            margin: -1px;
+            padding: 0;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            position: absolute;
+        }
+        .of-copyright .oc-icon-gs {
+            width: 15px;
+            height: 19px;
+            margin-left: 3px;
+            display: inherit;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            /*  background-image: url(../images/icon-gs@1x.png);*/
+            background-image: url("../imgs/footer/pa.png");
+        }
+        .of-copyright .of-sns-content{
+            box-sizing: border-box;
+            height: 100%;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-pack: center
+        }
+        .of-copyright .of-qrcode-model {
+            position: absolute;
+            width: 296px;
+            height: 148px;
+            background-color: #fff;
+            border: 1px #ebebeb solid;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            right: 0;
+            bottom: 100%;
+            padding: 12px;
+        }
+
+        /*@media (min-width: 768px){
+            .container {
+                 width: 97%;
+            }
+        }
+
+
+
+        @media (max-width: 768px) {
+
+            .of-nav .of-directory dl.active dt b {
+                will-change: transform;
+                -webkit-transform: rotate(-135deg);
+                -ms-transform: rotate(-135deg);
+                transform: rotate(-135deg);
+            }
+        }
+            @media (max-width: 768px){
+                .of-nav .of-directory dl dt b {
+                    display: block;
+                }
+        }
+
+        @media (max-width: 768px) {
+
+            .of-copyright .of-qrcode-model .of-qrcode-view .qrcode-text {
+                padding: 0;
+                line-height: 16px;
+                margin-top: 21px;
+            }
+        }
+        @media (max-width: 768px){
+
+            .of-copyright .of-qrcode-model .of-qrcode-view .download-link {
+                display: flex;
+                align-self: flex-start;
+            }
+        }
+        @media (max-width: 768px) {
+
+            .of-copyright  {
+                margin-bottom: 5px;
+            }
+        }*/
+
+        .of-nav .of-directory dl dd {
+            display: block;
+            line-height: 1;
+            padding: 6px 0;
+            color: #666;
+
+            overflow: hidden;
+            margin-right: 1em;
+        }
+
+        dd>a:hover{
+            text-decoration: none;
+            color: #ccc;
+            font-size: 15px;
+        }
+        dd>a{
+            font-size: 13px;
+            color: #919191;
+            /*    #333;*/
+
+            /* #98979A*/
+        }
+        dt{
+            color: #919191;
+        }
+
+        #lx_foot1 {
+
+            display: none;
+        }
+        #lx_footWrap {
+            border-top: 1px #ebebeb solid;
+            display: block;
+            margin: 0 20px;
+        }
+        #lx_footWrap .foot-floor {
+            border-bottom: 1px #ebebeb solid;
+        }
+        #lx_footWrap .foot-floor p {
+            padding: 20px 0;
+            font-weight: 500;
+        }
+        #lx_footWrap .foot-floor p span {
+            font-weight: 100;
+            font-size: 10px;
+            float: right;
+            height: 10px;
+            line-height: 10px;
+            vertical-align: middle;
+            text-align: right;
+            margin-right: 10px;
+            transition: all 0.5s;
+        }
+        #lx_footWrap .foot-floor p span.on {
+            transform: rotate(-135deg);
+        }
+        #lx_footWrap .foot-floor ul {
+            display: none;
+        }
+        #lx_footWrap .foot-floor ul li {
+            padding-left: 10px;
+        }
+        #lx_footWrap .foot-floor ul li a {
+            padding: 6px 0;
+            display: block;
+        }
+        #lx_footWrap .foot-floor ul li a:hover {
+            text-decoration: none;
+            color: #acacac;
+        }
+        #lx_footWrap .foot-weiChat {
+            overflow: hidden;
+            padding: 30px 0;
+            border-bottom: 1px #ebebeb solid;
+        }
+        #lx_footWrap .foot-weiChat .foot-weiChat-text {
+            float: left;
+        }
+        #lx_footWrap .foot-weiChat .foot-weiChat-text h3 {
+            margin: 5px 0;
+        }
+        #lx_footWrap .foot-weiChat .foot-weiChat-text p {
+            color: #acacac;
+        }
+        #lx_footWrap .foot-weiChat .foot-weiChat-icon {
+            float: right;
+        }
+        #lx_footWrap .foot-weiChat .foot-weiChat-icon a {
+            display: block;
+            border-radius: 39px;
+            height: 39px;
+            line-height: 38px;
+            width: 130px;
+            color: #fff;
+            background-color: #666;
+            text-align: center;
+            padding: 3px ;
+            box-sizing: content-box;
+        }
+        #lx_footWrap .foot-weiChat .foot-copyRight {
+            color: #98979a;
+        }
+        #lx_footWrap .foot-weiChat .foot-copyRight a {
+            color: inherit;
+        }
+        @media (min-width: 768px) {
+            #lx_footWrap {
+                display: none;
+            }
+            #lx_foot1 {
+                display: block;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+<!--头部导航-->
+<div class="navbar navbar-default" id="zsx_navTop">
+    <div id="mySlideBox"></div>
+    <div style="position: relative;">
+        <div class="navbar-header text-center myNavHead" >
+            <button class="navbar-toggle open-menu" id="title-openMenu" data-toggle="collapse" data-target="#Col">
+                <i class="open-menu-bar"></i>
+                <i class="open-menu-bar"></i>
+                <i class="open-menu-bar"></i>
+            </button>
+            <a href="" class="navbar-brand svg_z">
+                <svg id="oppo-logo-common" viewBox="0 0 415 67" width="100%" height="100%" fill="#f00">
+                    <path d="M48.9.3C22.1.3.3 11.2.3 24.5s21.8 24.2 48.6 24.2 48.6-10.8 48.6-24.2S75.8.3 48.9.3zm-4.7 41.4c-17.9 0-32.4-7.8-32.4-17.5S26.3 6.7 44.2 6.7s32.4 7.8 32.4 17.5-14.5 17.5-32.4 17.5zM366.1.3c-26.9 0-48.6 10.8-48.6 24.2s21.8 24.2 48.6 24.2 48.6-10.8 48.6-24.2S392.9.3 366.1.3zm-4.8 41.4c-17.9 0-32.4-7.8-32.4-17.5s14.5-17.5 32.4-17.5 32.4 7.8 32.4 17.5-14.4 17.5-32.4 17.5zM156.1.3c-8.3 0-16.7 1-22.7 2.9v6.6c5.8-2.1 11.9-3.1 18-3 17.9 0 32.3 7.8 32.3 17.5s-14.5 17.5-32.4 17.5c-12.6 0-23.9-3.9-28.9-9.6V1.7h-18v65h18V42c9 4.1 20.5 6.7 33.5 6.7 26.8 0 48.7-10.8 48.7-24.2S182.9.3 156.1.3zM262.6.3c-7.8 0-15.6.9-23.2 2.9v6.6c6-2 12.2-3 18.5-3 17.9 0 32.5 7.8 32.5 17.5S276 41.7 258.1 41.7c-12.6 0-23.7-3.9-28.7-9.6V1.7h-18v65h17.8V42.3c8.7 4.1 20.5 6.6 33.6 6.6 26.8 0 48.5-10.9 48.5-24.3S289.4.3 262.6.3z"></path></svg>
+            </a>
+            <!--<a href="#" class="navbar-brand Tbziti">
+                <svg t="1516584944160" class="icon" style="width: 25px;height: 25px;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1359" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><defs><style type="text/css"></style></defs><path d="M818.031487 66.875107 205.966467 66.875107c-46.02422 0-83.463923 37.439704-83.463923 83.463923L122.502543 873.66097c0 46.078455 37.438681 83.463923 83.463923 83.463923l612.06502 0c46.025243 0 83.463923-37.384445 83.463923-83.463923L901.49541 150.338007C901.49541 104.314811 864.05673 66.875107 818.031487 66.875107zM845.853136 873.66097c0 15.32401-12.497639 27.821649-27.821649 27.821649L205.966467 901.482619c-15.322987 0-27.821649-12.497639-27.821649-27.821649l0-83.463923 667.707294 0L845.852112 873.66097zM845.853136 734.582401l-667.707294 0L178.145841 150.338007c0-15.322987 12.497639-27.821649 27.821649-27.821649l612.06502 0c15.32401 0 27.821649 12.498662 27.821649 27.821649L845.854159 734.582401z" p-id="1360"></path><path d="M743.262596 234.725976c-0.272199 0-0.543376 0-0.86981 0-15.32401 0.48914-27.386744 13.313214-26.951839 28.635177 0.055259 0.86981 1.738597 86.451978-53.360302 143.126768-33.744545 34.667567-82.649372 52.218292-145.462976 52.218292-203.822129 0-214.09203-195.617259-214.418464-203.930599-0.651846-15.32401-12.986779-26.298969-28.853142-26.733874-15.322987 0.597611-27.331485 13.420661-26.789133 28.744671 0.10847 2.554172 12.063757 257.562077 270.060739 257.562077 78.682014 0 141.170207-23.36515 185.782264-69.49784 71.50966-74.008574 68.792782-178.88211 68.683289-183.282327C770.539846 246.517533 758.204913 234.725976 743.262596 234.725976z" p-id="1361"></path></svg>
+            </a>-->
+            <div class="zsx_boxTop">
+                <div class="zsx_smallboxTop"></div>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse topLi " id="Col">
+            <ul class="nav navbar-nav" id="xia">
+                <li class="xians"  id="title-openMenu2">
+                    <a href="#">手机
+                     <span class="open-menu2">
+                        <i class="glyphicon glyphicon-menu-down zsx_down"></i>
+                    </span>
+                    </a>
+                    <div class="zsx_hoVer">
+                        <div class="zsx_hoVerbox">
+                            <div class="zsx_navTopLeft">
+                                <img src="../imgs/zsx/zsx_topWrap1bot.jpg" class="zsx_bian" alt=""/>
+                                <img src="../imgs/zsx/zsx_lt_bota.png" alt=""/>
+                            </div>
+                            <div class="zsx_navToprigh">
+                                <ul>
+                                    <li>
+                                        <img src="../imgs/zsx/zsx_topWrap1left.jpg" alt=""/>
+                                        <img src="../imgs/zsx/zsx_topWrap1rig.png" alt=""/>
+                                        <h3>R11s 高配版</h3>
+                                    </li>
+                                    <li>
+                                        <img src="../imgs/zsx/zsx_topWrap2rig.jpg" alt=""/>
+                                        <img src="../imgs/zsx/zsx_topWrap2left.png" alt=""/>
+                                        <h3>A79</h3>
+                                    </li>
+                                    <li>
+                                        <img src="../imgs/zsx/zsx_topWrap3rig.jpg" alt=""/>
+                                        <img src="../imgs/zsx/zsx_topWrap3left.png" alt=""/>
+                                        <h3>A73</h3>
+                                    </li>
+                                    <li>
+                                        <img src="../imgs/zsx/zsx_topWrap4rig.jpg" alt=""/>
+                                        <img src="../imgs/zsx/zsx_topWrap4left.png" alt=""/>
+                                        <h3>A57</h3>
+                                    </li>
+                                    <li>
+                                        <img src="../imgs/zsx/zsx_topWrap5rig.jpg" alt=""/>
+                                        <img src="../imgs/zsx/zsx_topWrap5left.png" alt=""/>
+                                        <h3>A83</h3>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--点击箭头触发下拉菜单-->
+                    <div class="zsx_lt_bot">
+                        <div class="zsx_lt_navTop">
+                            <div class="zsx_lt_pict" style="overflow: hidden">
+                                <img src="../imgs/zsx/zsx_topWrap1bot.jpg" alt="" class="zsx_bian"/>
+                                <img src="../imgs/zsx/zsx_lt_bota.png" alt=""/>
+                            </div>
+                        </div>
+                        <ul class="clearfix">
+                            <li>
+                                <a href="">
+                                    <img src="../imgs/zsx/zsx_topWrap1left.jpg" alt=""/>
+                                    <img src="../imgs/zsx/zsx_topWrap1rig.png" alt=""/>
+                                </a>
+                                <h3>R11s 高配版</h3>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../imgs/zsx/zsx_topWrap2rig.jpg" alt=""/>
+                                    <img src="../imgs/zsx/zsx_topWrap2left.png" alt=""/>
+                                </a>
+                                <h3>A79</h3>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../imgs/zsx/zsx_topWrap3rig.jpg" alt=""/>
+                                    <img src="../imgs/zsx/zsx_topWrap3left.png" alt=""/>
+                                </a>
+                                <h3>A73</h3>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../imgs/zsx/zsx_topWrap4rig.jpg" alt=""/>
+                                    <img src="../imgs/zsx/zsx_topWrap4left.png" alt=""/>
+                                </a>
+                                <h3>A57</h3>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../imgs/zsx/zsx_topWrap5rig.jpg" alt=""/>
+                                    <img src="../imgs/zsx/zsx_topWrap5left.png" alt=""/>
+                                </a>
+                                <h3>A83</h3>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#" >品牌</a></li>
+                <li><a href="#" >商城</a></li>
+                <li><a href="#" >体验店</a></li>
+                <li><a href="#" >服务</a></li>
+                <li><a href="#" >社区</a></li>
+                <li><a href="#" >ColorOS</a></li>
+                <li><a href="#" >云服务</a></li>
+            </ul>
+        </div>
+        <a href="#" class="navbar-brand Tbziti">
+            <svg t="1516584944160" class="icon" style="width: 25px;height: 25px;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1359" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><defs><style type="text/css"></style></defs><path d="M818.031487 66.875107 205.966467 66.875107c-46.02422 0-83.463923 37.439704-83.463923 83.463923L122.502543 873.66097c0 46.078455 37.438681 83.463923 83.463923 83.463923l612.06502 0c46.025243 0 83.463923-37.384445 83.463923-83.463923L901.49541 150.338007C901.49541 104.314811 864.05673 66.875107 818.031487 66.875107zM845.853136 873.66097c0 15.32401-12.497639 27.821649-27.821649 27.821649L205.966467 901.482619c-15.322987 0-27.821649-12.497639-27.821649-27.821649l0-83.463923 667.707294 0L845.852112 873.66097zM845.853136 734.582401l-667.707294 0L178.145841 150.338007c0-15.322987 12.497639-27.821649 27.821649-27.821649l612.06502 0c15.32401 0 27.821649 12.498662 27.821649 27.821649L845.854159 734.582401z" p-id="1360"></path><path d="M743.262596 234.725976c-0.272199 0-0.543376 0-0.86981 0-15.32401 0.48914-27.386744 13.313214-26.951839 28.635177 0.055259 0.86981 1.738597 86.451978-53.360302 143.126768-33.744545 34.667567-82.649372 52.218292-145.462976 52.218292-203.822129 0-214.09203-195.617259-214.418464-203.930599-0.651846-15.32401-12.986779-26.298969-28.853142-26.733874-15.322987 0.597611-27.331485 13.420661-26.789133 28.744671 0.10847 2.554172 12.063757 257.562077 270.060739 257.562077 78.682014 0 141.170207-23.36515 185.782264-69.49784 71.50966-74.008574 68.792782-178.88211 68.683289-183.282327C770.539846 246.517533 758.204913 234.725976 743.262596 234.725976z" p-id="1361"></path></svg>
+        </a>
+    </div>
+
+</div>
+<!--头部点击按钮阴影遮罩层-->
+<!--<div class="zsx_boxShadw"></div>-->
+<!--头部导航结束-->
+<!--蒙版div-->
+<div id="lx_slideIn">
+    <div class="myContainer">
+        <div class="col-md-4 col-sm-6 imgHead">
+            <section>
+                <div>50</div>
+                <h2>OPPO 摄影廊</h2>
+            </section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div class="col-md-4 col-sm-6 myImg">
+            <div></div>
+            <section></section>
+        </div>
+        <div style="clear: both; height: 0;"></div>
+    </div>
+</div>
+
+<!--大屏图片-->
+
+<div id="Wrap">
+    <div id="lx_img_wrap">
+        <ul class="clearfix">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="lxFoot">
+                <footer id="oc-footer" class="oc-footer">
+                    <!--底部第一套-->
+                    <div id="lx_foot1">
+                        <section class="of-nav ">
+                            <div class="container lr_con">
+                                <!--四栏-->
+                                <nav class="of-directory ">
+                                    <dl class="active">
+                                        <dt>推荐机型<b class="oc-icon oc-iconfont-expandtiny"></b></dt>
+                                        <dd><a href="" target="_blank">R11s</a></dd>
+                                        <dd><a href="" target="_blank">A73</a></dd>
+                                        <dd><a href="" target="_blank">A57</a></dd>
+                                        <dd><a href="" target="_blank">A79</a></dd>
+                                    </dl>
+                                    <dl class="active lr_of1">
+                                        <dt>服务<b class="oc-icon oc-iconfont-expandtiny"></b></dt>
+                                        <dd><a href="/" target="_blank">服务网点查询</a></dd>
+                                        <dd><a href="/" target="_blank">零配件价格查询</a></dd>
+                                        <dd><a href="" target="_blank">官方授权网店</a></dd>
+                                        <dd><a href="" target="_blank">预置软件公示</a></dd>
+                                    </dl>
+                                    <dl class="active lr_of1">
+                                        <dt>关于我们<b class="oc-icon oc-iconfont-expandtiny"></b></dt>
+                                        <dd><a href="//" target="_blank">关于 OPPO</a></dd>
+                                        <dd><a href="" target="_blank">加入我们</a></dd>
+                                    </dl>
+                                    <dl class="lr_of1">
+                                        <dt>商务合作<b class="oc-icon oc-iconfont-expandtiny"></b></dt>
+                                        <dd><a href="" target="_blank">开放平台</a></dd>
+                                        <dd><a href="//" target="_blank">采购相关</a></dd>
+                                    </dl>
+                                </nav>
+
+                                <section class="of-service">
+                                    <section class="of-serv-oppo">
+                                        <a href="" target="_blank" class="of-ico oc-btn btn-size-bottom oppo-tj" data-tj="">
+                                            <!--客服小图标-->
+                                            <!--   <b class="oc-icon oc-iconfont-ooo"></b>-->
+                                            <img src="../imgs/footer/P1A.png" width="46" height="42" style="margin-top: -8px">
+                                            <span>在线客服</span>
+                                        </a>
+                                    </section>
+                                    <section class="of-serv-tel">
+                                        <h3>4001-666-888</h3>
+                                        <p>24 小时全国热线</p>
+                                        <!-- <a class="of-tel" href="tel:4001-666-888">4001-666-888</a>-->
+                                    </section>
+                                </section>
+                            </div>
+                        </section>
+
+                        <div class="container">
+                            <section class="row of-copyright">
+
+                                <section class="of-cp-content">
+
+                                    © 2005 - 2018 OPPO 版权所有
+                                    <a href="" target="_blank">粤ICP备08130115号-1</a> 联系方式：4001-666-888
+                                    <a href="http://wljg.gdgs.gov.cn/corpsrch.aspx?key=441900000436441" target="_blank" title="企业名称：广东欧珀电子工业有限公司
+法定代表人：金乐亲
+标识状态：已激活 粤工商备E191512001248
+电子标识有效期：2015-12-14～2020-12-16" class="of-gs-link">
+                                        <b class="oc-icon oc-icon-gs">&nbsp;</b></a>
+                                </section>
+                                <section class="of-sns-content">
+                                    <strong>关注我们：</strong>
+                                    <a href="http://weibo.com/oppo" target="_blank" class="of-sns-link">
+                                        <b class="oc-icon oc-iconfont-weibo"><i class="icon iconfont">&#xe655;</i></b>
+                                        <span class="oc-text-inside">oppp官方 微博</span></a>
+                                    <a class="of-sns-link" data-trigger="qrcode-wechat">
+                                        <b class="oc-icon oc-iconfont-weixin"> <i class="icon iconfont">&#xe646;</i></b>
+                                        <span class="oc-text-inside">oppp官方 微信</span>
+                                    </a>
+                                    <a href="http://p.alipay.com/P/iNeaUvUf" target="_blank" class="of-sns-link" data-trigger="qrcode-alipay">
+                                        <b class="oc-icon oc-iconfont-alipay"><i class="icon iconfont">&#xe64b;</i></b>
+                                        <span class="oc-text-inside">关注我们</span>
+                                    </a>
+                                    <a href="https://www.oppo.com/cn/global " target="_blank" class="of-sns-link of-global-link"><em>|</em>
+                                        <b class="oc-icon oc-iconfont-global "><i class="icon iconfont">&#xe709;</i></b><span>Global</span></a>
+                                </section>
+                                <!--    微信栏-->
+                                <section class="of-qrcode-model" style="visibility: hidden; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 15);">
+                                    <section class="wechat-qrcode of-qrcode-view oc-row">
+                                        <section class="qrcode-text col-6 col-xs-12">
+                                            <p class="text-title">用微信扫描</p>
+                                            <p class="text-title text-title-m">保存后可在微信扫码关注</p>
+                                            <p class="text-des">关注 OPPO 公众号</p>
+                                        </section>
+                                        <section class="qrcode-figure col-6 col-xs-12">
+                                            <i>
+                                                <img src="../imgs/footer/lr_oc-qecode-alipay.png" data-srcset="." class="lazyload" alt="OPPO 公众号">
+                                            </i>
+                                        </section>
+                                        <a class="download-link" href="" download="oppo-wechat">保存到手机<b class="oc-icon oc-iconfont-download"></b>
+                                        </a>
+                                    </section>
+                                    <section class="alipay-qrcode of-qrcode-view oc-row">
+                                        <section class="qrcode-text col-6 ">
+                                            <p class="text-title">用支付宝扫描</p>
+                                            <p class="text-title text-title-m">保存后可在支付宝扫码关注</p>
+                                            <p class="text-des">关注 OPPO 生活号</p>
+                                        </section>
+                                        <!-- 微信栏-->
+                                        <section class="qrcode-figure col-6 ">
+                                            <i>
+                                                <img src="../imgs/footer/lr_op_h.png" data-srcset="" class="lazyload" alt="OPPO 生活号">
+                                            </i>
+                                        </section>
+                                        <a class="download-link" href="../" download="oppo-alipay">保存到手机
+                                            <b class="oc-icon oc-iconfont-download"></b></a>
+                                    </section>
+
+                                </section>
+
+                            </section>
+                        </div>
+                    </div>
+
+                    <!--底部第二套-->
+                    <div id="lx_footWrap">
+                        <div >
+                            <section class="foot-floor">
+                                <p>推荐机型 <span class="glyphicon glyphicon-plus " aria-hidden="true"></span></p>
+                                <ul>
+                                    <li><a href="####">R11s</a></li>
+                                    <li><a href="####">A73</a></li>
+                                    <li><a href="####">A57</a></li>
+                                    <li><a href="####">A79</a></li>
+                                </ul>
+                            </section>
+                            <section class="foot-floor">
+                                <p>服务<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></p>
+                                <ul>
+                                    <li><a href="####">服务网点查询</a></li>
+                                    <li><a href="####">零配件价格查询</a></li>
+                                    <li><a href="####">官方授权网店</a></li>
+                                    <li><a href="####">预置软件公示</a></li>
+                                </ul>
+                            </section>
+                            <section class="foot-floor">
+                                <p>关于我们<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></p>
+                                <ul>
+                                    <li><a href="####">关于OPPO</a></li>
+                                    <li><a href="####">加入我们</a></li>
+                                </ul>
+                            </section>
+                            <section class="foot-floor">
+                                <p>商务合作<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></p>
+                                <ul>
+                                    <li><a href="####">开放平台</a></li>
+                                    <li><a href="####">采购相关</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                        <div class="foot-weiChat">
+                            <div class="foot-weiChat-text">
+                                <p>24 小时全国热线</p>
+                                <h3>4001-666-888</h3>
+                            </div>
+                            <div class="foot-weiChat-icon">
+                                <a href="####" >
+                                    <img src="../imgs/footer/P1A.png" width="46" height="42" style="margin-top: -8px">
+                                    <span>在线客服</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="foot-copyRight" style="padding: 20px 0">
+                            <section style="margin-bottom: 20px">
+
+                                <section class="">
+
+                                    © 2005 - 2018 OPPO 版权所有
+                                    <a href="" target="_blank">粤ICP备08130115号-1</a> 联系方式：4001-666-888
+                                    <a href="http://wljg.gdgs.gov.cn/corpsrch.aspx?key=441900000436441" target="_blank" title="企业名称：广东欧珀电子工业有限公司
+法定代表人：金乐亲
+标识状态：已激活 粤工商备E191512001248
+电子标识有效期：2015-12-14～2020-12-16" class="of-gs-link">
+                                        <b class="oc-icon oc-icon-gs">&nbsp;</b></a>
+                                </section>
+                                <section style="padding: 10px 0">
+                                    <strong>关注我们：</strong>
+                                    <a href="http://weibo.com/oppo" target="_blank" class="of-sns-link">
+                                        <b class="oc-icon oc-iconfont-weibo"><i class="icon iconfont">&#xe655;</i></b>
+                                        <span class="oc-text-inside">oppp官方 微博</span></a>
+                                    <a class="of-sns-link" data-trigger="qrcode-wechat">
+                                        <b class="oc-icon oc-iconfont-weixin"> <i class="icon iconfont">&#xe646;</i></b>
+                                        <span class="oc-text-inside">oppp官方 微信</span>
+                                    </a>
+                                    <a href="http://p.alipay.com/P/iNeaUvUf" target="_blank" class="of-sns-link" data-trigger="qrcode-alipay">
+                                        <b class="oc-icon oc-iconfont-alipay"><i class="icon iconfont">&#xe64b;</i></b>
+                                        <span class="oc-text-inside">关注我们</span>
+                                    </a>
+                                    <a href="https://www.oppo.com/cn/global " target="_blank" class="of-sns-link of-global-link"><em>|</em>
+                                        <b class="oc-icon oc-iconfont-global "><i class="icon iconfont">&#xe709;</i></b><span>Global</span></a>
+                                </section>
+
+
+                            </section>
+                        </div>
+
+                    </div>
+
+
+
+                </footer>
+            </li>
+        </ul>
+
+    </div>
+
+    <!--右下角页码数字块-->
+    <div id="lx_countBar">
+        <span id="curCounter">01</span>
+        <span id="totalCounter" style="color: #b3b3b3">50</span>
+    </div>
+
+    <!--style="transform: translate3d(0px, 0px, 0px);-->
+
+
+    <!--左下角文字块-->
+    <div id="lx_page_text">
+        <!--<h1 class="page-content-title"></h1>-->
+        <p class="page-content-tip">拍摄手机：<em>OPPO R11s</em></p>
+        <!--<p class="page-content-tip"></p>-->
+    </div>
+
+    <!--最下面的箭头-->
+    <div id="myBtnIcon">
+        <img src="../imgs/lx/icon-arrow.png" />
+    </div>
+
+
+    <!--右侧点击-->
+    <div id="lx_myMenus">
+        <a id="openMenu" class="open-menu">
+            <i class="open-menu-bar"></i>
+            <i class="open-menu-bar"></i>
+            <i class="open-menu-bar"></i>
+        </a>
+        <a class="menus-btn" id="favorBtn">
+            <img src="../imgs/lx/icon-favor.png" alt="">
+        </a>
+        <a class="menus-btn menus-btn-share">
+            <img src="../imgs/lx/icon-share.png" alt="">
+            <div class="share_hover">
+                <div class="share-item" style="margin-left: 10px">
+                    <img src="../imgs/lx/share-wb.png" alt="" class="img-wb">
+                </div>
+                <div class="share-item">
+                    <img src="../imgs/lx/qrcode.png" alt="">
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</body>
+</html>
+
+<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script src="../js/lx_swipe.js"></script>
+<script type="text/javascript" src="../js/lx2_addFoot2_noIframe.js"></script>
+
+<script>
+
+    $('#lx_footWrap .foot-floor span').click(function(){
+        $(this).toggleClass('on').parents('.foot-floor').find('ul').slideToggle();
+
+    })
+
+</script>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript" src="../../js/jquery-1.11.3.js"></script>
+<link rel="stylesheet" href="//at.alicdn.com/t/font_488056_euc28mu1gee6zuxr.css">
+<style type="text/css">
+    *{margin:0;padding:0;}
+    .xf-slider{margin:100px auto 10px !important;}
+    #slider{width:100%; overflow:hidden;
+        }
+    .xf-slider .cnt{position:relative;left:0;width:2000%;
+        top: 0;}
+    .xf-slider .cnt li{float:left;height: 248px;
+        margin-right:5px;
+        overflow: hidden;
+        position: relative;
+        left: 0;
+    }
+    .xf-slider .cnt img{
+        display:inline-block;width:100%;height:450px;
+        vertical-align:top;
+    }
+    .xf-slider .cnt p{margin:10px 0;}
+    .xf-slider .xf-icons{text-align:center;color:#000;
+        position: relative; z-index: 999;
+    }
+    .xf-slider .xf-icons span{
+        /*background: #fff;*/ border-radius: 5px;
+         display: inline-block;
+        height: 10px; margin: 0 3px; overflow: hidden;
+        text-indent: -99em; width: 10px;
+        box-shadow: 0 0 2px #808b86 inset;
+    }
+    .xf-slider .xf-icons .curr{
+        background-color: #808b86;
+        box-shadow: 0 0 2px #808b86 inset;
+        opacity: .2
+    }
+    #carousel-control{
+        top: -156px;
+        position: relative;
+        width: 100%;
+    }
+    #carousel-control .right:hover{
+        background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/next.svg?201707261604);
+    }
+    #carousel-control .left:hover{
+        background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/pre.svg?201707261604);
+    }
+    #carousel-control .left{
+        float: left;
+        width: 40px;
+        height: 40px;
+        background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/pre-default.svg?201707261604);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50%;
+    }
+    #carousel-control .right{
+        width: 40px;
+        height: 40px;
+        float: right;
+        background-image: url(http://shopfs.myoppo.com/hd/2017/R11bf/images/1920/next-default.svg?201707261604);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50%;
+    }
+</style>
+<div class="xf-slider">
+    <div id="slider">
+        <ul id="xf-slider" class="cnt">
+            <li><a href="#1"><img src="../../imgs/wosen-boyfriends/part1-1.jpg" alt="" /></a></li>
+            <li><a href="#2"><img src="../../imgs/wosen-boyfriends/part2-1.jpg" alt="" /></a></li>
+            <li><a href="#3"><img src="../../imgs/wosen-boyfriends/part3-1.jpg" alt="" /></a></li>
+            <li><a href="#4"><img src="../../imgs/wosen-boyfriends/part4-1.jpg" alt="" /></a></li>
+            <li><a href="#5"><img src="../../imgs/wosen-boyfriends/part5-1.jpg" alt="" /></a></li>
+            <li><a href="#6"><img src="../../imgs/wosen-boyfriends/part6-1.jpg" alt="" /></a></li>
+            <li><a href="#7"><img src="../../imgs/wosen-boyfriends/part7-1.jpg" alt="" /></a></li>
+            <li><a href="#8"><img src="../../imgs/wosen-boyfriends/part8-1.jpg" alt="" /></a></li>
+            <!--<li><a href="#1"><img src="../imgs/wosen-boyfriends/part1-1.jpg" alt="" /></a></li>-->
+        </ul>
+    </div>
+    <div id="xf-icons" class="xf-icons"><span class="curr">1</span>
+        <span>2</span> <span>3</span> <span>4</span> <span>5</span>
+        <span>6</span> <span>7</span> <span>8</span> <span>9</span>
+    </div>
+    <!--点击的箭头-->
+    <div id="carousel-control">
+        <a href="####" class="left"></a>
+        <a href="####" class="right"></a>
+    </div>
+</div>
+<script src="../../js/jquery-1.11.3.js"></script>
+<script src="../../bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($){
+        var $slider = $('#xf-slider');
+        var $icons = $('#xf-icons');
+        var $li = $slider.children('li');
+        var $click1=$(".left");
+        var $click2=$(".right");
+        var WIDTH = $li.width();
+        var SIZE = $li.size();
+        $slider.append($li.first().clone());
+
+        var ox,mx,ux,sumx,scroll,i=0,bool=false,staut=true;
+        $li.find('a').click(function(){
+            //阻止轮播元素的默认点击事件
+            return false;
+        });
+
+        $slider.mousedown(function(e){
+            //鼠标左键轮播区域
+            if(e.target.tagName == 'IMG' && e.button == 0){
+                //左键图片
+                staut = true;
+                //初始化拖拽,状态为true,可以触发点击事件
+                sumx = 0;
+                //初始化鼠标偏移为0
+                bool = true;
+                //记录左键状态
+                ox = e.pageX;
+                //记录鼠标初始坐标
+                scroll = $slider.parent().scrollLeft();
+                //记录初始轮播水平滚动偏移
+                e.preventDefault();
+                //阻止鼠标点击默认事件
+            }
+        });
+        $slider.mousemove(function(e){
+            //鼠标在轮播区域移动
+            if(bool){//左键状态
+                staut = false;
+                //已经拖拽,状态为false,不再触发点击事件
+                mx = e.pageX;
+                //记录鼠标实时坐标
+                sumx = ox - mx;
+                //记录鼠标坐标偏移
+                $slider.parent().scrollLeft(scroll+sumx);
+            }
+        });
+        $slider.mouseout(function(e){
+            //鼠标离开轮播区域
+            if(bool){
+                //左键状态
+                staut = true;
+                //已经拖拽,但是离开了轮播区域,
+                //状态为true,可以触发点击事件
+                bool = false;//释放左键状态
+                sumx > 0 && i < SIZE && i++;//下一个
+                sumx < 0 && i > 0 && i--;//上一个
+                $slider.parent().stop().animate({scrollLeft:i*WIDTH},300,function(){
+                    if(i == SIZE){
+                        i = 0;
+                        $slider.parent().scrollLeft(0);
+                    }
+                    $icons.find('.curr').removeClass('curr').end().children().eq(i).addClass('curr');
+                });//完成拖拽
+            }
+        });
+        $slider.mouseup(function(e){
+            //鼠标释放,完成click事件
+            bool = false;
+            //释放左键状态
+            if(staut && e.button == 0){
+                //没有拖拽或者拖拽失效,且是左键,触发点击事件
+                window.location.href = $(e.target).parent().attr('href');
+                //触发点击事件
+            }else if(!staut && e.button == 0){
+                //成功拖拽,且是左键
+                sumx > 0 && i < SIZE && i++;//下一个
+                sumx < 0 && i > 0 && i--;//上一个
+                $slider.parent().stop().animate({scrollLeft:i*WIDTH},300,function(){
+                    if(i == SIZE){
+                        //最后一个
+                        i = 0;
+                        $slider.parent().scrollLeft(0);//归位
+                    }
+                    $icons.find('.curr').removeClass('curr').end().children().eq(i).addClass('curr');
+                });//完成拖拽
+            }
+        });
+        /*左右耳朵点击*/
+        $click1.click(function(e){
+            setSlider();
+            /*console.log(SIZE);
+            console.log(WIDTH);
+            console.log({scrollLeft:i*WIDTH});*/
+        });
+        $click2.click(function(e){
+            setSlider2();
+
+        });
+        function setSlider2(){
+            i < SIZE && i++;//下一个
+            var a=-284;
+            $slider.parent().stop().animate({scrollLeft:i*WIDTH},300,function(){
+                if(i== SIZE){//最后一个
+                    i = 0;
+                    $slider.parent().scrollLeft(0-a);
+                }
+                $icons.find('.curr').removeClass('curr').end().children().eq(i).addClass('curr');
+            });//完成拖拽
+        }
+        function setSlider(){
+            i < SIZE && i++;//下一个
+            $slider.parent().stop().animate({scrollLeft:i*WIDTH},300,function(){
+                if(i == SIZE){//最后一个
+                    i = 0;
+                    $slider.parent().scrollLeft(0);
+                }
+                $icons.find('.curr').removeClass('curr').end().children().eq(i).addClass('curr');
+            });//完成拖拽
+        }
+        /*点击下面的原点*/
+        $(".xf-icons span").click(function(){
+            var sidex=$(this).index();
+            $slider.parent().animate({scrollLeft:sidex*WIDTH},300,function(){
+                /*if(i == SIZE){//最后一个
+                    i = 0;
+                    $slider.parent().scrollLeft(0);
+                }*/
+            })//完成拖拽
+            $(this).siblings().removeClass('curr');
+            $(this).addClass('curr');
+
+        });
+        /*var timer = setInterval(function(){
+         setSlider();
+         },3000);*/
+        /*$slider.hover(function(){
+            if(timer){
+                clearInterval(timer);
+                timer = null;
+            }
+        },function(){
+            timer = setInterval(function(){
+                setSlider();
+            },3000);
+        });*/
+        $(window).resize(function(){
+            WIDTH = $li.width();
+            $slider.parent().scrollLeft(i*WIDTH);//归位
+            //console.log(WIDTH + '-' + i);
+        });
+    });
+</script>

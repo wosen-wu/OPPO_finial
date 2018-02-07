@@ -1,0 +1,447 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "方正悠黑 508R W", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial;
+}
+* a:hover {
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+/* --------------------导航-----------------------------*/
+#navTop {
+  position: absolute;
+  margin-top: 10px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  border: none;
+}
+.navbar-default {
+  background-color: transparent;
+  border-color: #e7e7e7;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #000;
+  margin-top: 10px;
+  padding: 0 25px;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  opacity: .6;
+  color: #ccc;
+}
+.navbar-default .navbar-brand:hover {
+  color: #fff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+.navbar-default .navbar-toggle {
+  border-color: #333;
+}
+#oppo-logo-common {
+  width: 105px;
+  font-size: 15px;
+  fill: #000;
+  float: left;
+}
+.navbar-nav > li {
+  height: 50px;
+}
+/*------------------------导航结束--------------*/
+/*------------------------上面背景图片--------------*/
+#xf_main {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+.xf_header {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+/*关于搜索框*/
+.search_bg {
+  background: url("../imgs/wosen/xf-bg.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+}
+.search_bg .search_cont {
+  text-align: center;
+  padding-top: 2rem;
+  z-index: 2;
+}
+.search_bg .search_cont .xf_tb {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.search_bg .search_cont h2 {
+  margin-bottom: .22rem;
+  line-height: 1;
+  font-size: .48rem;
+}
+.search_bg .search_cont h3 {
+  font-size: .28rem;
+  margin-bottom: .35rem;
+  line-height: 1;
+  font-weight: 400;
+}
+.search_bg .search_cont input {
+  display: inline-block;
+  vertical-align: middle;
+  touch-action: manipulation;
+  background-image: none;
+  padding: 5px 20px;
+  padding-left: 55px;
+  border: 0;
+  border-radius: 25px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 18px;
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+  color: #333;
+  max-width: 650px;
+  width: 80%;
+  height: 50px;
+}
+.search_bg .search_cont .search-stage {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 610px;
+  margin: 20px auto;
+  padding: 30px;
+  padding-left: 35px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.96);
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  -webkit-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.11);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.11);
+}
+.search_bg .search_cont .search-stage .sec-title {
+  color: #a0a0a0;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.search_bg .search_cont .search-stage .sec-list {
+  margin: -12px 0;
+}
+.search_bg .search_cont .search-stage .sec-list li a {
+  color: #666;
+  text-decoration: none;
+}
+.search_bg .search_cont .search-stage .sec-list li a:hover {
+  color: #333 ;
+}
+.search_bg .search_cont .search-stage .sec-list li a p {
+  font-size: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #ededed;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#xf_Cont_mid {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f6f6f6;
+  padding: 0 128px 1rem 128px;
+  /*搜索框内容*/
+}
+#xf_Cont_mid .xf_service {
+  margin: 0 auto;
+}
+#xf_Cont_mid .xf_service h3 {
+  padding: 90px 0;
+  font-size: 36px;
+  text-align: center;
+  font-family: "方正悠黑 510M", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial;
+}
+#xf_Cont_mid .xf_service p {
+  padding: 90px 0;
+  font-size: 36px;
+  text-align: center;
+}
+/*------------------------搜索框结束--------------*/
+/*服务*/
+.xf_view_cont {
+  text-decoration: none;
+  margin-bottom: 0;
+  width: 100%;
+  height: 360px;
+}
+.xf_view_cont .thumbnail .caption {
+  padding: 0;
+}
+.xf_view_cont .service_type {
+  padding-left: 0;
+  padding-right: 8px;
+}
+.xf_view_cont .service_type .sec_mdl {
+  min-height: 266px;
+  border-radius: 0;
+  max-height: 360px;
+}
+.xf_view_cont .service_type .sec_mdl img {
+  padding-top: 20px;
+}
+.xf_view_cont .service_type .sec_mdl:hover {
+  color: #333;
+  box-shadow: 0 0 30px #E5EAF0;
+}
+.xf_view_cont .service_type .sec_mdl .type_text {
+  padding-top: 20px;
+  min-height: 1.2rem;
+  text-align: center;
+  font-size: 16px;
+  line-height: 26px;
+  color: #666;
+  margin-bottom: 30px;
+}
+.xf_view_cont .type_title {
+  max-width: 352px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.xf_view_cont .type_title h3 {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+.xf_view_cont a {
+  text-decoration: none;
+  color: #333;
+}
+/*结束*/
+/*主题*/
+.xf_cont_theme {
+  font-family: "方正悠黑 510M", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial;
+  position: relative;
+  overflow: hidden;
+  padding: 0 128px 1rem 128px;
+  /**/
+}
+.xf_cont_theme .xf_hot {
+  border-bottom: 1px solid #ccc;
+}
+.xf_cont_theme .xf_hot p {
+  padding: 90px 0;
+  font-size: 36px;
+  text-align: center;
+}
+.xf_cont_theme .theme_cont {
+  width: 100%;
+  float: left;
+  padding: .7rem 0;
+}
+.xf_cont_theme .theme_cont .theme_cont_font {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  max-width: 330px;
+  width: 100%;
+}
+.xf_cont_theme .theme_cont .theme_cont_font h3 {
+  text-align: left;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+.xf_cont_theme .theme_cont .theme_cont_font p {
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+.xf_cont_theme .theme_cont .theme_cont_font a {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 18px;
+}
+.xf_cont_theme .theme_cont .theme_cont_font a:hover {
+  color: #666;
+}
+.xf_cont_theme .theme_cont .theme_cont_font a span {
+  margin-left: 5px;
+  display: inline-block;
+  border-right: 5px solid transparent;
+  border-left: #000 5px solid;
+  border-top: transparent 5px solid;
+  border-bottom: transparent 5px solid;
+}
+.xf_cont_theme .theme_cont .theme_cont_img {
+  margin-bottom: 20px;
+  float: right;
+}
+.xf_cont_theme .theme_cont .theme_cont_img img {
+  width: 100%;
+}
+.xf_cont_theme .theme_cont_right {
+  width: 100%;
+  float: left;
+  padding: .7rem 0;
+}
+.xf_cont_theme .theme_cont_right .theme_cont_font_right {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  max-width: 330px;
+  width: 100%;
+}
+.xf_cont_theme .theme_cont_right .theme_cont_font_right h3 {
+  text-align: left;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+.xf_cont_theme .theme_cont_right .theme_cont_font_right p {
+  text-align: left;
+  max-width: 330px;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+.xf_cont_theme .theme_cont_right .theme_cont_font_right a {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 18px;
+}
+.xf_cont_theme .theme_cont_right .theme_cont_font_right a:hover {
+  color: #666;
+}
+.xf_cont_theme .theme_cont_right .theme_cont_font_right a span {
+  margin-left: 5px;
+  display: inline-block;
+  border-right: 5px solid transparent;
+  border-left: #000 5px solid;
+  border-top: transparent 5px solid;
+  border-bottom: transparent 5px solid;
+}
+.xf_cont_theme .theme_cont_right .theme_cont_img_right {
+  margin-bottom: 20px;
+  float: right;
+}
+.xf_cont_theme .theme_cont_right .theme_cont_img_right img {
+  width: 100%;
+}
+/*------------------------主题结束--------------*/
+/*底部上部内容*/
+#xf_footer {
+  background-color: #f6f6f6;
+  width: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  font-family: "方正悠黑 510M", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial;
+}
+#xf_footer .ft_inner {
+  background-color: #fff;
+  line-height: 32px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  /*width: 100%;
+    float: left;
+    padding-top: 30px;
+    padding-bottom: 30px;*/
+}
+#xf_footer .ft_inner .xf_foot_left {
+  margin: 15px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #fff;
+  border-right: 1px solid #cccccc;
+  box-sizing: border-box;
+  /*display: inline-block;
+        float: left;
+        width: 50%;
+
+       */
+  text-align: center;
+  /*padding-right: 30px;*/
+}
+#xf_footer .ft_inner .xf_foot_left p {
+  font-size: 12px;
+  color: #666;
+}
+#xf_footer .ft_inner .xf_foot_left p a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 14px;
+}
+#xf_footer .ft_inner .xf_foot_left p a span {
+  margin-left: 10px;
+  display: inline-block;
+  border-right: 5px solid transparent;
+  border-left: #000 5px solid;
+  border-top: transparent 5px solid;
+  border-bottom: transparent 5px solid;
+}
+#xf_footer .ft_inner .xf_foot_left p a:hover {
+  color: #666;
+}
+#xf_footer .ft_inner .xf_foot_right {
+  margin: 15px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #fff;
+  text-align: center;
+  float: left;
+}
+#xf_footer .ft_inner .xf_foot_right p {
+  font-size: 12px;
+  color: #666;
+}
+#xf_footer .ft_inner .xf_foot_right p a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 14px;
+}
+#xf_footer .ft_inner .xf_foot_right p a:hover {
+  color: #666;
+}
+#xf_footer .ft_inner .xf_foot_right p a span {
+  margin-left: 10px;
+  display: inline-block;
+  border-right: 5px solid transparent;
+  border-left: #000 5px solid;
+  border-top: transparent 5px solid;
+  border-bottom: transparent 5px solid;
+}
+#xf_footer .ft_inner .xf_foot_right p a:hover {
+  color: #666;
+}
+/*------------------------底部上部结束--------------*/
+/*------------------------底部链接条开始--------------*/
+.xf_footer_mdl {
+  float: left;
+  height: 200px;
+  width: 100%;
+  border: 1px solid #f00;
+}
+/*------------------------底部链接条结束--------------*/
+/*------------------------底部下部开始--------------*/
+.xf_footer_btm {
+  float: left;
+  height: 100px;
+  width: 100%;
+  border: 1px solid #00f;
+}
+/*------------------------底部下部结束--------------*/

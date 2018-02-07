@@ -1,0 +1,421 @@
+/*--------------------隐藏滚动条-------------------------*/
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/*----------------出现的蒙版照片部分-----------------------*/
+#lx_slideIn {
+    position: relative;
+    z-index: 99;
+    display: none;
+    padding-top:70px ;
+    /*background: url("../imgs/lx/20.jpg");*/
+}
+#lx_slideIn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+}
+#lx_slideIn.on::before{
+    opacity: 1;
+}
+/*----------------底下图片的部分------------------*/
+
+/*媒体查询*/
+.myContainer .imgHead {
+    height: 196px;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    visibility: visible;
+}
+
+.myContainer div {
+    box-sizing: border-box;
+    height: 150px;
+    cursor: pointer;
+}
+
+.imgHead {
+    padding: 5% 0;
+}
+
+.imgHead div {
+    font-size: 137px;
+    color: #fff;
+    line-height: 100px;
+    height: 100px;
+    text-align: center;
+    font-weight: 100;
+}
+
+.imgHead h2 {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.imgHead h2::before, .imgHead h2::after {
+    content: '';
+    display: inline-block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    height: 0;
+    width: 15px;
+    margin-bottom: 4px;
+}
+
+.imgHead h2::before {
+    margin-right: 8px;
+}
+
+.imgHead h2::after {
+    margin-left: 8px;
+}
+
+
+
+/*图片容器*/
+.myImg {
+    position: relative;
+}
+
+.myImg div:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    transition: opacity 0.5s ease;
+}
+
+.myImg > div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.myImg > section {
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/*-----------图片----------------------*/
+
+#lx_img_wrap ul {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#lx_img_wrap li {
+    width: 100%;
+    /*height: 100%;*/
+    box-sizing: border-box;
+}
+
+/*----------------数字---------------*/
+#lx_countBar {
+    /*定位在页面右下角，并且给伪类提供定位参照*/
+    position: fixed;
+    bottom: 4.5%;
+    right: 3.4%;
+    text-align: right;
+    color: #fff;
+    overflow: hidden;
+    height: 35px;
+    line-height: 35px;
+    z-index: 5;
+    /*font-size: 20px;*/
+    font-size: 0.5rem;
+}
+
+#totalCounter:before {
+    content: '';
+    /*给伪类定位是常用的方法*/
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    height: 50%;
+    width: 10%;
+    border-right: 1px solid #b3b3b3;
+}
+
+#curCounter {
+    /*transform: translate3d(0px, -35px, 0px);*/
+    /*transition: all 0.5s;*/
+    /*display: inline-block;*/
+
+    /*给需要动位置的数字相对定位，占文档流，配合父级的overflow：hidden*/
+    position: relative;
+    top: 0;
+    left: 0;
+
+    /*-webkit-transition: all .75s ease;
+    transition: all .75s ease;*/
+}
+
+/*#curCounter.active{
+    transform:translateY(-100%)
+}*/
+
+/*----------左下角文字-------------------*/
+#lx_page_text {
+    /*定位在页面左下角*/
+    position: fixed;
+    bottom: 4.5%;
+    left: 3.4%;
+    z-index: 5;
+    color: #fff;
+    /*对字体进行抗锯齿渲染可以使字体看起来会更清晰舒服*/
+    -webkit-font-smoothing: antialiased;
+    font-size: 0.2rem;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+/*
+#lx_page_text:hover{
+    bottom: 10%;
+    transition: all 1s;
+}*/
+@keyframes arrow {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translate(-50%, 30%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@-webkit-keyframes arrow {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, 0);
+    }
+    50% {
+        opacity: 0.5;
+        -webkit-transform: translate(-50%, 30%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, 0);
+    }
+}
+
+#myBtnIcon {
+    /*定位在页面底部中间*/
+    position: fixed;
+    left: 50%;
+    bottom: 4.5%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    -webkit-animation: arrow 1.5s ease .3s infinite;
+    animation: arrow 1.5s ease .3s infinite;
+}
+
+/*-------------右侧点击栏-----------------*/
+#lx_myMenus {
+    /*定位在右侧*/
+    position: fixed;
+    top: 20%;
+    right: 3.4%;
+    width: 20px;
+    z-index: 99;
+}
+
+#lx_myMenus a {
+    display: inline-block;
+}
+
+#lx_myMenus img {
+    width: 100%;
+}
+
+/*1点开*/
+#lx_myMenus .open-menu {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    /*overflow: hidden;*/
+
+}
+
+#lx_myMenus .open-menu-bar
+{
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transform-origin: right;
+}
+
+#lx_myMenus .open-menu-bar:first-child {
+    top: 0;
+}
+
+#lx_myMenus .open-menu-bar:last-child {
+    top: 16px;
+}
+
+#openMenu.isOpen > i:first-child {
+    -webkit-transform: rotate(-45deg) translate3d(-4px, -1px, 0);
+    transform: rotate(-45deg) translate3d(-4px, -1px, 0);
+}
+
+#openMenu.isOpen > i:nth-child(2) {
+    opacity: 0
+}
+
+#openMenu.isOpen > i:last-child {
+    -webkit-transform: rotate(45deg) translate3d(-2px, 4px, 0);
+    transform: rotate(45deg) translate3d(-2px, 4px, 0);
+}
+
+/*2喜欢*/
+#favorBtn{
+    margin: 15px 0;
+    /*display: none;*/
+}
+/*3分享按钮*/
+
+
+#lx_myMenus .share_hover {
+    position: absolute;
+    right: 30px;
+    bottom: -15px;
+    width: 150px;
+    height: 65px;
+    padding-right: 10px;
+    display: none;
+}
+
+#lx_myMenus .menus-btn-share{
+    display: none;
+}
+
+#lx_myMenus .menus-btn-share:hover > div.share_hover {
+    display: block;
+}
+
+#lx_myMenus .menus-btn-share .share-item {
+    float: right;
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    border-radius: 4px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+
+
+#zsx_navTop .myNavHead{
+    padding-left: 20px;
+}
+
+@media (min-width: 768px) {
+    .myContainer .col-sm-6 {
+        float: left;
+        width: 50%;
+        height: 222px;
+    }
+
+    .myContainer .imgHead {
+        height: 444px;
+        padding: 0;
+    }
+
+    .imgHead section {
+        margin: 35% 0;
+    }
+
+    #lx_myMenus{
+        width: 30px;
+    }
+
+    #lx_myMenus .menus-btn-share{
+        display: inline-block;
+    }
+
+    #lx_myMenus .open-menu {
+        height: 26px;
+    }
+
+    #lx_myMenus .open-menu-bar
+    {
+        top:11px;
+        height: 4px;
+    }
+
+    #lx_myMenus .open-menu-bar:last-child {
+        top: 22px;
+    }
+
+    #favorBtn{
+        margin: 30px 0;
+    }
+}
+
+@media (min-width: 992px) {
+    #lx_slideIn{
+        padding-top: 0;
+    }
+    .myContainer .col-md-4 {
+        float: left;
+        width: 33.33333333%;
+    }
+
+    .myImg:hover>div:after {
+        opacity: 0;
+    }
+
+    .myImg:hover > section {
+        opacity: 1;
+    }
+
+    .imgHead h2 {
+        font-size: 18px;
+    }
+
+    .imgHead section {
+        margin: 20% 0;
+    }
+
+    .imgHead div {
+        font-size: 205px;
+        line-height: 225px;
+        height: 225px;
+    }
+}
+

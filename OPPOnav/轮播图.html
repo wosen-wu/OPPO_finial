@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            width: 600px;
+            height: 400px;
+            border: 1px solid #000;
+            margin: 0 auto;
+            position: relative;
+        }
+        #list{
+            width:4200px;
+            height: 400px;
+            position: absolute;
+            top:0;
+            left: 0;
+            z-index: 1;
+            transition: left,.3s;
+        }
+        #list>img{
+            float:left;
+            width: 600px;
+            height: 400px;
+        }
+        .spanList span{
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+            z-index: 2;
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0,0,0,.6);
+            color: #fff;
+            font-size: 20px;
+            line-height: 40px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .spanList span:first-child{
+            left: 0;
+        }
+        .spanList span:last-child{
+            right: 0;
+        }
+        #BtnWrap{
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            z-index: 2;
+        }
+        #BtnWrap span{
+            float: left;
+            display: block;
+            width: 10px;
+            height: 10px;
+            background: #ccc;
+            border: 1px solid #f00;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+        #BtnWrap span.on{
+            background: #f00;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="list" style="left:0px;">
+        <img src="imgs/zsx/zsx_banner1.jpg" alt=""/>
+        <img src="imgs/zsx/zsx_banner1.jpg" alt=""/>
+        <img src="imgs/zsx/zsx_banner1.jpg" alt=""/>
+        <img src="imgs/zsx/zsx_banner1.jpg" alt=""/>
+        <img src="imgs/zsx/zsx_banner1.jpg" alt=""/>
+    </div>
+    <div class="spanList">
+        <span id="left">&lt;</span>
+        <span id="right">&gt;</span>
+    </div>
+    <div id="BtnWrap">
+        <span class="on"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+</body>
+</html>
+<script>
+    index=0;
+    right.onclick=function(){
+        index++;
+        if(index>4){
+            index=4
+        }
+        list.style.left=index*(-600)+"px";
+        showBtn()
+    };
+    left.onclick=function(){
+        index--;
+        if(index<0){
+            index=0
+        }
+        list.style.left=index*(-600)+"px";
+        showBtn()
+    };
+    var btn=document.getElementById("BtnWrap").getElementsByTagName("span");
+    console.log(btn);
+
+    function showBtn(){
+        for(var i=0;i<btn.length;i++){
+            btn[i].className="";
+        }
+        btn[index].className="on";
+    }
+</script>

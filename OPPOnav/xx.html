@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/globle.css"/>
+    <style>
+        .open-menu{
+            position:relative;
+            top: 30px;
+            left: 100px;
+            width: 30px;
+            height: 34px;
+            /*overflow: hidden;*/
+        }
+
+        .open-menu-bar/*,.open-menu-bar::after,.open-menu-bar::before*/{
+            content: '';
+            position: absolute;
+            top: 11px;
+            left: 0;
+            width: 30px;
+            height: 4px;
+            background-color: #000;
+            transition: all .3s ease-in-out;
+            -webkit-transition: all .3s ease-in-out;
+            transform-origin: right;
+        }
+        .open-menu-bar:first-child{
+            top: 0;
+        }
+        .open-menu-bar:last-child{
+            top: 22px;
+        }
+        /**::before, *::after {
+            box-sizing: border-box;
+        }*/
+
+        #openMenu.isOpen>i:first-child {
+            -webkit-transform: rotate(-45deg) translate3d(-4px, -1px, 0);
+            transform: rotate(-45deg) translate3d(-4px, -1px, 0);
+        }
+        #openMenu.isOpen>i:nth-child(2) {
+            opacity: 0
+        }
+        #openMenu.isOpen>i:last-child {
+            -webkit-transform: rotate(45deg) translate3d(-2px, 4px, 0);
+            transform: rotate(45deg) translate3d(-2px, 4px, 0);
+        }
+    </style>
+</head>
+<body>
+<a id="openMenu" class="open-menu">
+    <i class="open-menu-bar"></i>
+    <i class="open-menu-bar"></i>
+    <i class="open-menu-bar"></i>
+</a>
+
+
+
+</body>
+</html>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    $('#openMenu').click(function(){
+        $(this).toggleClass('isOpen');
+    })
+</script>

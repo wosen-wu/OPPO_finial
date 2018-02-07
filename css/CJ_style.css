@@ -1,0 +1,687 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: 0;
+  border: 0;
+  font-style: normal;
+}
+.element::-webkit-scrollbar {
+  display: none;
+}
+body {
+  font-family: FZYH_510M,FZYH_508R,Microsoft YaHei;
+  color: #000;
+  background-color: #fff;
+  font-size: 18px;
+  margin: 0;
+}
+a,
+input,
+textarea {
+  text-decoration: none;
+  outline: 0;
+}
+.bgSize {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+/*媒体查询--------分辨率1025---1920*/
+@media only screen and (max-width: 1920px) and (min-width: 1025px) {
+  .CJ_banner1 {
+    height: 1458px;
+  }
+  .CJ_screen {
+    height: 1080px;
+  }
+  .CJ_special {
+    height: 1080px;
+  }
+  .CJ_backCamera {
+    height: 1150px;
+  }
+  .CJ_faceCamera {
+    height: 1380px;
+  }
+  .CJ_facelook {
+    height: 1150px;
+  }
+  .CJ_ColorOS {
+    height: 1360px;
+  }
+  .CJ_cpu {
+    height: 1080px;
+  }
+  .CJ_vooc {
+    height: 1080px;
+  }
+  .fiPhone1_md {
+    display: none;
+  }
+  .fiPhone1 {
+    display: block;
+    position: fixed;
+    width: 433.5px;
+    height: 826.2px;
+    top: 181px;
+    left: 50%;
+    margin-left: -226px;
+    opacity: 0;
+    background-image: url(../imgs/cj/fiPhone1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .banner1_fontLeft2 {
+    display: none;
+  }
+  .banner1_fontLeft {
+    display: block;
+    width: 235.45px;
+    height: 69.7px;
+    position: absolute;
+    top: 518px;
+    right: auto;
+    bottom: auto;
+    left: 215px;
+  }
+  .banner1_fontRgt2 {
+    display: none;
+  }
+  .banner1_fontRgt {
+    display: block;
+    width: 209.1px;
+    height: 72.25px;
+    position: absolute;
+    top: 518px;
+    right: auto;
+    bottom: auto;
+    left: 495px;
+  }
+  .fiPhone2 {
+    width: 1444px;
+    height: 325px;
+    position: absolute;
+    top: 614px;
+    right: auto;
+    bottom: auto;
+    left: -228px;
+    background-image: url('../imgs/cj/fiPhone2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .fiPhone3 {
+    width: 1228px;
+    height: 531px;
+    position: absolute;
+    top: 549px;
+    right: auto;
+    bottom: auto;
+    left: -123px;
+    background-image: url('../imgs/cj/fiPhone3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .fiPhone4 {
+    width: 1197px;
+    height: 845px;
+    position: absolute;
+    top: 659px;
+    right: auto;
+    bottom: auto;
+    left: 80px;
+    background-image: url('../imgs/cj/fiPhone4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .fiPhone5 {
+    width: 541px;
+    height: 850px;
+    position: absolute;
+    top: 666px;
+    right: auto;
+    bottom: auto;
+    left: 269px;
+    background-image: url('../imgs/cj/fiPhone5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .fiPhone6 {
+    width: 980px;
+    height: 771px;
+    position: absolute;
+    top: 484px;
+    right: auto;
+    bottom: auto;
+    left: -4px;
+    background-image: url('../imgs/cj/fiPhone6.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .fiPhone7 {
+    width: 862px;
+    height: 740px;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 43px;
+    left: 60px;
+    background-image: url('../imgs/cj/fiPhone7.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .fiPhone8 {
+    width: 1102px;
+    height: 506px;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 93px;
+    left: -61px;
+    background-image: url('../imgs/cj/fiPhone8.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .fiPhone9_1 {
+    width: 980px;
+    height: 535px;
+    position: absolute;
+    top: 299px;
+    right: auto;
+    bottom: auto;
+    left: -5px;
+    background-image: url('../imgs/cj/fiPhone9_1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .fiPhone9_2 {
+    width: 134px;
+    height: 517px;
+    position: absolute;
+    top: 876px;
+    right: auto;
+    bottom: auto;
+    left: 419px;
+    background-image: url('../imgs/cj/fiPhone9_2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .desc-texts {
+    padding: 0 75px;
+  }
+  .desc-more {
+    width: 153px;
+    height: 46px;
+    margin: 66px auto 0;
+  }
+  .desc-tittle {
+    margin-left: 36px;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .CJ_banner1 {
+    height: 1080px;
+  }
+  .CJ_screen {
+    height: 880px;
+  }
+  .CJ_special {
+    height: 880px;
+  }
+  .CJ_backCamera {
+    height: 1150px;
+  }
+  .CJ_faceCamera {
+    height: 1380px;
+  }
+  .CJ_facelook {
+    height: 1080px;
+  }
+  .CJ_ColorOS {
+    height: 1440px;
+  }
+  .CJ_cpu {
+    height: 989px;
+  }
+  .CJ_vooc {
+    height: 1260px;
+  }
+  .fiPhone1 {
+    display: none;
+  }
+  .fiPhone1_md {
+    display: block;
+    position: fixed;
+    width: 306px;
+    height: 583.2px;
+    top: 126px;
+    left: 50vw;
+    margin-left: -156px;
+    background-image: url("../imgs/cj/fiPhone1_1025.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .fiPhone2 {
+    width: 924px;
+    height: 208px;
+    position: absolute;
+    top: 567px;
+    right: auto;
+    bottom: auto;
+    left: 29px;
+    background-image: url('../imgs/cj/fiPhone2_1025.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .fiPhone3 {
+    width: 812px;
+    height: 1056px;
+    position: absolute;
+    top: 508px;
+    right: auto;
+    bottom: auto;
+    left: 112px;
+    background-image: url('../imgs/cj/fiPhone3_1025.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .fiPhone4 {
+    width: 917px;
+    height: 606px;
+    position: absolute;
+    top: 662px;
+    right: auto;
+    bottom: auto;
+    left: 107px;
+    background-image: url('../imgs/cj/fiPhone4_1025.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .fiPhone5 {
+    width: 541px;
+    height: 850px;
+    position: absolute;
+    top: 638px;
+    right: auto;
+    bottom: auto;
+    left: 272px;
+    background-image: url('../imgs/cj/fiPhone5_1025.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .fiPhone6 {
+    width: 926px;
+    height: 728px;
+    position: absolute;
+    top: 463px;
+    right: auto;
+    bottom: auto;
+    left: 74px;
+    background-image: url('../imgs/cj/fiPhone6_1025.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .fiPhone7 {
+    width: 862px;
+    height: 740px;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 107px;
+    left: 59px;
+    background-image: url('../imgs/cj/fiPhone7_1025.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .fiPhone8 {
+    width: 875px;
+    height: 402px;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 104px;
+    left: 48px;
+    background-image: url('../imgs/cj/fiPhone8_1025.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .fiPhone9_1 {
+    width: 788px;
+    height: 432px;
+    position: absolute;
+    top: 456px;
+    right: auto;
+    bottom: auto;
+    left: 96px;
+    background-image: url('../imgs/cj/fiPhone9_1_1025.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .fiPhone9_2 {
+    width: 108px;
+    height: 417px;
+    position: absolute;
+    top: 960px;
+    right: auto;
+    bottom: auto;
+    left: 437px;
+    background-image: url('../imgs/cj/fiPhone9_2_1025.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+  .banner1_fontLeft {
+    display: none;
+  }
+  .banner1_fontLeft2 {
+    display: block;
+    width: 166.2px;
+    height: 49.2px;
+    position: absolute;
+    top: 450px;
+    right: auto;
+    bottom: auto;
+    left: 14vw;
+  }
+  .banner1_fontRgt {
+    display: none;
+  }
+  .banner1_fontRgt2 {
+    display: block;
+    width: 147.6px;
+    height: 51px;
+    position: absolute;
+    top: 450px;
+    right: auto;
+    bottom: auto;
+    left: 66vw;
+  }
+}
+.non {
+  display: none;
+}
+.blk {
+  display: block;
+}
+.wraper_ban {
+  height: 100%;
+  width: 980px;
+  margin: 0 auto;
+  position: relative;
+}
+.wraper {
+  width: 980px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.wraper .descWrap {
+  width: 880px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 170px;
+}
+.wraper .descWrap .desc-subTitle {
+  color: #1e1e1e;
+  line-height: 1em;
+  font-size: 20px;
+  margin-left: -10px;
+  font-family: 'FZYH_510M';
+}
+.wraper .descWrap .desc-tittle {
+  color: #1e1e1e;
+  font-size: 48px;
+  line-height: 1.2em;
+  margin-top: 20px;
+  font-family: 'FZYH_510M';
+}
+.wraper .descWrap .desc-texts {
+  color: #1e1e1e;
+  line-height: 2em;
+  font-size: 18px;
+  margin-top: 30px;
+  font-family: 'FZYH_508R';
+}
+.wraper .descWrap .desc-more {
+  background-image: url('../imgs/cj/button.svg');
+  background-size: cover;
+  cursor: pointer;
+}
+.wraper .descWrap .desc-more:hover {
+  background-image: url('../imgs/cj/button-hover.svg');
+}
+.wraper .descWrap .white {
+  color: white;
+}
+.opaInt {
+  opacity: 0;
+}
+.opaOut {
+  opacity: 1;
+}
+.trans {
+  opacity: 1;
+  transition: transform 1.5s cubic-bezier(0.39, 0.575, 0.565, 1), opacity 2.5s ease;
+}
+.animate {
+  opacity: 1;
+  /* -webkit-transform: translate3D(0, 0, 0);
+   -moz-transform: translate3D(0, 0, 0);
+   -o-transform: translate3D(0, 0, 0);
+   -ms-transform: translate3D(0, 0, 0);*/
+  transform: translate(0, -40px);
+  /* -webkit-transition: transform 1.5s cubic-bezier(.56, 0, .1, .95);
+   -moz-transition: transform 1.5s cubic-bezier(.56, 0, .1, .95);
+   -o-transition: transform 1.5s cubic-bezier(.56, 0, .1, .95);
+   -ms-transition: transform 1.5s cubic-bezier(.56, 0, .1, .95);*/
+  transition: transform 1.5s cubic-bezier(0.56, 0, 0.1, 0.1), left 1s cubic-bezier(0.56, 0, 0.1, 0.95), opacity 1s ease-in;
+}
+/*-----------------------共用类结束-------------------------------------*/
+/*-------------top导航1-----------*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  opacity: 1;
+  transition: all .5s ease;
+  z-index: 10;
+}
+@media only screen and (min-width: 310px) {
+  header .CJ_headerWrap {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  header .CJ_headerWrap .logo {
+    float: left;
+    line-height: 60px;
+  }
+  header .CJ_headerWrap .logo a {
+    transition: all .5s ease;
+    font-family: FZYH_510M;
+    color: #1f1f1f;
+    margin-left: 0;
+    font-size: 24px;
+  }
+  header .CJ_headerWrap .headBuy {
+    font-family: FZYH_510M;
+    float: right;
+    margin-right: 0;
+    line-height: 60px;
+  }
+  header .CJ_headerWrap .headBuy a {
+    transition: all .5s ease;
+    font-family: FZYH_510M;
+    background-color: #05b570;
+    color: #fff;
+    border-radius: 18px;
+    font-size: 14px;
+    padding: 9px 18px;
+  }
+  header .CJ_headerWrap .headBuy a:nth-child(2) {
+    font-family: FZYH_510M;
+    transition: all .5s ease;
+    margin-left: 10px;
+  }
+  header .CJ_headerWrap .headBuy a:hover {
+    transition: all .5s ease;
+    background-color: #059157;
+  }
+  header .CJ_headerWrap .headMenu {
+    color: #787878;
+    float: right;
+    font-size: 18px;
+  }
+  header .CJ_headerWrap .headMenu ul li {
+    float: left;
+    display: inline-block;
+    margin-right: 37px;
+    line-height: 59px;
+  }
+  header .CJ_headerWrap .headMenu ul li a {
+    transition: all .5s ease;
+    font-family: FZYH_508R;
+    font-weight: 400;
+    font-size: 16px;
+    color: #a1a1a1;
+  }
+  header .CJ_headerWrap .headMenu ul li a.active {
+    transition: all .5s ease;
+    color: #4a4a4a;
+    font-family: FZYH_510M;
+  }
+}
+header.black {
+  background-color: rgba(27, 27, 27, 0.95);
+  border-bottom: 1px solid #232323;
+  transition: all .5s ease;
+}
+header.black .CJ_headerWrap .logo a {
+  transition: all .5s ease;
+  color: white;
+}
+header.black .CJ_headerWrap .headBuy a {
+  transition: all .5s ease;
+  background: white;
+  color: black;
+}
+header.black .CJ_headerWrap .headMenu a.active {
+  transition: all .5s ease;
+  color: white;
+}
+/*----------------导航1结束--------------------------*/
+/*------动态logo和大图1-------*/
+.CJ_banner1 {
+  background-color: #f7f7f7;
+  width: 100%;
+  overflow: hidden;
+}
+.CJ_banner1 .wraper_ban .banner1_font {
+  width: 880px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 120px;
+}
+.CJ_banner1 .wraper_ban .banner1_font .banner1_fontLeft,
+.CJ_banner1 .wraper_ban .banner1_font .banner1_fontLeft2 {
+  background: url("../imgs/cj/oppo.svg");
+  background-size: cover;
+  transition: transform 1.5s cubic-bezier(0.56, 0, 0.1, 0.95), left 1.5s cubic-bezier(0.56, 0, 0.1, 0.95);
+}
+.CJ_banner1 .wraper_ban .banner1_font .banner1_fontRgt,
+.CJ_banner1 .wraper_ban .banner1_font .banner1_fontRgt2 {
+  background: url("../imgs/cj/r11s.svg");
+  background-size: cover;
+  transition: transform 1.5s cubic-bezier(0.56, 0, 0.1, 0.95), left 1.5s cubic-bezier(0.56, 0, 0.1, 0.95);
+}
+/*------屏幕介绍-------*/
+.CJ_screen {
+  width: 100%;
+  overflow: hidden;
+}
+/*----------------------------结束---*/
+/*---特别版部分*/
+.CJ_special {
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+/*----------------*/
+/*后置摄像头*/
+.CJ_backCamera {
+  width: 100%;
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+/*-----------------*/
+/*前置摄像头*/
+.CJ_faceCamera {
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+/*------------------*/
+/*面部识别*/
+.CJ_facelook {
+  width: 100%;
+  background-color: #efefef;
+  overflow: hidden;
+}
+/*----------------------*/
+/*colorOS照片系统*/
+.CJ_ColorOS {
+  width: 100%;
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+/*-----------------------*/
+/*cpu简介*/
+.CJ_cpu {
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+/*----------------------*/
+/*快充简介*/
+.CJ_vooc {
+  width: 100%;
+  background: #f7f7f7;
+  overflow: hidden;
+}
+/*----------------------*/
+/*footer备注*/
+.footTxts {
+  font-family: FZYH_506L;
+  color: #a0a0a0;
+  text-align: left;
+  line-height: 2;
+  font-size: 12px;
+  padding: 0;
+}
+footer {
+  background-color: #fff;
+  padding: 150px 0;
+}

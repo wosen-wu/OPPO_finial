@@ -1,0 +1,2007 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style:none;
+}
+a {
+    margin: 0;
+    padding: 0 25px;
+    font-family: "�����ƺ� 508R W","PingFang SC","Microsoft YaHei","Helvetica Neue",Helvetica,Arial;
+    color: #333;
+}
+/* ------------------------------------------ͷ��--------------------------------------------------*/
+/* ���м��ɫ*/
+
+/*ͷ��*/
+#zsx_navTop{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    border: none;
+
+}
+.navbar-default {
+    background-color: transparent;
+    border-color: #e7e7e7;
+}
+
+.navbar-nav > li > a:hover{
+    opacity: .6;
+    color: #ccc;
+}
+.navbar-default .navbar-brand:hover{
+    color: #fff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: transparent;
+}
+.navbar-default .navbar-toggle {
+    border-color: #333;
+}
+
+.oppo-logo-common{
+    width: 105px;
+    font-size: 15px;
+    fill: #000;
+    float: left;
+}
+
+@media screen and (max-width: 768px){
+
+    .zsx_ulBox{
+        width: 100%;
+        height: 160px;
+        background: #fff;
+    }
+    .navbar-nav > li > a:hover{
+        opacity: 1;
+        color: #333;
+    }
+    .oppo-logo-common{
+        width: 105px;
+        font-size: 15px;
+        fill: #000;
+        float: left;
+        margin-right: 40px;
+    }
+    .navbar-brand{
+        display: inline-block;
+        float: none;
+    }
+    .navbar-toggle {
+        position: relative;
+        float: left;
+        padding: 9px 10px;
+        margin-top: 8px;
+        margin-right: 15px;
+        margin-bottom: 8px;
+        background-image: none;
+        border-radius: 0;
+    }
+    #xia li{
+        width: 100%;
+        text-align: left;
+        float: left;
+        border-bottom: 1px rgba(0, 0, 0, .082) solid;;
+    }
+    .navbar-default .navbar-toggle{
+        background: transparent;
+        border: none;
+    }
+    .navbar-default .navbar-toggle:hover{
+        background: transparent;
+        border: none;
+    }
+    .topLi ul{
+        width: 85%;
+        left: 0;
+        background: transparent;
+    }
+    .topLi ul li a {
+        padding: 13px 25px;
+        opacity: 1;
+        height: 46px;
+        z-index: 2;
+        font-size: 16px;
+    }
+    .navbar-nav > li > a {
+        color: #333;
+    }
+    /*�Ŵ�*/
+    .navbar-default .navbar-brand {
+        color: #000;
+    }
+    /* ��������߿�ȡ��*/
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+        border-color: transparent;
+    }
+    .navbar-default .navbar-toggle:focus {
+        background-color: transparent;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .navbar-default .navbar-nav > li{
+        float: left;
+    }
+    .navbar-nav > li > a{
+        color: #000;
+        margin-top: 10px;
+        padding: 0 15px;
+    }
+}
+@media screen and (min-width: 992px){
+    .navbar-nav > li > a{
+        color: #000;
+        margin-top: 10px;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .navbar-nav > li > a{
+        color: #000;
+        margin-top: 10px;
+        padding: 0 27px;
+        height: 40px;
+    }
+}
+/*------------------------ͷ������--------------*/
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #000;
+}
+.topLi{
+    text-align: center;
+}
+#xia{
+    display: inline-block;
+    float: none;
+}
+.Tbziti{
+    position: absolute;
+    right: 5px;
+    top: -5px;
+    color:#000;
+}
+.Tbziti span{
+    color: #000;
+}
+
+/*@media screen and (min-width: 768px){
+    .zsx_navTopLeft{
+        float: left;
+        width: 310px;
+        height: 213px;
+        background:#f3f3f3;
+        overflow: hidden;
+    }
+    .zsx_navTopLeft img{
+        width: 510px;
+        height: 213px;
+        margin-left: -40px;
+    }
+    .zsx_navToprigh{
+        margin-left: 20px;
+        float: left;
+        width: 404px;
+        height: 213px;
+        background: transparent;
+    }
+    .zsx_navToprigh ul li{
+        position: relative;
+        margin: 5px 5px;
+        float: left;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        overflow: hidden;
+    }
+}*/
+/*
+ͷ����꾭�� ����1200*/
+
+@media screen and (max-width: 768px){
+    #zsx_navTop{
+        background: #fff;
+    }
+    .zsx_lt_bot{
+        display: none;
+    }
+    .zsx_lt_bot ul{
+        width: 100%;
+        float: left;
+    }
+    .zsx_lt_bot ul li{
+        margin-top: 10px;
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100px;
+        border-bottom: 1px rgba(0,0,0,.082) solid;
+    }
+    .zsx_lt_bot ul li h3{
+        font-size: 14px;
+        bottom: 42.5%;
+        left: 60%;
+        margin-right: 8%;
+        float: right;
+        line-height: 90px;
+    }
+    .zsx_lt_bot ul li:nth-child(1) h3{
+        margin-right: 0;
+    }
+    .zsx_lt_bot ul li img{
+        width: 80px;
+        height: 90px;
+    }
+    .zsx_lt_bot ul li img:nth-child(2){
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 80px;
+        height: 90px;
+    }
+    .zsx_hoVer{
+        display: none;
+    }
+    .zsx_lt_bot{
+        width: 100%;
+        border-bottom: 1px rgba(0,0,0,.082) solid;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .zsx_lt_navTop{
+        overflow: hidden;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .zsx_lt_pict{
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: -10px
+    }
+    .zsx_lt_pict img{
+        height: auto;
+        width: 100%;
+    }
+    .zsx_lt_pict img:nth-child(2){
+        position: absolute;
+        right: 50px;
+        top: 120px;
+        width: 200px;
+        height: auto;
+    }
+    .zsx_lt_pict .zsx_bian {
+        cursor: pointer;
+        transition: all 0.8s;
+    }
+    .zsx_lt_pict:hover>.zsx_bian {
+        transform:scale(1.2);
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .glyphicon{
+        display: block;
+    }
+    .zsx_lt_bot,.open-menu2{
+        display: none;
+    }
+    .zsx_hoVer{
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 350px;
+        /*background: #f3f3f3;*/
+        opacity: 0;
+        background: #f2f2f2;
+        left: 0;
+        top: 50px;
+        z-index: 2;
+    }
+    .zsx_hoVerbox{
+        position: relative;
+        left: 0;
+        top: 11%;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .zsx_navTopLeft{
+        margin-left: 30px;
+        float: left;
+        width: 290px;
+        height: 250px;
+        background:#f3f3f3;
+        overflow: hidden;
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+    }
+    .zsx_navTopLeft img{
+        width: 580px;
+        height: 250px;
+        margin-left: -40px;
+    }
+    .zsx_navTopLeft img:nth-child(2){
+        position: absolute;
+        bottom: 8%;
+        width: 50%;
+        height: auto;
+        left: 40%;
+    }
+    .zsx_navTopLeft .zsx_bian {
+        cursor: pointer;
+        transition: all 0.8s;
+    }
+    .zsx_navTopLeft:hover>.zsx_bian {
+        transform:scale(1.2);
+    }
+
+    .zsx_navToprigh{
+        margin-left: 10px;
+        float: left;
+        width: 430px;
+        height: 270px;
+        background: transparent;
+    }
+    .zsx_navToprigh ul li{
+        position: relative;
+        margin: 6px 5px;
+        float: left;
+        width: 115px;
+        height: 115px;
+        background: #fff;
+        overflow: hidden;
+    }
+    .zsx_navToprigh ul li h3{
+        font-family: "�����ƺ� 510M W","PingFang SC","Microsoft YaHei","Helvetica Neue",Helvetica,Arial;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 15px;
+        text-align: center;
+        font-size: 16px;
+        color: #333;
+        font-weight: 400;
+        line-height: 1;
+        white-space: nowrap;
+        -webkit-transition: color .35s ease;
+        transition: color .35s ease;
+    }
+    .zsx_navToprigh ul li img{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        top: -10px;
+        /*  position: absolute;
+          top: 20px;*/
+    }
+
+    .topFloat{
+        top: -20px;
+    }
+    .botFloat{
+        top: 0;
+    }
+    #zsx_navTop{
+        background: transparent;
+    }
+}
+@media screen and (min-width: 992px){
+    #zsx_navTop{
+        background: transparent;
+    }
+    .glyphicon{
+        display: block;
+    }
+    .zsx_lt_bot,.open-menu2{
+        display: none;
+    }
+    .zsx_lt_bot,.open-menu2,.glyphicon{
+        display: none;
+    }
+    .zsx_hoVer{
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 416px;
+        opacity: 0;
+        background: #f2f2f2;
+        left: 0;
+        top: 50px;
+        z-index: 2;
+    }
+    .zsx_hoVerbox{
+        position: relative;
+        top: 12%;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .zsx_navTopLeft{
+        float: left;
+        width: 410px;
+        height: 313px;
+        background:#f3f3f3;
+        overflow: hidden;
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+    }
+    .zsx_navTopLeft img{
+        width: 710px;
+        height: 313px;
+        margin-left: -40px;
+    }
+    .zsx_navTopLeft img:nth-child(2){
+        position: absolute;
+        bottom: 8%;
+        width: 40%;
+        height: auto;
+        left: 40%;
+    }
+    .zsx_navTopLeft .zsx_bian {
+        cursor: pointer;
+        transition: all 0.8s;
+    }
+    .zsx_navTopLeft:hover>.zsx_bian {
+        transform:scale(1.2);
+    }
+
+    .zsx_navToprigh{
+        margin-left: 20px;
+        float: left;
+        width: 504px;
+        height: 313px;
+        background: transparent;
+    }
+    .zsx_navToprigh ul li{
+        position: relative;
+        margin: 5px 5px;
+        float: left;
+        width: 150px;
+        height: 150px;
+        background: #fff;
+        overflow: hidden;
+    }
+    .zsx_navToprigh ul li h3{
+        font-family: "�����ƺ� 510M W","PingFang SC","Microsoft YaHei","Helvetica Neue",Helvetica,Arial;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 15px;
+        text-align: center;
+        font-size: 16px;
+        color: #333;
+        font-weight: 400;
+        line-height: 1;
+        white-space: nowrap;
+        -webkit-transition: color .35s ease;
+        transition: color .35s ease;
+    }
+    .zsx_navToprigh ul li img{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        top: -10px;
+        /*  position: absolute;
+          top: 20px;*/
+    }
+
+    .topFloat{
+        top: -20px;
+    }
+    .botFloat{
+        top: 0;
+    }
+}
+@media screen and (min-width: 1200px){
+    #zsx_navTop{
+        background: transparent;
+    }
+    .glyphicon{
+        display: block;
+    }
+    .zsx_lt_bot,.open-menu2{
+        display: none;
+    }
+    .zsx_hoVer{
+        display: none;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 416px;
+        /*background: #f3f3f3;*/
+        background: #f2f2f2;
+        left: 0;
+        top: 54px;
+        z-index: 2;
+    }
+    .zsx_hoVerbox{
+        position: relative;
+        top: 12%;
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .zsx_navTopLeft{
+        float: left;
+        width: 410px;
+        height: 313px;
+        background:#f3f3f3;
+        overflow: hidden;
+        position: relative;
+        left: 0;
+        top: 0;
+        right: 0;
+    }
+    .zsx_navTopLeft img{
+        width: 710px;
+        height: 313px;
+        margin-left: -40px;
+    }
+    .zsx_navTopLeft img:nth-child(2){
+        position: absolute;
+        bottom: 8%;
+        width: 40%;
+        height: auto;
+        left: 40%;
+    }
+    .zsx_navTopLeft .zsx_bian {
+        cursor: pointer;
+        transition: all 0.8s;
+    }
+    .zsx_navTopLeft:hover>.zsx_bian {
+        transform:scale(1.2);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .zsx_navToprigh{
+        margin-left: 20px;
+        float: left;
+        width: 504px;
+        height: 313px;
+        background: transparent;
+    }
+    .zsx_navToprigh ul li{
+        position: relative;
+        margin: 5px 5px;
+        float: left;
+        width: 150px;
+        height: 150px;
+        background: #fff;
+        overflow: hidden;
+    }
+    .zsx_navToprigh ul li h3{
+        font-family: "�����ƺ� 510M W","PingFang SC","Microsoft YaHei","Helvetica Neue",Helvetica,Arial;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 15px;
+        text-align: center;
+        font-size: 16px;
+        color: #333;
+        font-weight: 400;
+        line-height: 1;
+        white-space: nowrap;
+        -webkit-transition: color .35s ease;
+        transition: color .35s ease;
+    }
+    .zsx_navToprigh ul li img{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        top: -10px;
+        /*  position: absolute;
+          top: 20px;*/
+    }
+
+    .topFloat{
+        top: -20px;
+    }
+    .botFloat{
+        top: 0;
+    }
+}
+
+/*��꾭��li��Ӱ*/
+.zsx_boxShadw{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    opacity: 0;
+    background: #000;
+}
+/* ------------------------------------------ͷ������--------------------------------------------------*/
+/*
+
+-------------------------------banner----------------------*/
+.zsx_banner{
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+#zsx_banner_inner{
+    position: relative;
+    transition: left .9s;
+}
+#zsx_banner_inner>div{
+    position: relative;
+    float: left;
+    height: 610px;
+}
+/* ��һ��ͼ*/
+.zsx_ban1{
+    left: 0;
+    top: 0;
+    position: relative;
+    width: 100%;
+    background: #fff;
+}
+/* ����λ��*/
+.zsx_ban1 .zsx_text{
+    text-align: center;
+    position: absolute;
+    bottom: 60%;
+    left: 10%;
+}
+.zsx_ban1 .zsx_text h1{
+    margin-top: 40px;
+    line-height: 40px;
+    font-size: 29px;
+}
+.zsx_ban1 .zsx_text h3{
+    margin-top: 10px;
+    font-size: 11px;
+}
+.zsx_ban1 .zsx_text .banner-link{
+    padding-top: 15px;
+    margin-left: 10px ;
+}
+.zsx_ban1 .zsx_text .banner-link a:hover{
+    cursor: pointer;
+    background: #fff;
+}
+.zsx_ban1 .zsx_text .banner-link a:nth-child(2):hover{
+    cursor: pointer;
+    background: #059157;
+}
+.zsx_ban1 .zsx_text .banner-link a{
+    border: 1px solid #999;
+    color: #333;
+    width: 124px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 20px;
+    margin: 0 15px;
+    font-size: 16px;
+    text-decoration:none;
+    float: left;
+}
+.zsx_ban1 .zsx_text .banner-link a:nth-child(2){
+    background:#05b570;color: #fff;border-color:#05b570;
+}
+/* ͼƬ*/
+.zsx_ban1 .zsx_img{
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    bottom: 15%;
+    left: 4%;
+    overflow: hidden;
+}
+.zsx_ban1 .zsx_img img{
+    width: auto;
+    height: 100%;
+    cursor: pointer;
+}
+/*�ڶ���ͼ*/
+.zsx_ban2{
+    left: 0;
+    top: 0;
+    position: relative;
+    width: 100%;
+    height: 610px;
+    background: #fff;
+}
+/* ����λ��*/
+.zsx_ban2 .zsx_text{
+    text-align: center;
+    position: absolute;
+    bottom: 65%;
+    left: 15%;
+}
+.zsx_ban2 .zsx_text h1{
+    margin-top: 40px;
+    line-height: 40px;
+    font-size: 29px;
+}
+.zsx_ban2 .zsx_text h3{
+    margin-top: 15px;
+    font-size: 11px;
+}
+.zsx_ban2 .zsx_text .banner-link{
+    padding-top: 15px;
+    margin-left: 3px ;
+
+}
+.zsx_ban2 .zsx_text .banner-link a:hover{
+    cursor: pointer;
+    background: #fff;
+}
+.zsx_ban2 .zsx_text .banner-link a:nth-child(2):hover{
+    cursor: pointer;
+    background: #059157;
+}
+.zsx_ban2 .zsx_text .banner-link a{
+    border: 1px solid #999;
+    color: #333;
+    width: 124px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 20px;
+    margin: 0 15px;
+    font-size: 16px;
+    text-decoration:none;
+    float: left;
+}
+.zsx_ban2 .zsx_text .banner-link a:nth-child(2){
+    background:#05b570;color: #fff;border-color:#05b570;
+}
+/* ͼƬ*/
+.zsx_ban2 .zsx_img{
+    position: absolute;
+    width: 240px;
+    height: 290px;
+    bottom: 10%;
+    left: 22%;
+    overflow: hidden;
+}
+.zsx_ban2 .zsx_img img{
+    width: auto;
+    height: 100%;
+    cursor: pointer;
+}
+/*������ͼƬ*/
+.zsx_ban3{
+    left: 0;
+    top: 0;
+    position: relative;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+/* ����λ��*/
+.zsx_ban3 .zsx_text{
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 300px;
+}
+.zsx_ban3 .zsx_text h1{
+    margin-top: 30px;
+    line-height: 40px;
+    font-size: 30px;
+    color: #fff;
+}
+.zsx_ban3 .zsx_text h3{
+    margin-top: 10px;
+    font-size: 14px;
+    color: #fff;
+}
+.zsx_ban3 .zsx_text .banner-link{
+    padding-top: 20px;
+    margin-left: 150px ;
+
+}
+.zsx_ban3 .zsx_text .banner-link a:hover{
+    cursor: pointer;
+}
+.zsx_ban3 .zsx_text .banner-link a:nth-child(2):hover{
+    cursor: pointer;
+    background: #f0efee;
+}
+.zsx_ban3 .zsx_text .banner-link a{
+    border: 1px solid #999;
+    color: #fff;
+    width: 124px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 20px;
+    margin: 0 5px;
+    font-size: 16px;
+    text-decoration:none;
+    float: left;
+}
+.zsx_ban3 .zsx_text .banner-link a:nth-child(2){
+    background:#fff;
+    color: #333;
+    border-color:#fff;
+}
+/* ͼƬ*/
+.zsx_ban3 .zsx_img{
+    position: relative;
+    width: 100%;
+    /*overflow: hidden;*/
+}
+
+/* ������ͼ*/
+.zsx_ban4{
+    left: 0;
+    top: 0;
+    position: relative;
+    width: 100%;
+    height: 610px;
+    background: #FFCCCC;
+}
+/* ����λ��*/
+.zsx_ban4 .zsx_text{
+    text-align: center;
+    position: absolute;
+    top: 15%;
+    left:  10%;
+}
+.zsx_ban4 .zsx_text h1{
+    margin-top: 40px;
+    line-height: 40px;
+    font-size: 45px;
+}
+.zsx_ban4 .zsx_text h3{
+    padding: 15px 0;
+    font-size: 17px;
+}
+.zsx_ban4 .zsx_text .banner-link{
+    padding-top: 15px;
+    margin-left: 5px ;
+
+}
+.zsx_ban4 .zsx_text .banner-link a:hover{
+    cursor: pointer;
+    background: #fff;
+}
+.zsx_ban4 .zsx_text .banner-link a:nth-child(2):hover{
+    cursor: pointer;
+    background: #059157;
+}
+.zsx_ban4 .zsx_text .banner-link a{
+    border: 1px solid #999;
+    color: #333;
+    width: 124px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 20px;
+    margin: 0 15px;
+    font-size: 16px;
+    text-decoration:none;
+    float: left;
+}
+.zsx_ban4 .zsx_text .banner-link a:nth-child(2){
+    background:#05b570;color: #fff;border-color:#05b570;
+}
+/* ͼƬ*/
+.zsx_ban4 .zsx_img{
+    position: absolute;
+    width: 350px;
+    height: 170px;
+    bottom: 5%;
+    left: 13%;
+    overflow: hidden;
+}
+.zsx_ban4 .zsx_img img{
+    width: auto;
+    height: 90%;
+    cursor: pointer;
+}
+
+/* ��5��ͼ*/
+.zsx_ban5{
+    left: 0;
+    top: 0;
+    position: relative;
+    height: 610px;
+    background: #fff;
+}
+/* ����λ��*/
+.zsx_ban5 .zsx_text{
+    text-align: center;
+    position: absolute;
+    top: 15%;
+    left:  10%;
+}
+.zsx_ban5 .zsx_text h1{
+    margin-top: 40px;
+    line-height: 40px;
+    font-size: 45px;
+}
+.zsx_ban5 .zsx_text h3{
+    padding: 15px 0;
+    font-size: 17px;
+}
+.zsx_ban5 .zsx_text .banner-link{
+    padding-top: 15px;
+    margin-left: 5px ;
+
+}
+.zsx_ban5 .zsx_text .banner-link a:hover{
+    cursor: pointer;
+    background: #fff;
+}
+.zsx_ban5 .zsx_text .banner-link a:nth-child(2):hover{
+    cursor: pointer;
+    background: #059157;
+}
+.zsx_ban5 .zsx_text .banner-link a{
+    border: 1px solid #999;
+    color: #333;
+    width: 124px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 20px;
+    margin: 0 15px;
+    font-size: 16px;
+    text-decoration:none;
+    float: left;
+}
+.zsx_ban5 .zsx_text .banner-link a:nth-child(2){
+    background:#05b570;color: #fff;border-color:#05b570;
+}
+/* ͼƬ*/
+.zsx_ban5 .zsx_img{
+    position: absolute;
+    width: 350px;
+    height: 170px;
+    bottom: 5%;
+    left: 13%;
+    overflow: hidden;
+}
+.zsx_ban5 .zsx_img img{
+    width: auto;
+    height: 90%;
+    cursor: pointer;
+}
+/*�ֲ�����λ��*/
+.zsx_BtnWrap{
+    position: absolute;
+    bottom: 30px;
+    left: 45%;
+}
+.zsx_BtnWrap ul li{
+    float: left;
+    margin-left: 2px;
+    cursor: pointer;
+    margin-left: 26px;
+}
+.zsx_BtnWrap{
+    position: absolute;
+    bottom: 30px;
+    left: 23%;
+}
+
+@media screen and (min-width: 473px){
+    /* ��һ��ͼ*/
+    .zsx_ban1{
+        left: 0;
+        top: 0;
+        position: relative;
+        width: 100%;
+        background: #fff;
+    }
+    /* ����λ��*/
+    .zsx_ban1 .zsx_text{
+        text-align: center;
+        position: absolute;
+        width: 600px;
+        height: 193px;
+        bottom: 56%;
+        left: 0;
+    }
+    .zsx_ban1 .zsx_text h1{
+        margin-top: 40px;
+        line-height: 40px;
+        font-size: 29px;
+    }
+    .zsx_ban1 .zsx_text h3{
+        margin-top: 10px;
+        font-size: 11px;
+    }
+    .zsx_ban1 .zsx_text .banner-link{
+        padding-top: 15px;
+        margin-left: 150px ;
+
+    }
+    .zsx_ban1 .zsx_text .banner-link a:hover{
+        cursor: pointer;
+        background: #fff;
+    }
+    .zsx_ban1 .zsx_text .banner-link a:nth-child(2):hover{
+        cursor: pointer;
+        background: #059157;
+    }
+    .zsx_ban1 .zsx_text .banner-link a{
+        border: 1px solid #999;
+        color: #333;
+        width: 124px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 20px;
+        margin: 0 15px;
+        font-size: 16px;
+        text-decoration:none;
+        float: left;
+    }
+    .zsx_ban1 .zsx_text .banner-link a:nth-child(2){
+        background:#05b570;color: #fff;border-color:#05b570;
+    }
+    /* ͼƬ*/
+    .zsx_ban1 .zsx_img{
+        position: absolute;
+        width: 400px;
+        height: 250px;
+        bottom: 10%;
+        left: 4%;
+        overflow: hidden;
+    }
+    .zsx_ban1 .zsx_img img{
+        width: auto;
+        height: 100%;
+        cursor: pointer;
+    }
+    /*�ڶ���ͼ*/
+    .zsx_ban2{
+        left: 0;
+        top: 0;
+        position: relative;
+        width: 100%;
+        height: 610px;
+        background: #fff;
+    }
+    /* ����λ��*/
+    .zsx_ban2 .zsx_text{
+        text-align: center;
+        position: absolute;
+        width: 600px;
+        height: 193px;
+        top: 33%;
+        left: 10%;
+    }
+    .zsx_ban2 .zsx_text h1{
+        margin-top: 40px;
+        line-height: 40px;
+        font-size: 38px;
+    }
+    .zsx_ban2 .zsx_text h3{
+        margin-top: 15px;
+        font-size: 17px;
+    }
+    .zsx_ban2 .zsx_text .banner-link{
+        padding-top: 15px;
+        margin-left: 140px ;
+
+    }
+    .zsx_ban2 .zsx_text .banner-link a:hover{
+        cursor: pointer;
+        background: #fff;
+    }
+    .zsx_ban2 .zsx_text .banner-link a:nth-child(2):hover{
+        cursor: pointer;
+        background: #059157;
+    }
+    .zsx_ban2 .zsx_text .banner-link a{
+        border: 1px solid #999;
+        color: #333;
+        width: 124px;
+        height: 31px;
+        line-height: 36px;
+        border-radius: 20px;
+        margin: 0 15px;
+        font-size: 16px;
+        text-decoration:none;
+        float: left;
+    }
+    .zsx_ban2 .zsx_text .banner-link a:nth-child(2){
+        background:#05b570;color: #fff;border-color:#05b570;
+    }
+    /* ͼƬ*/
+    .zsx_ban2 .zsx_img{
+        position: absolute;
+        width: 300px;
+        height: 360px;
+        bottom: 10%;
+        left: -10%;
+        overflow: hidden;
+    }
+    .zsx_ban2 .zsx_img img{
+        width: auto;
+        height: 100%;
+        cursor: pointer;
+    }
+    /*������ͼƬ*/
+    .zsx_ban3{
+        left: 0;
+        top: 0;
+        position: relative;
+        width: 100%;
+        background: #fff;
+        overflow: hidden;
+    }
+    /* ����λ��*/
+    .zsx_ban3 .zsx_text{
+        text-align: center;
+        position: absolute;
+        width: 600px;
+        height: 193px;
+        top: 35%;
+        left: 75%;
+    }
+    .zsx_ban3 .zsx_text h1{
+        margin-top: 30px;
+        line-height: 40px;
+        font-size: 38px;
+        color: #fff;
+    }
+    .zsx_ban3 .zsx_text h3{
+        margin-top: 10px;
+        font-size: 17px;
+        color: #fff;
+    }
+    .zsx_ban3 .zsx_text .banner-link{
+        padding-top: 30px;
+        margin-left: 140px ;
+
+    }
+    .zsx_ban3 .zsx_text .banner-link a:hover{
+        cursor: pointer;
+    }
+    .zsx_ban3 .zsx_text .banner-link a:nth-child(2):hover{
+        cursor: pointer;
+        background: #f0efee;
+    }
+    .zsx_ban3 .zsx_text .banner-link a{
+        border: 1px solid #999;
+        color: #fff;
+        width: 124px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 20px;
+        margin: 0 15px;
+        font-size: 16px;
+        text-decoration:none;
+        float: left;
+    }
+    .zsx_ban3 .zsx_text .banner-link a:nth-child(2){
+        background:#fff;
+        color: #333;
+        border-color:#fff;
+    }
+    /* ͼƬ*/
+    .zsx_ban3 .zsx_img{
+        position: relative;
+        width: 100%;
+    }
+
+    /* ������ͼ*/
+    .zsx_ban4{
+        left: 0;
+        top: 0;
+        position: relative;
+        width: 100%;
+        height: 610px;
+        background: #FFCCCC;
+    }
+    /* ����λ��*/
+    .zsx_ban4 .zsx_text{
+        text-align: center;
+        position: absolute;
+        width: 600px;
+        height: 193px;
+        bottom: 56%;
+        left: 0;
+    }
+    .zsx_ban4 .zsx_text h1{
+        margin-top: 40px;
+        line-height: 40px;
+        font-size: 29px;
+    }
+    .zsx_ban4 .zsx_text h3{
+        padding: 15px 0;
+        font-size: 11px;
+    }
+    .zsx_ban4 .zsx_text .banner-link{
+        padding-top: 15px;
+        margin-left: 140px ;
+
+    }
+    .zsx_ban4 .zsx_text .banner-link a:hover{
+        cursor: pointer;
+        background: #fff;
+    }
+    .zsx_ban4 .zsx_text .banner-link a:nth-child(2):hover{
+        cursor: pointer;
+        background: #059157;
+    }
+    .zsx_ban4 .zsx_text .banner-link a{
+        border: 1px solid #999;
+        color: #333;
+        width: 124px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 20px;
+        margin: 0 15px;
+        font-size: 16px;
+        text-decoration:none;
+        float: left;
+    }
+    .zsx_ban4 .zsx_text .banner-link a:nth-child(2){
+        background:#05b570;color: #fff;border-color:#05b570;
+    }
+    /* ͼƬ*/
+    .zsx_ban4 .zsx_img{
+        position: absolute;
+        width: 500px;
+        height: 250px;
+        bottom: 2%;
+        left: 4%;
+        overflow: hidden;
+    }
+    .zsx_ban4 .zsx_img img{
+        width: auto;
+        height: 90%;
+        cursor: pointer;
+    }
+
+    /* ��5��ͼ*/
+    .zsx_ban5{
+        left: 0;
+        top: 0;
+        position: relative;
+        height: 610px;
+        background: #fff;
+    }
+    /* ����λ��*/
+    .zsx_ban5 .zsx_text{
+        text-align: center;
+        position: absolute;
+        width: 600px;
+        height: 193px;
+        bottom: 56%;
+        left: 0;
+    }
+    .zsx_ban5 .zsx_text h1{
+        margin-top: 40px;
+        line-height: 40px;
+        font-size: 29px;
+    }
+    .zsx_ban5 .zsx_text h3{
+        padding: 15px 0;
+        font-size: 11px;
+    }
+    .zsx_ban5 .zsx_text .banner-link{
+        padding-top: 15px;
+        margin-left: 140px ;
+
+    }
+    .zsx_ban5 .zsx_text .banner-link a:hover{
+        cursor: pointer;
+        background: #fff;
+    }
+    .zsx_ban5 .zsx_text .banner-link a:nth-child(2):hover{
+        cursor: pointer;
+        background: #059157;
+    }
+    .zsx_ban5 .zsx_text .banner-link a{
+        border: 1px solid #999;
+        color: #333;
+        width: 124px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 20px;
+        margin: 0 15px;
+        font-size: 16px;
+        text-decoration:none;
+        float: left;
+    }
+    .zsx_ban5 .zsx_text .banner-link a:nth-child(2){
+        background:#05b570;color: #fff;border-color:#05b570;
+    }
+    /* ͼƬ*/
+    .zsx_ban5 .zsx_img{
+        position: absolute;
+        width: 600px;
+        height: 250px;
+        bottom: 2%;
+        left: 4%;
+        overflow: hidden;
+    }
+    .zsx_ban5 .zsx_img img{
+        width: auto;
+        height: 90%;
+        cursor: pointer;
+    }
+    /*�ֲ�����λ��*/
+    .zsx_BtnWrap{
+        position: absolute;
+        bottom: 30px;
+        left: 45%;
+    }
+    .zsx_BtnWrap ul li{
+        float: left;
+        margin-left: 2px;
+    }
+    .zsx_BtnWrap{
+        position: absolute;
+        bottom: 30px;
+        left: 33%;
+    }
+    .zsx_BtnWrap ul li{
+        float: left;
+        margin-left: 26px;
+    }
+}
+@media screen and (min-width: 768px){
+    .zsx_ban1{
+        left: 0;
+        top: 0;
+        position: relative;
+        width: 100%;
+        background: #fff;
+    }
+    /* ����λ��*/
+    .zsx_ban1 .zsx_text{
+        text-align: center;
+        position: absolute;
+        bottom: 56%;
+        left: 24%;
+    }
+    .zsx_ban1 .zsx_text h1{
+        margin-top: 40px;
+        line-height: 40px;
+        font-size: 38px;
+    }
+    .zsx_ban1 .zsx_text h3{
+        margin-top: 10px;
+        font-size: 17px;
+    }
+    .zsx_ban1 .zsx_text .banner-link{
+        padding-top: 15px;
+        margin-left: 140px ;
+
+    }
+    .zsx_ban1 .zsx_text .banner-link a:hover{
+        cursor: pointer;
+        background: #fff;
+    }
+    .zsx_ban1 .zsx_text .banner-link a:nth-child(2):hover{
+        cursor: pointer;
+        background: #059157;
+    }
+    .zsx_ban1 .zsx_text .banner-link a{
+        border: 1px solid #999;
+        color: #333;
+        width: 124px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 20px;
+        margin: 0 15px;
+        font-size: 16px;
+        text-decoration:none;
+        float: left;
+    }
+    .zsx_ban1 .zsx_text .banner-link a:nth-child(2){
+        background:#05b570;color: #fff;border-color:#05b570;
+    }
+    /* ͼƬ*/
+    .zsx_ban1 .zsx_img{
+        position: absolute;
+        width: 600px;
+        height: 300px;
+        bottom: 10%;
+        left: 20%;
+        overflow: hidden;
+
+    }
+    .zsx_ban1 .zsx_img img{
+        width: auto;
+        height: 100%;
+        cursor: pointer;
+    }
+    /*�ڶ���ͼ*/
+    .zsx_ban2{
+        left: 0;
+        top: 0;
+        position: relative;
+        width: 100%;
+        height: 610px;
+        background: #fff;
+    }
+    /* ����λ��*/
+    .zsx_ban2 .zsx_text{
+        text-align: center;
+        position: absolute;
+        width: 600px;
+        height: 193px;
+        top: 33%;
+        left: 45%;
+    }
+    .zsx_ban2 .zsx_text h1{
+        margin-top: 40px;
+        line-height: 40px;
+        font-size: 38px;
+    }
+    .zsx_ban2 .zsx_text h3{
+        margin-top: 15px;
+        font-size: 17px;
+    }
+    .zsx_ban2 .zsx_text .banner-link{
+        padding-top: 15px;
+        margin-left: 140px ;
+
+    }
+    .zsx_ban2 .zsx_text .banner-link a:hover{
+        cursor: pointer;
+        background: #fff;
+    }
+    .zsx_ban2 .zsx_text .banner-link a:nth-child(2):hover{
+        cursor: pointer;
+        background: #059157;
+    }
+    .zsx_ban2 .zsx_text .banner-link a{
+        border: 1px solid #999;
+        color: #333;
+        width: 124px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 20px;
+        margin: 0 15px;
+        font-size: 16px;
+        text-decoration:none;
+        float: left;
+    }
+    .zsx_ban2 .zsx_text .banner-link a:nth-child(2){
+        background:#05b570;color: #fff;border-color:#05b570;
+    }
+    /* ͼƬ*/
+    .zsx_ban2 .zsx_img{
+        position: absolute;
+        width: 363px;
+        height: 466px;
+        bottom: 10%;
+        left: 23%;
+        overflow: hidden;
+    }
+    .zsx_ban2 .zsx_img img{
+        width: auto;
+        height: 100%;
+        cursor: pointer;
+    }
+    /*������ͼƬ*/
+    .zsx_ban3{
+        left: 0;
+        top: 0;
+        position: relative;
+        width: 100%;
+        background: #fff;
+        overflow: hidden;
+    }
+    /* ����λ��*/
+    .zsx_ban3 .zsx_text{
+        text-align: center;
+        position: absolute;
+        width: 600px;
+        height: 193px;
+        top: 35%;
+        left: 75%;
+    }
+    .zsx_ban3 .zsx_text h1{
+        margin-top: 30px;
+        line-height: 40px;
+        font-size: 38px;
+        color: #fff;
+    }
+    .zsx_ban3 .zsx_text h3{
+        margin-top: 10px;
+        font-size: 17px;
+        color: #fff;
+    }
+    .zsx_ban3 .zsx_text .banner-link{
+        padding-top: 30px;
+        margin-left: 140px ;
+
+    }
+    .zsx_ban3 .zsx_text .banner-link a:hover{
+        cursor: pointer;
+    }
+    .zsx_ban3 .zsx_text .banner-link a:nth-child(2):hover{
+        cursor: pointer;
+        background: #f0efee;
+    }
+    .zsx_ban3 .zsx_text .banner-link a{
+        border: 1px solid #999;
+        color: #fff;
+        width: 124px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 20px;
+        margin: 0 15px;
+        font-size: 16px;
+        text-decoration:none;
+        float: left;
+    }
+    .zsx_ban3 .zsx_text .banner-link a:nth-child(2){
+        background:#fff;
+        color: #333;
+        border-color:#fff;
+    }
+    /* ͼƬ*/
+    .zsx_ban3 .zsx_img{
+        position: relative;
+        width: 100%;
+    }
+
+    /* ������ͼ*/
+    .zsx_ban4{
+        left: 0;
+        top: 0;
+        position: relative;
+        width: 100%;
+        height: 610px;
+        background: #FFCCCC;
+    }
+    /* ����λ��*/
+    .zsx_ban4 .zsx_text{
+        text-align: center;
+        position: absolute;
+        width: 600px;
+        height: 193px;
+        top: 15%;
+        left: 25%;
+    }
+    .zsx_ban4 .zsx_text h1{
+        margin-top: 40px;
+        line-height: 40px;
+        font-size: 45px;
+    }
+    .zsx_ban4 .zsx_text h3{
+        padding: 15px 0;
+        font-size: 17px;
+    }
+    .zsx_ban4 .zsx_text .banner-link{
+        padding-top: 15px;
+        margin-left: 140px ;
+
+    }
+    .zsx_ban4 .zsx_text .banner-link a:hover{
+        cursor: pointer;
+        background: #fff;
+    }
+    .zsx_ban4 .zsx_text .banner-link a:nth-child(2):hover{
+        cursor: pointer;
+        background: #059157;
+    }
+    .zsx_ban4 .zsx_text .banner-link a{
+        border: 1px solid #999;
+        color: #333;
+        width: 124px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 20px;
+        margin: 0 15px;
+        font-size: 16px;
+        text-decoration:none;
+        float: left;
+    }
+    .zsx_ban4 .zsx_text .banner-link a:nth-child(2){
+        background:#05b570;color: #fff;border-color:#05b570;
+    }
+    /* ͼƬ*/
+    .zsx_ban4 .zsx_img{
+        position: absolute;
+        width: 500px;
+        height: 260px;
+        bottom: 5%;
+        left: 27%;
+        overflow: hidden;
+    }
+    .zsx_ban4 .zsx_img img{
+        width: auto;
+        height: 90%;
+        cursor: pointer;
+    }
+
+    /* ��5��ͼ*/
+    .zsx_ban5{
+        left: 0;
+        top: 0;
+        position: relative;
+        height: 610px;
+        background: #fff;
+    }
+    /* ����λ��*/
+    .zsx_ban5 .zsx_text{
+        text-align: center;
+        position: absolute;
+        width: 600px;
+        height: 193px;
+        top: 15%;
+        left: 25%;
+    }
+    .zsx_ban5 .zsx_text h1{
+        margin-top: 40px;
+        line-height: 40px;
+        font-size: 45px;
+    }
+    .zsx_ban5 .zsx_text h3{
+        padding: 15px 0;
+        font-size: 17px;
+    }
+    .zsx_ban5 .zsx_text .banner-link{
+        padding-top: 15px;
+        margin-left: 140px ;
+
+    }
+    .zsx_ban5 .zsx_text .banner-link a:hover{
+        cursor: pointer;
+        background: #fff;
+    }
+    .zsx_ban5 .zsx_text .banner-link a:nth-child(2):hover{
+        cursor: pointer;
+        background: #059157;
+    }
+    .zsx_ban5 .zsx_text .banner-link a{
+        border: 1px solid #999;
+        color: #333;
+        width: 124px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 20px;
+        margin: 0 15px;
+        font-size: 16px;
+        text-decoration:none;
+        float: left;
+    }
+    .zsx_ban5 .zsx_text .banner-link a:nth-child(2){
+        background:#05b570;color: #fff;border-color:#05b570;
+    }
+    /* ͼƬ*/
+    .zsx_ban5 .zsx_img{
+        position: relative;
+        width: 500px;
+        height: 260px;
+        top: 50%;
+        left: 27%;
+        overflow: hidden;
+    }
+    .zsx_ban5 .zsx_img img{
+        width: auto;
+        height: 90%;
+        cursor: pointer;
+    }
+    /*�ֲ�����λ��*/
+    .zsx_BtnWrap{
+        position: absolute;
+        bottom: 30px;
+        left: 45%;
+    }
+    .zsx_BtnWrap ul li{
+        float: left;
+        margin-left: 2px;
+    }
+    .zsx_BtnWrap{
+        position: absolute;
+        bottom: 30px;
+        left: 40%;
+    }
+    .zsx_BtnWrap ul li{
+        float: left;
+        margin-left: 26px;
+    }
+}
+@media screen and (min-width: 1200px){
+
+
+    /* ����λ��*/
+    .zsx_ban1 .zsx_text{
+        text-align: center;
+        position: absolute;
+        bottom: 58%;
+        left: 27%;
+    }
+    .zsx_ban1 .zsx_text h1{
+        margin-top: 40px;
+        line-height: 40px;
+        font-size: 3em;
+    }
+    .zsx_ban1 .zsx_text h3{
+        margin-top: 10px;
+        font-size: 17px;
+    }
+    .zsx_ban1 .zsx_text .banner-link{
+        padding-top: 15px;
+        margin-left: 140px ;
+
+    }
+
+
+    /* ͼƬ*/
+    .zsx_ban1 .zsx_img{
+        position: absolute;
+        width: 600px;
+        height: 300px;
+        bottom: 10%;
+        left: 26%;
+        overflow: hidden;
+    }
+
+    /*�ڶ���ͼ*/
+
+    /* ����λ��*/
+    .zsx_ban2 .zsx_text{
+        text-align: center;
+        position: absolute;
+        width: 600px;
+        height: 193px;
+        top: 33%;
+        left: 45%;
+    }
+    .zsx_ban2 .zsx_text h1{
+        margin-top: 40px;
+        line-height: 40px;
+        font-size: 38px;
+    }
+    .zsx_ban2 .zsx_text h3{
+        margin-top: 15px;
+        font-size: 17px;
+    }
+
+    /* ͼƬ*/
+    .zsx_ban2 .zsx_img{
+        position: absolute;
+        width: 363px;
+        height: 466px;
+        bottom: 10%;
+        left: 23%;
+        overflow: hidden;
+    }
+    /*������ͼƬ*/
+
+    /* ����λ��*/
+    .zsx_ban3 .zsx_text{
+        text-align: center;
+        position: absolute;
+        width: 600px;
+        height: 193px;
+        top: 35%;
+        left: 75%;
+    }
+    .zsx_ban3 .zsx_text h1{
+        margin-top: 30px;
+        line-height: 40px;
+        font-size: 38px;
+        color: #fff;
+    }
+    .zsx_ban3 .zsx_text h3{
+        margin-top: 10px;
+        font-size: 17px;
+        color: #fff;
+    }
+
+    /* ͼƬ*/
+    .zsx_ban3 .zsx_img{
+        position: relative;
+        width: 100%;
+    }
+
+    /* ������ͼ*/
+
+    /* ����λ��*/
+    .zsx_ban4 .zsx_text{
+        text-align: center;
+        position: absolute;
+        width: 600px;
+        height: 193px;
+        top: 15%;
+        left: 25%;
+    }
+    .zsx_ban4 .zsx_text h1{
+        margin-top: 40px;
+        line-height: 40px;
+        font-size: 45px;
+    }
+    .zsx_ban4 .zsx_text h3{
+        padding: 15px 0;
+        font-size: 17px;
+    }
+
+    /* ͼƬ*/
+    .zsx_ban4 .zsx_img{
+        position: absolute;
+        width: 500px;
+        height: 260px;
+        bottom: 5%;
+        left: 27%;
+        overflow: hidden;
+    }
+    /* ��5��ͼ*/
+
+    /* ����λ��*/
+    .zsx_ban5 .zsx_text{
+        text-align: center;
+        position: absolute;
+        width: 600px;
+        height: 193px;
+        top: 15%;
+        left: 25%;
+    }
+    .zsx_ban5 .zsx_text h1{
+        margin-top: 40px;
+        line-height: 40px;
+        font-size: 45px;
+    }
+    .zsx_ban5 .zsx_text h3{
+        padding: 15px 0;
+        font-size: 17px;
+    }
+
+    /* ͼƬ*/
+    .zsx_ban5 .zsx_img{
+        position: relative;
+        width: 500px;
+        height: 260px;
+        top: 50%;
+        left: 27%;
+        overflow: hidden;
+    }
+    .zsx_BtnWrap{
+        position: absolute;
+        bottom: 30px;
+        left: 40%;
+    }
+    .zsx_BtnWrap ul li{
+        float: left;
+        margin-left: 26px;
+    }
+}
+/*�ֲ�����λ��*/
+
+
+
+/*-------------------banner����------------*/
+/*banner��������ͼ*/
+@media screen and (max-width: 768px){
+    .zsx_botTop{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .zsx_botTop .zsx_imgBigbox{
+        padding-top: 1%;
+        width: 100%;
+    }
+    .zsx_botTop .zsx_imgBigbox img{
+        position: relative;
+        width: 100%;
+        height: 60%;
+    }
+}
+@media screen and (min-width: 768px){
+    .zsx_botTop{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .zsx_botTop .zsx_imgBigbox{
+        padding-top: 1%;
+        width: 49.5%;
+        height: 200px;
+        float: left;
+        overflow: hidden;
+    }
+    .zsx_botTop .zsx_imgBigbox:nth-child(2){
+        margin-left: 1%;
+    }
+    .zsx_botTop .zsx_imgBigbox:nth-child(4){
+        margin-left: 1%;
+    }
+    .zsx_botTop .zsx_imgBigbox img{
+        position: relative;
+        width: auto;
+        height: 99%;
+        right:17%;
+    }
+}
+@media screen and (min-width: 992px){
+    .zsx_botTop{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .zsx_botTop .zsx_imgBigbox{
+        padding-top: 10px;
+        width: 49.5%;
+        height: 250px;
+        float: left;
+        overflow: hidden;
+    }
+    .zsx_botTop .zsx_imgBigbox:nth-child(2){
+        margin-left: 1%;
+    }
+    .zsx_botTop .zsx_imgBigbox:nth-child(4){
+        margin-left: 1%;
+    }
+    .zsx_botTop .zsx_imgBigbox img{
+        position: relative;
+        width: auto;
+        height: 99%;
+        right:21%;
+    }
+}
+@media screen and (min-width: 1200px){
+    .zsx_botTop{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .zsx_botTop .zsx_imgBigbox{
+        padding-top: 10px;
+        width: 49.5%;
+        height: 300px;
+        float: left;
+        overflow: hidden;
+    }
+    .zsx_botTop .zsx_imgBigbox:nth-child(2){
+        margin-left: 1%;
+    }
+    .zsx_botTop .zsx_imgBigbox:nth-child(4){
+        margin-left: 1%;
+    }
+    .zsx_botTop .zsx_imgBigbox img{
+        position: relative;
+        width: auto;
+        height: 99%;
+        right:21%;
+    }
+}
+
+
+
+/*���Ͻǵ��������*/
+
+
+

@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/* 声明 WebFont */
+@font-face {
+  font-family: 'FZYH_510M';
+  src: url('./FZYH_510M.ttf');
+  src:
+    /*url('./FZYH_510M.eot?#font-spider') format('embedded-opentype'),*/
+    url('./FZYH_510M.woff?v=2') format('woff'),
+    url('./FZYH_510M.ttf') format('truetype'),
+    url('./FZYH_510M.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FZYH_508R';
+  src: url('./FZYH_508R.ttf');
+  src:
+    /*url('./FZYH_508R.eot?#font-spider') format('embedded-opentype'),*/
+    url('./FZYH_508R.woff?v=2') format('woff'),
+    url('./FZYH_508R.ttf') format('truetype'),
+    url('./FZYH_508R.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FZYH_506L';
+  src: url('./FZYH_506L.ttf');
+  src:
+    /*url('./FZYH_506L.eot?#font-spider') format('embedded-opentype'),*/
+    url('./FZYH_506L.woff?v=2') format('woff'),
+    url('./FZYH_506L.ttf') format('truetype'),
+    url('./FZYH_506L.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*@font-face {
+  font-family: "Myriad Pro";
+  font-weight: 800;
+  font-style: normal;
+  src: url("./myriadpro/MyriadPro-Semibold.eot");
+  src: url("./myriadpro/MyriadPro-Semibold.eot?#iefix") format("embedded-opentype"),
+  url("./myriadpro/MyriadPro-Semibold.svg#MyriadProSemibold") format("svg"),
+  url("./myriadpro/MyriadPro-Semibold.woff") format("woff"),
+  url("./myriadpro/MyriadPro-Semibold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Myriad Pro";
+  font-weight: 600;
+  font-style: normal;
+  src: url("./myriadpro/MyriadPro-Regular.eot");
+  src: url("./myriadpro/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"),
+  url("./myriadpro/MyriadPro-Regular.svg#MyriadProRegular") format("svg"),
+  url("./myriadpro/MyriadPro-Regular.woff") format("woff"),
+  url("./myriadpro/MyriadPro-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Myriad Pro";
+  font-weight: 400;
+  font-style: normal;
+  src: url("./myriadpro/MyriadPro-Light.eot");
+  src: url("./myriadpro/MyriadPro-Light.eot?#iefix") format("embedded-opentype"),
+  url("./myriadpro/MyriadPro-Light.svg#MyriadProLight") format("svg"),
+  url("./myriadpro/MyriadPro-Light.woff") format("woff"),
+  url("./myriadpro/MyriadPro-Light.ttf") format("truetype");
+}*/
+
+/*@font-face {
+  font-family: 'MyriadPro-Light';
+  src: url('./MyriadPro-Light.ttf');
+  src:
+    url('./MyriadPro-Light.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}*/
+
+body {
+  font-family: 'FZYH_510M', 'FZYH_508R', 'Microsoft YaHei';
+}
+/*
+.sec-text-suptitle,
+.sec-text-title,
+.sec-text-more,
+.next,
+header .menu {
+  font-family: 'FZYH_510M';
+}
+
+.sec-text-desc,
+.comments,
+header .menu ul li {
+  font-family: 'FZYH_508R';
+}*/
